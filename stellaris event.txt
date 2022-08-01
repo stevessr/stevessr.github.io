@@ -1,0 +1,1808 @@
+事件/country events
+< 事件 | 步履蹒跚的龙石岛亲王SerGawen 于5年前修改了此页面。
+  
+事件
+内置顾问
+异常点事件
+异常点失败
+通讯
+国家事件
+危机事件
+外交事件
+派系事件
+失落帝国觉醒事件
+失落帝国事件
+失落帝国任务事件
+星际特性事件
+游戏开始
+守护者事件
+视界信号事件
+海盗事件
+人口事件
+先驱者事件
+伪装者事件
+原始文明事件
+进步事件
+难民事件
+故事事件
+科技风险事件
+测试事件
+教程事件
+动乱事件
+擢升事件
+游戏开始
+乌托邦行动事件
+乌托邦虚境事件
+天堂之战事件
+country.1 亚光速探索探针
+country.10 亚空间异常
+country.1000 流亡
+country.1001 流亡：目的
+country.1002 
+country.1003 流亡：死胡同
+country.1005 流亡：间隙事件
+country.1010 物理研究负责人
+country.1011 物理研究负责人
+country.1012 物理研究负责人
+country.1015 流亡：无人机
+country.1020 流亡：无人机被摧毁
+country.1021 
+country.1022 流亡：无人机被击毁
+country.1025 流亡：特殊计划完成
+country.1026 
+country.1030 流亡：天降灾祸
+country.1031 
+country.1035 物理学家的研究
+country.1040 日曝海盗
+country.1041 日曝海盗
+country.1042 日曝海盗
+country.1043 
+country.1044 首席物理学家的研究
+country.1045 首席物理学家的研究
+country.1046 首席物理学家的研究。
+country.1047 流亡：盲目
+country.1050 流亡：窗已打开
+country.1051 首席物理学家的研究
+country.1052 首席物理学家的研究
+country.1053 首席物理学家的研究
+country.1055 流亡：窗的关闭
+country.1060 
+country.1061 流亡：海盗的覆灭
+country.11 异常已消除
+country.1100 大灭绝
+country.1101 
+country.1102 
+country.1105 大灭绝：破碎的星球
+country.1110 大灭绝：燃烧的星球
+country.1115 大灭绝：荒芜星球
+country.1120 大灭绝：剧毒星球
+country.1125 大灭绝：寒冷星球
+country.1130 大灭绝：小行星
+country.1135 大灭绝：熔化
+country.1140 大灭绝：荒芜
+country.1145 大灭绝：剧毒
+country.1150 大灭绝：冰封
+country.1155 大灭绝：研究完毕
+country.1156 大灭绝：调查完毕
+country.1157 大灭绝：对未来的信心
+country.1158 大灭绝：信息传播
+country.12 改良探测器
+country.13 探测器意识
+country.14 探测器已被摧毁
+country.15 探测器回收
+country.16 
+country.17 打捞舰队被毁
+country.18 
+country.19 子空间异常已消除
+country.2 
+country.20 
+country.200 [radical_cult.GetName]
+country.201 
+country.202 异教徒飞船已失灵！
+country.203 登舰行动
+country.204 遭遇异教徒掠夺者
+country.205 遭遇异教徒掠夺者
+country.206 遭遇异教徒掠夺者
+country.208 回收工作完成
+country.209 船坞已摧毁
+country.21 改良探测器已被摧毁
+country.210 疑似邪教徒旗舰位置
+country.211 邪教徒旗舰
+country.212 
+country.213 旗舰失灵
+country.214 已占领异教徒旗舰
+country.215 
+country.216 
+country.217 
+country.218 异教徒飞船已失灵！
+country.219 异教徒舰队已摧毁
+country.220 
+country.221 船坞已摧毁
+country.222 
+country.223 异教徒旗舰已摧毁
+country.250 追捕风信子号
+country.251 星系已勘察
+country.252 星系已勘察
+country.253 星系已勘察
+country.254 找到风信子号
+country.255 登上风信子号
+country.256 飞船档案
+country.257 盖棺定论
+country.258 
+country.259 
+country.260 星系已勘察
+country.3 发现亚光速探测器
+country.4 探测器回收完毕
+country.5 离子轨迹
+country.50 宜居世界勘测
+country.51 勘测完成
+country.52 
+country.53 外星样本采购
+country.54 塔布拉克已捕获
+country.55 塔萨古德已捕获
+country.56 奥琳塞已捕获
+country.57 斯匿冉已捕获
+country.58 古朗萨群已捕获
+country.59 乌朵兰已捕获
+country.6 探测到打捞舰
+country.60 祖戈虫群已捕获
+country.61 标本已获取
+country.7 打捞舰舰长
+country.8 探测器已转让
+country.9 探测器回收完毕
+country.900 
+country.901 
+country.902 
+country.999 彗星观测
+
+
+
+
+
+
+事件/anomaly events
+< 事件 | 步履蹒跚的龙石岛亲王SerGawen 于5年前修改了此页面。
+  
+事件
+内置顾问
+异常点事件
+异常点失败
+通讯
+国家事件
+危机事件
+外交事件
+派系事件
+失落帝国觉醒事件
+失落帝国事件
+失落帝国任务事件
+星际特性事件
+游戏开始
+守护者事件
+视界信号事件
+海盗事件
+人口事件
+先驱者事件
+伪装者事件
+原始文明事件
+进步事件
+难民事件
+故事事件
+科技风险事件
+测试事件
+教程事件
+动乱事件
+擢升事件
+游戏开始
+乌托邦行动事件
+乌托邦虚境事件
+天堂之战事件
+anomaly.1 粪化石小行星
+anomaly.10 小行星动物群
+anomaly.100 追赶上先驱者
+anomaly.105 多么古典的曲调啊...
+anomaly.106 新大陆
+anomaly.110 来自过去的声音
+anomaly.115 一个珍贵的基因库
+anomaly.1190 生死弥留：线缆中的灵魂
+anomaly.1191 
+anomaly.1192 生死弥留：科技进步
+anomaly.1193 
+anomaly.1194 生死弥留：科技进步
+anomaly.1195 生死弥留：离去
+anomaly.1196 生死弥留：苏醒者
+anomaly.1197 
+anomaly.1198 生死弥留：新的开始
+anomaly.1199 生死弥留：觉醒
+anomaly.120 埃迪克巨石
+anomaly.121 埃迪克巨石
+anomaly.125 未经允许的地图绘制工程
+anomaly.130 重力撞击
+anomaly.135 被废弃游乐场
+anomaly.140 熟悉的圣殿
+anomaly.145 他们创作了什么音乐
+anomaly.15 小行星上的化石
+anomaly.150 泽珞之下
+anomaly.155 不法勾当
+anomaly.165 上古之神：女施主的神殿
+anomaly.166 上古之神：勇敢无畏者的神殿
+anomaly.167 上古之神：敏锐者的神殿
+anomaly.168 古神：启示
+anomaly.169 神灵谕旨
+anomaly.170 流亡者
+anomaly.171 寒冷虚空
+anomaly.172 深入地下
+anomaly.175 盐
+anomaly.180 小家伙
+anomaly.185 生死弥留
+anomaly.186 生死弥留
+anomaly.187 生死弥留：新的开始
+anomaly.188 生死弥留：教训
+anomaly.189 生死弥留：新的开始
+anomaly.190 卫星投影
+anomaly.191 投影真相
+anomaly.195 薄暮海岸
+anomaly.200 地热能源
+anomaly.205 一马平川
+anomaly.210 维度陷阱
+anomaly.211 维度漂移
+anomaly.212 
+anomaly.215 丰饶景色
+anomaly.220 矿物成群
+anomaly.225 游荡阴影
+anomaly.230 蠢蠢欲动
+anomaly.231 战略性星球转化
+anomaly.232 战略性星球转化失败
+anomaly.233 战略性星球转化成功
+anomaly.235 光影艺术
+anomaly.240 骗人的巨行星
+anomaly.245 失乐园
+anomaly.25 被遗弃的船坞
+anomaly.250 不明气体
+anomaly.2501 特殊项目完成
+anomaly.251 不明气体
+anomaly.2510 冰下海洋
+anomaly.2512 特殊项目完成
+anomaly.2513 特殊项目完成
+anomaly.2520 巨大骨架
+anomaly.2521 特殊项目完成
+anomaly.2522 特殊项目完成
+anomaly.2530 战争迹象
+anomaly.2531 特殊项目完成
+anomaly.2540 外星壁画
+anomaly.2541 特殊项目完成
+anomaly.2542 特殊项目完成
+anomaly.255 过去的世界末日
+anomaly.2550 自动化造船厂
+anomaly.2551 特殊项目完成
+anomaly.2552 特殊项目完成
+anomaly.256 有趣的发现
+anomaly.2560 气态巨行星飞船
+anomaly.2561 特殊项目完成
+anomaly.2562 特殊项目完成
+anomaly.257 残酷的发现
+anomaly.2570 终端轨道
+anomaly.2571 特殊项目完成
+anomaly.2575 发现地貌改造候选
+anomaly.258 空手而归
+anomaly.265 外星汽车赛
+anomaly.270 撞车大事故
+anomaly.275 遗弃的推动装置
+anomaly.285 不寻常的地壳
+anomaly.290 潜在矿脉
+anomaly.292 潜在矿脉
+anomaly.295 上下颠倒
+anomaly.30 垃圾场
+anomaly.300 大气生态系统
+anomaly.3000 低级错误
+anomaly.3005 隐藏牢笼
+anomaly.3010 水晶记录仪
+anomaly.3012 水晶记录仪
+anomaly.3015 外星军营
+anomaly.3017 外星军营
+anomaly.3020 分区
+anomaly.3025 远古自动工厂
+anomaly.3027 远古自动工厂
+anomaly.3030 硬质路肩
+anomaly.3035 获得资金
+anomaly.3040 被流放的海盗
+anomaly.305 被抛弃的豆荚型货舱
+anomaly.3050 刺耳的音频
+anomaly.3055 万木之木
+anomaly.3056 万木之木
+anomaly.3057 万木之木
+anomaly.3060 沙漠吞噬
+anomaly.3061 沙漠吞噬
+anomaly.3062 沙漠吞噬
+anomaly.3063 沙漠吞噬
+anomaly.3065 非法通信
+anomaly.3070 前功尽弃
+anomaly.3075 零散辐射
+anomaly.3080 玩具工厂
+anomaly.3085 王子
+anomaly.3086 王子，可读版
+anomaly.3087 [book_writer.GetName]
+anomaly.3088 [book_writer.GetName]
+anomaly.3089 [book_writer.GetName]
+anomaly.3090 赎金猎人：紧急浮标
+anomaly.3091 赎金猎人：SOS
+anomaly.3092 [Root.GetSpeciesAdj]俘虏
+anomaly.3093 [Root.GetSpeciesAdj]俘虏
+anomaly.3094 [Root.GetSpeciesAdj]俘虏
+anomaly.3095 赎金猎人：最佳计划
+anomaly.3096 [Root.GetSpeciesAdj]俘虏
+anomaly.3097 
+anomaly.3098 赎金猎人：魂归尘土
+anomaly.3099 赎金猎人：意想不到的救世主
+anomaly.310 社会实验
+anomaly.3100 赎金猎人：突袭
+anomaly.3101 赎金猎人：搜寻残骸
+anomaly.3102 已解救[Root.GetSpeciesAdj]俘虏
+anomaly.3103 [Root.GetSpeciesAdj]俘虏。
+anomaly.3104 赎金猎人：烟雾尘嚣
+anomaly.3105 赎金猎人：一切安好？
+anomaly.3110 过去的讯息
+anomaly.3111 被摧毁的通讯
+anomaly.3112 被摧毁的通讯
+anomaly.3113 讯息被破解
+anomaly.3114 海盗出没
+anomaly.3115 舰队漂流
+anomaly.3116 舰队被征用
+anomaly.3120 海盗被剿灭
+anomaly.3125 远古工厂
+anomaly.3126 远古工厂：新的采矿站
+anomaly.3127 远古工厂
+anomaly.3128 远古工厂：无人机激活
+anomaly.3129 远古工厂：惊动母巢
+anomaly.3130 辩论与讨论
+anomaly.3131 
+anomaly.315 太空殖民地
+anomaly.320 破碎之地
+anomaly.325 损坏的巡洋舰
+anomaly.330 风暴肆虐
+anomaly.335 能源特征
+anomaly.340 宝贝月亮
+anomaly.35 侦察舰坠毁
+anomaly.40 自动采矿基地
+anomaly.4000 生命之道
+anomaly.4005 站在巨人的肩膀上
+anomaly.4010 迷失太空
+anomaly.4011 特殊项目完成
+anomaly.4012 特殊项目完成
+anomaly.4015 最后的休憩
+anomaly.4016 
+anomaly.4017 [DefiledCountry.GetName]
+anomaly.4018 
+anomaly.4020 巨兽的陨落
+anomaly.4025 老探险家
+anomaly.4030 沙之仆人
+anomaly.4031 特殊项目完成
+anomaly.4035 熔炉烈焰
+anomaly.4036 
+anomaly.4037 熔炉烈焰
+anomaly.4038 熔炉烈焰
+anomaly.4040 恒星的原罪
+anomaly.4045 深空的回声
+anomaly.4046 深空的回声
+anomaly.4047 深空的回声
+anomaly.4048 深空的回声
+anomaly.4049 深空的回声
+anomaly.4050 深空的回声
+anomaly.4051 深空的回声
+anomaly.4052 深空的回声
+anomaly.4055 璞玉浑金
+anomaly.4060 概率难题
+anomaly.4061 特殊项目完成
+anomaly.4062 特殊项目完成
+anomaly.4065 采好你自己的矿
+anomaly.4066 特殊项目完成
+anomaly.4070 丰饶的收获
+anomaly.4075 小身板，大力量
+anomaly.4076 小身板，大力量
+anomaly.4077 小身板，大力量
+anomaly.4080 被遗弃的传感列阵
+anomaly.4081 特殊项目完成
+anomaly.4086 特殊项目完成
+anomaly.4100 水域统治者
+anomaly.4101 水域统治者
+anomaly.4102 水域统治者
+anomaly.4103 水域统治者
+anomaly.4104 水域统治者
+anomaly.4105 驱之不散
+anomaly.4106 特殊项目完成
+anomaly.4110 流沙
+anomaly.4115 暗中潜伏
+anomaly.4116 暗中潜伏
+anomaly.4117 暗中潜伏
+anomaly.4120 天际巨响
+anomaly.4125 熄灯的矿场
+anomaly.4130 大树
+anomaly.4131 特殊项目完成
+anomaly.4135 殖民者的教诲
+anomaly.4136 特殊项目完成
+anomaly.4140 探索者的教诲
+anomaly.4141 特殊项目完成
+anomaly.4150 贸易者的教诲
+anomaly.4151 特殊项目完成
+anomaly.4155 战地之下
+anomaly.4156 战地之下
+anomaly.4157 冷冻舱中的勇士
+anomaly.4158 冷冻舱中的勇士
+anomaly.4159 冷冻舱中的勇士
+anomaly.4160 冷冻舱中的勇士
+anomaly.4161 冷冻舱中的勇士
+anomaly.4162 冷冻舱中的勇士
+anomaly.4163 冷冻舱中的勇士
+anomaly.4165 勇士的教诲
+anomaly.4166 特殊项目完成
+anomaly.4170 挥发性资源
+anomaly.4171 
+anomaly.4172 挥发性资源
+anomaly.5 海盗的财宝
+anomaly.50 武器标靶
+anomaly.5000 气态巨行星信号
+anomaly.5001 特殊项目完成
+anomaly.5002 特殊项目失败
+anomaly.5003 气态巨行星传输
+anomaly.5004 特殊项目完成
+anomaly.5005 特殊项目失败
+anomaly.5006 信号传输接入
+anomaly.5007 新殖民地
+anomaly.5008 特殊项目完成
+anomaly.5009 查比克·莱迪
+anomaly.5010 特殊项目完成
+anomaly.5011 失去联络
+anomaly.5012 特殊项目完成
+anomaly.5013 革命阵线
+anomaly.5014 伯达拉克回应
+anomaly.5015 特殊项目完成
+anomaly.5016 革命委员会
+anomaly.5017 伯达拉克大众声明
+anomaly.5018 伯达拉克大众声明
+anomaly.5019 伯达拉克大众声明
+anomaly.5020 特殊项目完成
+anomaly.5021 远征部队获取控制
+anomaly.5022 新伯达拉克公告
+anomaly.5023 新伯达拉克公告
+anomaly.5024 伯达拉克大众声明
+anomaly.5025 伯达拉克科学学院
+anomaly.5026 大扫除
+anomaly.55 小行星碰撞
+anomaly.60 外来辐射
+anomaly.600 小行星碰撞
+anomaly.6000 流浪卫星
+anomaly.6001 流浪卫星
+anomaly.605 翘曲的影响
+anomaly.610 微型奇点
+anomaly.615 磁场反转
+anomaly.625 飞行员木乃伊
+anomaly.630 古老的逃生舱
+anomaly.635 异星小说
+anomaly.65 矿物货舰坠毁
+anomaly.650 太阳帆船
+anomaly.655 擦肩而过
+anomaly.660 小行星搬运工
+anomaly.6660 异常境况
+anomaly.670 核毁灭
+anomaly.685 消失的温室效应
+anomaly.690 氨基生物
+anomaly.695 硅基生物形式
+anomaly.700 非法矿工
+anomaly.705 古代位置信标
+anomaly.75 石脑
+anomaly.80 岩石偏头痛
+anomaly.85 窃窃私语的行星
+anomaly.90 贪婪之藤
+anomaly.91 青草民兵团
+anomaly.95 对其他人很重要
+anomaly.96 固态行星
+
+
+
+
+
+
+
+
+
+
+
+事件/galactic features events
+< 事件 | 步履蹒跚的龙石岛亲王SerGawen 于5年前修改了此页面。
+  
+事件
+内置顾问
+异常点事件
+异常点失败
+通讯
+国家事件
+危机事件
+外交事件
+派系事件
+失落帝国觉醒事件
+失落帝国事件
+失落帝国任务事件
+星际特性事件
+游戏开始
+守护者事件
+视界信号事件
+海盗事件
+人口事件
+先驱者事件
+伪装者事件
+原始文明事件
+进步事件
+难民事件
+故事事件
+科技风险事件
+测试事件
+教程事件
+动乱事件
+擢升事件
+游戏开始
+乌托邦行动事件
+乌托邦虚境事件
+天堂之战事件
+galactic_features.101 遭遇外星文明原型
+galactic_features.102 遭遇外星文明原型
+galactic_features.103 遭遇外星文明原型
+galactic_features.104 核毁灭
+galactic_features.2 Zanaam 的守卫者
+galactic_features.3 
+galactic_features.300 屏蔽的世界
+galactic_features.301 封存舰队
+galactic_features.302 知识的避难所
+galactic_features.303 囚徒
+galactic_features.304 信号传输接入
+galactic_features.305 流亡者的回归
+galactic_features.350 遭遇环形世界
+galactic_features.351 信号传输接入
+galactic_features.360 
+galactic_features.361 恶臭的后代
+galactic_features.362 
+
+
+
+
+
+
+
+
+
+事件/fallen empire tasks events
+< 事件 | 步履蹒跚的龙石岛亲王SerGawen 于5年前修改了此页面。
+  
+事件
+内置顾问
+异常点事件
+异常点失败
+通讯
+国家事件
+危机事件
+外交事件
+派系事件
+失落帝国觉醒事件
+失落帝国事件
+失落帝国任务事件
+星际特性事件
+游戏开始
+守护者事件
+视界信号事件
+海盗事件
+人口事件
+先驱者事件
+伪装者事件
+原始文明事件
+进步事件
+难民事件
+故事事件
+科技风险事件
+测试事件
+教程事件
+动乱事件
+擢升事件
+游戏开始
+乌托邦行动事件
+乌托邦虚境事件
+天堂之战事件
+fallen_empires_tasks.1 好的。
+fallen_empires_tasks.10 来自[FallenEmpireTaskOrigin.GetName]的通讯
+fallen_empires_tasks.11 来自[FallenEmpireTaskOrigin.GetName]的通讯
+fallen_empires_tasks.12 好的。
+fallen_empires_tasks.13 来自[FallenEmpireTaskOrigin.GetName]的通讯
+fallen_empires_tasks.14 好的。
+fallen_empires_tasks.15 来自[FallenEmpireTaskOrigin.GetName]的通讯
+fallen_empires_tasks.16 来自[FallenEmpireTaskOrigin.GetName]的通讯
+fallen_empires_tasks.17 来自[FallenEmpireTaskOrigin.GetName]的通讯
+fallen_empires_tasks.18 来自[FallenEmpireTaskOrigin.GetName]的通讯
+fallen_empires_tasks.19 好的。
+fallen_empires_tasks.2 来自[FallenEmpireTaskOrigin.GetName]的通讯
+fallen_empires_tasks.20 来自[FallenEmpireTaskOrigin.GetName]的通讯
+fallen_empires_tasks.21 好的。
+fallen_empires_tasks.22 来自[FallenEmpireTaskOrigin.GetName]的通讯
+fallen_empires_tasks.23 好的。
+fallen_empires_tasks.24 来自[FallenEmpireTaskOrigin.GetName]的通讯
+fallen_empires_tasks.3 好的。
+fallen_empires_tasks.4 来自[FallenEmpireTaskOrigin.GetName]的通讯
+fallen_empires_tasks.5 好的。
+fallen_empires_tasks.7 好的。
+fallen_empires_tasks.8 来自[FallenEmpireTaskOrigin.GetName]的通讯
+fallen_empires_tasks.9 来自[FallenEmpireTaskOrigin.GetName]的通讯
+
+
+
+
+
+事件/fallen empire events
+
+fallen_empires.1 好的。
+fallen_empires.10 好的。
+fallen_empires.11 好的。
+fallen_empires.12 好的。
+fallen_empires.13 好的。
+fallen_empires.2 [From.GetName]暗杀[Root.GetRulerTitle]!
+fallen_empires.3 好的。
+fallen_empires.4 来自[From.GetName]的通讯
+fallen_empires.5 来自[From.GetName]的通讯
+fallen_empires.6 来自[From.GetName]的通讯
+fallen_empires.7 来自[From.GetName]的通讯
+fallen_empires.8 来自[From.GetName]的通讯
+fallen_empires.9 来自[From.GetName]的通讯
+
+
+
+
+事件/fallen empire awakening events
+
+fallen_empires_awakening.1 好的。
+fallen_empires_awakening.2 睡狮的苏醒
+fallen_empires_awakening.3 好的。
+fallen_empires_awakening.4 好的。
+fallen_empires_awakening.5 银河守护者
+
+事件/faction events
+factions.1 派系建立
+factions.1005 
+factions.220 
+factions.330 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+事件/diplomatic events
+diplomatic.1 
+diplomatic.10 研究人员怀疑外国舰船。
+diplomatic.1000 舰队演习
+diplomatic.1001 舰队演习取消
+diplomatic.1002 舰队演习取消
+diplomatic.1005 
+diplomatic.1006 [exercise_system.GetName]有舰队反应
+diplomatic.1010 
+diplomatic.1011 舰队演习：碰撞
+diplomatic.1012 舰队演习：军舰损失
+diplomatic.1013 舰队演习：优秀军官
+diplomatic.1014 舰队演习：公众利益
+diplomatic.1020 来自[From.Owner.GetSpeciesName]的演习情报
+diplomatic.1021 信号传输接入
+diplomatic.1022 信号传输接入
+diplomatic.1023 信号传输接入
+diplomatic.1024 信号传输接入
+diplomatic.1025 演习结束
+diplomatic.1026 [From.Owner.GetSpeciesName]演习结束
+diplomatic.11 [From.GetName]关闭边界。
+diplomatic.12 [From.From.GetName]怀疑测绘基因组。
+diplomatic.13 [From.GetName]关闭了边界。
+diplomatic.14 基因组测绘已经给出结果了。
+diplomatic.15 监视[From.From.GetAdj]的科学家。
+diplomatic.16 From.GetName]关闭了边界。
+diplomatic.17 在[From.GetName]有了异端的发现。
+diplomatic.18 [encroaching_research_leader.GetName]发表了他的异端邪说。
+diplomatic.19 异域的木管乐器
+diplomatic.2 [From.From.Owner.GetAdj]舰队司令侮辱了我们。
+diplomatic.20 器乐生物学
+diplomatic.21 [neighbor_contesting_colony.GetName]反对扩张
+diplomatic.3 舰队司令侮辱了[From.GetSpeciesNamePlural]
+diplomatic.4 舰队司令侮辱了[From.GetSpeciesNamePlural]
+diplomatic.5 [From.GetName]解雇了舰队司令
+diplomatic.6 引渡[From.GetName]舰队司令
+diplomatic.7 [From.GetName]维护舰队司令
+diplomatic.9 
+
+
+
+事件/crisis events
+crisis.10 
+crisis.100 
+crisis.1000 
+crisis.1003 
+crisis.1006 
+crisis.1007 不速之客
+crisis.1008 银河电涌
+crisis.1009 不速之客
+crisis.101 受伤的虫后
+crisis.1010 截获通讯
+crisis.1011 [Root.GetName]陷落
+crisis.1012 
+crisis.1013 维度传送门被摧毁
+crisis.1016 第一道传送门被毁
+crisis.105 虫后万岁！
+crisis.1050 信号传输接入
+crisis.1051 信号传输接入
+crisis.1052 信号传输接入
+crisis.106 
+crisis.107 其他人得到了虫后
+crisis.11 亚空间回声
+crisis.1100 
+crisis.1103 
+crisis.1106 
+crisis.1110 第二道传送门
+crisis.1111 
+crisis.1112 异常
+crisis.1113 信号传输接入
+crisis.1115 
+crisis.1116 第二道传送门被毁
+crisis.1117 第二道传送门被毁
+crisis.12 
+crisis.1200 
+crisis.1203 
+crisis.1206 
+crisis.1210 强烈冲击
+crisis.1211 信号传输接入
+crisis.1215 
+crisis.1216 第三道传送门被毁
+crisis.1217 第三道传送门被毁
+crisis.1254 
+crisis.1260 
+crisis.1265 
+crisis.1266 
+crisis.1267 
+crisis.1270 
+crisis.1271 成功防御入侵
+crisis.1280 
+crisis.1281 
+crisis.1282 
+crisis.1283 
+crisis.13 接近星系外缘
+crisis.14 
+crisis.15 亚空间信号
+crisis.16 信号传输接入
+crisis.17 
+crisis.18 第一波冲击
+crisis.19 
+crisis.199 
+crisis.20 第二波冲击
+crisis.200 
+crisis.2000 
+crisis.2001 AI叛乱开始
+crisis.2002 信号传输接入
+crisis.2003 
+crisis.2004 机器崛起
+crisis.2005 机器征服了[Root.GetName]
+crisis.201 
+crisis.2010 机器起义
+crisis.2011 信号传输接入
+crisis.2012 
+crisis.2013 
+crisis.2014 AI叛乱扩散
+crisis.2015 AI叛乱
+crisis.2016 AI叛乱扩散
+crisis.2017 AI叛乱扩散
+crisis.202 
+crisis.203 
+crisis.204 
+crisis.205 
+crisis.206 
+crisis.207 
+crisis.208 
+crisis.210 
+crisis.2100 故障的合成人
+crisis.2101 失踪的合成人
+crisis.2102 非法合成人项目
+crisis.2103 凶猛的合成人
+crisis.211 虫群天灾的末日
+crisis.215 
+crisis.216 
+crisis.217 
+crisis.218 
+crisis.2190 
+crisis.2191 
+crisis.2192 完美的仆人
+crisis.2193 AI协议
+crisis.2194 
+crisis.2200 合成人的渗透企图
+crisis.2201 发现合成人渗透者
+crisis.2202 合成人探测计划
+crisis.2203 特殊项目完成
+crisis.2204 合成人炸弹
+crisis.2205 空间站坠毁
+crisis.2206 恐惧和怀疑
+crisis.2207 
+crisis.2208 刺杀行动被阻止！
+crisis.2209 [ruler.GetRegnalName]被刺杀！
+crisis.2210 信号传输接入
+crisis.2211 
+crisis.2215 
+crisis.2400 
+crisis.50 
+crisis.51 新组织
+crisis.52 信号传输接入
+crisis.55 信号传输接入
+crisis.60 
+crisis.61 
+crisis.70 
+crisis.71 信号传输接入
+
+
+
+
+
+
+
+事件/guardian events
+注意！已知在新版本（2.2.x）之后，事件代码中所有“guardian”已经被替换为“leviathans",如雪拉集团事件”guardian.100"现为“leviathans.100",旧版代码已经失效，新代码可以正常与控制台指令<events>联动。
+guardian.1 
+guardian.10 
+guardian.100 雪拉集团
+guardian.1000 噬星者
+guardian.1001 噬星者
+guardian.1005 
+guardian.1009 
+guardian.101 
+guardian.1010 
+guardian.1011 
+guardian.1012 
+guardian.1013 
+guardian.1014 
+guardian.1015 
+guardian.1016 噬星者
+guardian.1017 噬星者
+guardian.1018 噬星者
+guardian.1019 
+guardian.102 与[From.GetName]的第一次接触
+guardian.1020 
+guardian.103 里甘商务贸易公司
+guardian.1030 无限方程
+guardian.1031 
+guardian.1032 
+guardian.1039 
+guardian.104 穆塔根商业行会
+guardian.1040 无限方程
+guardian.1041 无限方程
+guardian.105 雪拉集团
+guardian.1050 永恒的计算机
+guardian.1051 永恒的计算机
+guardian.1052 永恒的计算机
+guardian.1053 无尽神机
+guardian.1055 无尽神机
+guardian.1056 无尽神机
+guardian.106 里甘商务贸易公司
+guardian.1060 无尽神机
+guardian.1061 无尽神机
+guardian.1062 无尽神机
+guardian.1063 无尽神机
+guardian.1065 无尽神机
+guardian.107 穆塔根商业行会
+guardian.1070 
+guardian.1071 
+guardian.1072 
+guardian.1073 
+guardian.1074 庞大古埃黑洞空间站
+guardian.1075 
+guardian.1076 庞大古埃黑洞空间站
+guardian.11 
+guardian.110 交换矿物
+guardian.120 交换能量币
+guardian.130 里甘商务贸易公司
+guardian.131 雪拉集团
+guardian.132 穆塔根商业行会
+guardian.135 
+guardian.136 
+guardian.137 
+guardian.140 
+guardian.141 [From.GetName]被毁
+guardian.142 [From.GetName]被毁
+guardian.143 [From.GetName]被毁
+guardian.144 [From.GetName]被毁
+guardian.150 雪拉集团
+guardian.151 里甘商务贸易公司
+guardian.152 穆塔根商业行会
+guardian.155 
+guardian.156 雪拉集团
+guardian.157 雪拉集团
+guardian.158 
+guardian.159 里甘商务贸易公司
+guardian.160 里甘商务贸易公司
+guardian.161 
+guardian.162 穆塔根商业行会
+guardian.163 穆塔根商业行会
+guardian.2010 幽灵发条
+guardian.2011 
+guardian.2012 幽魂
+guardian.2013 幽魂
+guardian.2014 幽魂的毁灭。
+guardian.2061 
+guardian.2099 神秘堡垒
+guardian.2100 
+guardian.2101 神秘堡垒
+guardian.2105 古代建筑
+guardian.2111 堡垒：入口
+guardian.2112 堡垒：无法阻止的崩坏
+guardian.2113 堡垒：调整能量供给
+guardian.2114 堡垒：重新充能
+guardian.2115 堡垒：气闸开启
+guardian.2131 堡垒：梵塔
+guardian.2132 堡垒：恼人的噪音
+guardian.2133 堡垒：梵塔重建
+guardian.2150 堡垒：中枢
+guardian.2151 堡垒：暗物质之心
+guardian.2152 堡垒：我们的观星者
+guardian.2153 堡垒：无果的开端
+guardian.2154 堡垒：中间道路
+guardian.2155 堡垒：结局
+guardian.2156 堡垒：暗物质策略
+guardian.2157 堡垒：一箭穿心
+guardian.2160 堡垒：重启
+guardian.300 艺术家联盟
+guardian.3000 
+guardian.3001 虚空中的梦魇
+guardian.3002 
+guardian.3003 放逐者
+guardian.3004 特殊项目完成
+guardian.301 
+guardian.302 艺术家联盟
+guardian.303 艺术家联盟
+guardian.304 艺术家联盟
+guardian.305 
+guardian.306 
+guardian.308 
+guardian.309 
+guardian.310 出离愤怒
+guardian.3100 自动无畏战舰
+guardian.3101 
+guardian.3102 瘫痪无畏战舰
+guardian.3103 修复无畏战舰
+guardian.311 两份交织的快乐
+guardian.312 背叛
+guardian.313 艺术家联盟
+guardian.314 
+guardian.315 艺术家联盟
+guardian.319 艺术家联盟
+guardian.320 
+guardian.3200 
+guardian.3201 蜂巢机群
+guardian.3202 晶态小行星
+guardian.3203 
+guardian.3204 击败蜂巢小行星
+guardian.3205 特殊项目完成
+guardian.321 给赞助者的简讯
+guardian.3210 
+guardian.3220 
+guardian.323 平淡的更新
+guardian.324 破碎性艺术
+guardian.330 
+guardian.331 
+guardian.332 艺术家联盟
+guardian.334 艺术家联盟
+guardian.4 
+guardian.5 守护者被击败
+guardian.500 策展人
+guardian.501 
+guardian.502 与[From.GetName]的初接触
+guardian.505 策展人
+guardian.506 星图
+guardian.507 辅助研究
+guardian.508 未解之谜
+guardian.509 
+guardian.510 以太巨龙
+guardian.515 神秘堡垒
+guardian.520 噬星者
+guardian.525 位面之魇
+guardian.530 蜂巢小行星
+guardian.535 无限神机
+guardian.540 自动无畏战舰
+guardian.545 幽魂
+guardian.560 
+guardian.590 雇佣科学家
+guardian.592 
+guardian.593 [From.GetName]已经被摧毁
+guardian.594 [From.GetName]已经被摧毁
+guardian.595 
+guardian.596 策展人
+guardian.597 策展人
+guardian.601 
+guardian.602 
+guardian.610 遭遇以太巨龙
+guardian.640 
+guardian.648 
+guardian.649 龙来了
+guardian.650 龙来了
+guardian.651 
+guardian.652 
+guardian.654 
+guardian.655 
+guardian.660 
+guardian.661 巨龙宝库：坟墓
+guardian.662 
+guardian.663 巨龙宝库：幼畜
+guardian.664 巨龙宝库：重生
+guardian.665 巨龙宝库：无果而终
+guardian.670 屠龙者
+guardian.671 
+guardian.9 
+guardian.97 
+guardian.98 通讯已建立
+guardian.99 通讯已建立
+guardian.999 坍缩的恒星
+
+事件/horizonsignal events
+akx.10000 亦始亦终
+akx.10010 烈阳之心
+akx.10020 见证未来
+akx.10030 被粉碎的圆环
+akx.8888 视界信号
+akx.9000 视界信号
+akx.9001 视界信号：重力即欲望
+akx.9005 视界信号：螶
+akx.9006 视界信号： - 讯息结束 -
+akx.9010 视界信号：谜团重现
+akx.9011 视界信号：无尽穿越
+akx.9012 视界信号：大胆干预
+akx.9013 视界信号： - 讯息结束 -
+akx.9020 视界信号：事已过三
+akx.9021 视界信号：终末之始
+akx.9022 视界信号：干预
+akx.9023 视界信号： - 讯息结束 -
+akx.9095 视界信号：灰烬中的教训
+akx.9100 环型神殿：石中诡符
+akx.9101 环形神殿：时与石
+akx.9200 信使：过去即未来
+akx.9201 信使：潜在可能
+akx.9210 信使：兵行险着
+akx.9211 信使：崭新曙光
+akx.9220 信使：封印禁忌
+akx.9221 信使：夜幕降临
+akx.9300 命中相会
+akx.9310 命中相会：昨日舰长
+akx.9312 命中相会：昨日舰长
+akx.9315 命中相会：如何结束
+akx.9318 
+akx.9319 命中相会：信号干扰
+akx.9320 命中相会：明日船长
+akx.9321 命中相会：明日船长
+akx.9330 命中相会：那天那时
+akx.9340 命中相会：陪葬品
+akx.9399 
+akx.9400 神之圆环
+akx.9410 神之圆环：小小麻烦
+akx.9420 神之圆环：深层根系
+akx.9450 神之圆环：迷宫典礼
+akx.9460 神之圆环：典礼终结
+akx.9465 神之圆环：地下的消息
+akx.9470 神之圆环：祭司之血
+akx.9480 神之圆环：迷城远航
+akx.9490 神之圆环：空寂神庙
+akx.9499 
+akx.9500 时螶之界
+akx.9505 时螶之界：定向爆破
+akx.9510 时螶之界：壁中暗影
+akx.9520 时螶之界：人口满盈
+akx.9525 时螶之界：如期而至
+akx.9530 时螶之界：退出舞台
+akx.9535 时螶之界：光的质量
+akx.9540 时螶之界：人人皆此
+akx.9541 时螶之界：无人生还
+akx.9545 时螶之界：万物归虚
+akx.9600 圣仆
+akx.9601 圣仆
+akx.9602 圣仆
+akx.9610 圣仆再临
+akx.9620 圣仆的最后使命
+
+
+事件/pirate events
+pirate.1 星际海盗出现
+pirate.10 海盗庇护所
+pirate.13 
+pirate.15 海盗巢穴被摧毁
+pirate.2 
+pirate.20 
+pirate.25 海盗站点被袭击
+pirate.3 
+pirate.30 遭遇海盗
+pirate.4 
+pirate.5 
+
+
+事件/pop events
+pop.1 一个新物种
+pop.10 [non_modified_pop_1.GetSpeciesNamePlural]在[Root.GetName]上屠杀!
+pop.11 
+pop.12 [modified_pop_1.GetSpeciesName]代表访问了[Root.Owner.Capital.GetName]
+pop.13 
+pop.14 力量强化
+pop.2 
+pop.3 [Root.GetName]上不断升级的紧张局势
+pop.5 
+pop.6 繁殖能力强化
+pop.7 
+pop.8 [Root.GetName]! 上对[modified_pop_1.GetSpeciesNamePlural]的屠杀。
+pop.9 
+
+
+事件/precursor events
+precursor.1 沃塔姆星议会
+precursor.10 沃塔姆的天文观测站
+precursor.100 锁定沃塔姆家园星系
+precursor.1000 第一联合
+precursor.1005 联合海军基地
+precursor.1006 考古项目已完成
+precursor.101 沃塔姆的母星
+precursor.1010 联合巡洋舰
+precursor.1011 考古项目已完成
+precursor.1015 汉姆达母星家园
+precursor.1016 考古项目已完成
+precursor.102 沃塔姆母星已发现
+precursor.1020 卡萨戈母星家园
+precursor.1021 考古项目已完成
+precursor.1025 米哲-杨母星家园
+precursor.1026 考古项目已完成
+precursor.1030 维'若帕母星家园
+precursor.1031 考古项目已完成
+precursor.1035 联合科学基地
+precursor.1036 考古项目已完成
+precursor.1040 联合的总和殖民地
+precursor.1041 考古项目已完成
+precursor.1045 联和贸易中心
+precursor.1046 考古项目已完成
+precursor.1050 战役残骸
+precursor.1051 考古项目已完成
+precursor.1055 第一联合监狱
+precursor.1056 考古项目已完成
+precursor.1060 保护原始文明世界
+precursor.1061 考古项目已完成
+precursor.1065 轨道封锁
+precursor.1066 考古项目已完成
+precursor.1070 走私者的小行星
+precursor.1071 考古项目已完成
+precursor.1097 
+precursor.1098 
+precursor.1099 
+precursor.11 考古项目已完成
+precursor.1100 第一联合母星系位置确认
+precursor.1101 第一联合总部
+precursor.1102 发现第一联合首都
+precursor.15 沃塔姆的殖民地
+precursor.1500 艾瑞希雅协约
+precursor.1505 隔离世界
+precursor.1506 考古项目已完成
+precursor.1510 净化世界
+precursor.1511 考古项目已完成
+precursor.1515 约格拉母星
+precursor.1516 考古项目已完成
+precursor.1520 提'德格家园
+precursor.1521 考古项目已完成
+precursor.1525 失落的殖民地
+precursor.1526 考古项目已完成
+precursor.1530 艾瑞希雅采矿基地
+precursor.1531 考古项目已完成
+precursor.1536 考古项目已完成
+precursor.1540 废弃的艾瑞希雅飞船
+precursor.1541 考古项目已完成
+precursor.1545 疫情控制
+precursor.1546 考古项目已完成
+precursor.1550 小行星监听站
+precursor.1551 考古项目已完成
+precursor.1555 气态巨星科考站
+precursor.1556 考古项目已完成
+precursor.1597 
+precursor.1598 
+precursor.1599 
+precursor.16 考古项目已完成
+precursor.1600 定位艾瑞希雅家园星系
+precursor.1601 艾瑞希雅母星
+precursor.1602 发现艾瑞希雅母星
+precursor.20 沃塔姆的殖民地
+precursor.2000 塞伯勒克斯
+precursor.2005 库尔的母星
+precursor.2006 考古项目已完成
+precursor.2010 印狄马克的母星
+precursor.2011 考古项目已完成
+precursor.2015 损坏的塞伯勒克斯战争单元
+precursor.2016 考古项目已完成
+precursor.2020 塞伯勒克斯入侵
+precursor.2021 考古项目已完成
+precursor.2025 塞伯勒克斯废墟
+precursor.2026 考古项目已完成
+precursor.2030 塞伯勒克斯监听站
+precursor.2031 考古项目已完成
+precursor.2035 塞伯勒克斯精炼厂
+precursor.2036 考古项目已完成
+precursor.2040 战役残骸
+precursor.2041 考古项目已完成
+precursor.2045 古代塞伯勒克斯基地
+precursor.2046 考古项目已完成
+precursor.2050 幸存的有机生命
+precursor.2051 考古项目已完成
+precursor.2055 塞伯勒克斯研究站
+precursor.2056 考古项目已完成
+precursor.2098 
+precursor.2099 
+precursor.21 考古项目已完成
+precursor.2100 锁定塞伯勒克斯家园星系
+precursor.2101 塞伯勒克斯中枢核心
+precursor.2102 发现塞伯勒克斯的环世界
+precursor.2103 
+precursor.2201 
+precursor.25 沃塔姆的殖民地
+precursor.26 考古项目已完成
+precursor.30 沃塔姆的气态巨行星设施
+precursor.301 发现先驱者的踪迹
+precursor.31 考古项目已完成
+precursor.35 沃塔姆的贸易站
+precursor.36 考古项目已完成
+precursor.40 沃塔姆的卫星
+precursor.41 考古项目已完成
+precursor.45 沃塔姆殖民地的分裂
+precursor.46 考古项目已完成
+precursor.5 沃塔姆的矿山基地
+precursor.50 沃塔姆虚拟现实枢纽
+precursor.500 亚特帝国
+precursor.505 亚特人栖息地
+precursor.506 考古项目已完成
+precursor.51 考古项目已完成
+precursor.510 亚特侦测站
+precursor.511 考古项目已完成
+precursor.515 亚特殖民地
+precursor.516 考古项目已完成
+precursor.520 亚特殖民地
+precursor.521 考古项目已完成
+precursor.525 亚特殖民地
+precursor.526 考古项目已完成
+precursor.530 亚特卫星
+precursor.531 考古项目已完成
+precursor.535 亚特巡洋舰
+precursor.536 考古项目已完成
+precursor.540 亚特殖民船
+precursor.541 考古项目已完成
+precursor.545 亚特小行星居所
+precursor.546 考古项目已完成
+precursor.55 沃塔姆的小行星矿物基地
+precursor.56 考古项目已完成
+precursor.597 
+precursor.598 
+precursor.599 
+precursor.6 考古项目已完成
+precursor.600 亚特母星系定位完毕
+precursor.601 亚特家园世界
+precursor.602 发现亚特母星家园
+precursor.97 
+precursor.98 
+precursor.99 
+
+
+
+
+事件/pretender events
+pretender.1 [From.GetRegnalName]死了，没有留下继任者
+
+
+
+事件/primitive events
+primitive.10 
+primitive.11 无线电讯号
+primitive.12 
+primitive.13 切分原子
+primitive.130 
+primitive.131 [From.GetName]核战争的深渊
+primitive.133 [From.GetName]核战争的深渊
+primitive.14 
+primitive.15 第一颗卫星
+primitive.16 
+primitive.17 太空时代
+primitive.170 
+primitive.171 研究提议
+primitive.172 特殊项目完成
+primitive.173 
+primitive.174 [From.GetName]
+primitive.18 
+primitive.19 原始人的空间站
+primitive.20 
+primitive.21 铁器时代
+primitive.22 
+primitive.23 印刷机
+primitive.24 
+primitive.25 火药
+primitive.26 
+primitive.27 蒸汽动力
+primitive.28 
+primitive.29 工业革命
+primitive.30 
+primitive.31 青铜时代文明出现
+
+
+
+
+事件/progress events
+progress.2 发现外星生命
+progress.3 第一个[Root.Owner.GetSpeciesName]殖民地
+progress.4 与外星生命初次相遇
+progress.5 与外星生命初次相遇
+progress.6 与外星生命初次相遇
+progress.7 
+
+
+事件/refugee events
+refugees.1 [Root.GetSpeciesName] 难民到达
+refugees.2 好的。
+refugees.3 好的。
+
+
+事件/story events
+story.1 接触报告：简单生命体
+story.100 
+story.101 太空变形虫
+story.105 永远的太空变形虫
+story.109 
+story.110 解剖变形虫
+story.2 接触报告：外层空间居民
+story.200 
+story.201 晶状生命体
+story.205 晶状生命体无法被摧毁
+story.209 
+story.210 晶状生命体破碎
+story.214 
+story.215 晶状生命体已被摧毁
+story.216 
+story.218 
+story.219 结晶体探测器
+story.220 水晶球
+story.221 调查完成
+story.222 
+story.223 扫描中断
+story.3 接触报告：行星动物
+story.300 
+story.301 远古采矿无人机
+story.305 敬业的采矿无人机
+story.306 
+story.307 
+story.308 
+story.309 
+story.310 摧毁采矿无人机
+story.311 
+story.320 已调查储存点
+story.330 远古矿物加工中心
+story.331 观测结果
+story.332 
+story.333 采矿无人机基地遭到摧毁
+story.4 接触报告：低等智慧生物
+story.400 
+story.401 虚空阴云
+story.405 虚云的秘密
+story.409 
+story.410 黑云
+story.5 接触报告：幸存者
+story.500 
+story.501 缇杨凯
+story.6 接触报告：原始生物
+story.7 接触报告：神秘的太空旅人
+story.8 接触报告：利维坦
+
+
+
+事件/tech risk events
+techrisk.4 
+techrisk.5 信号传输接入
+techrisk.6 
+techrisk.7 [From.GetName]建造了舰队！
+
+
+
+
+事件/test events
+henrik.1003 henrik.1003.name
+henrik.1004 
+henrik.1005 
+henrik.1040 
+henrik.1045 
+henrik.1050 
+henrik.1053 Test
+henrik.1054 Test
+henrik.1055 好的。
+henrik.1056 Purge the meat
+henrik.1060 Test
+henrik.1070 好的。
+henrik.1080 
+henrik.1100 blah
+henrik.1105 Test
+henrik.1106 Test
+henrik.1107 
+henrik.1110 
+henrik.1111 
+henrik.1112 
+henrik.1113 Test
+henrik.1114 
+henrik.1115 
+henrik.1116 LOC KEY TEST
+henrik.1120 Test
+henrik.1121 Test
+henrik.1122 饿了吗?
+henrik.1125 test
+henrik.1126 test
+henrik.1127 test
+henrik.1128 Adding Unrest
+henrik.1129 utopia.160.name
+henrik.1337 LOL WIN
+henrik.200 
+henrik.20000 
+henrik.239 
+henrik.240 
+henrik.250 
+henrik.251 henrik.251.name
+henrik.252 henrik.252.name
+henrik.253 henrik.253.name
+henrik.254 
+henrik.255 好的。
+henrik.260 
+henrik.671 TEST TITLE
+henrik.673 PIRATE BLITZ
+henrik.700 
+henrik.701 test
+henrik.702 test
+henrik.703 RARE TECH
+henrik.704 test
+henrik.705 
+henrik.706 
+henrik.707 LOL WIN
+henrik.710 BIG BOOL
+henrik.711 BIG BOOL FLAGS
+henrik.714 ambient objects
+henrik.750 Sound Test
+henrik.760 Test
+henrik.7774 
+henrik.7775 
+henrik.7776 
+henrik.7777 
+henrik.810 korv
+henrik.811 
+henrik.812 
+henrik.813 DIPLOMACY DIALOGUE WINDOW
+henrik.814 
+henrik.815 UNASSIGNING SHIP LEADER
+henrik.816 POINT OF INTEREST TEST
+henrik.817 
+henrik.818 
+henrik.819 TUTORIAL LEVEL
+henrik.820 
+henrik.821 
+henrik.827 
+henrik.828 UNASSIGNING SHIP LEADER
+henrik.829 REBEL
+henrik.832 
+henrik.833 
+henrik.834 
+henrik.836 
+henrik.837 
+henrik.838 korv
+henrik.839 
+henrik.840 
+henrik.842 
+henrik.845 
+henrik.846 HUMANITY CHECK
+henrik.848 
+henrik.999 
+
+事件/unrest events
+unrest.101 不满：恐怖主义
+unrest.105 不满：严重的恐怖主义
+unrest.110 不满：和平卫士
+unrest.115 不满：宗教传播
+unrest.120 不满：威权崛起
+unrest.125 不满：异种排斥
+unrest.130 不满：脚踏实地
+unrest.135 不满：团结一致
+unrest.140 不满：众生平等
+unrest.145 不满：收效甚微
+unrest.150 不满：军事激进
+unrest.155 不满：[revolt_planet.GetName]上的奴隶示威
+unrest.156 不满：[Root.GetName]的破坏行动
+unrest.157 不满：[revolt_planet.GetName]上的奴隶暴乱
+unrest.158 
+unrest.159 不满：[Root.GetName]上的绝食抗议
+unrest.160 不满：[revolt_planet.Planet.GetName]上的奴隶反叛了！
+unrest.161 叛乱遭到镇压
+unrest.162 
+unrest.163 奴役劳动将被终止。
+unrest.164 
+unrest.165 安抚奴隶
+unrest.167 [revolt_planet.Planet.GetName]沦陷
+unrest.168 信号传输接入
+unrest.169 信号传输接入
+unrest.170 
+unrest.4200 不满：[Root.GetName]的叛乱！
+unrest.4210 
+unrest.4211 不满：在[From.From.GetName]的殖民地沦陷！
+unrest.4220 [From.GetName]合并请求
+unrest.4225 前殖民地被附庸
+unrest.4230 前殖民地被合并
+unrest.4235 叛乱被镇压
+
+
+
+事件/uplifting events
+uplift.2222 
+uplift.6000 蜿蜒而行
+uplift.6001 蛇类生物提升
+uplift.6010 自水而生
+uplift.6011 提升成功
+uplift.6015 自水而生
+uplift.6020 发现可提升种族
+uplift.6021 提升成功
+uplift.6025 发现可提升种族
+uplift.6030 大地之子
+uplift.6031 提升成功
+uplift.6035 大地之子
+uplift.6040 欢迎来到丛林
+uplift.6041 提升成功
+uplift.6045 欢迎来到丛林
+uplift.6050 冰冻荒原
+uplift.6051 提升成功
+uplift.6055 冰冻荒原
+uplift.6060 生于极寒
+uplift.6061 提升成功
+uplift.6065 生于极寒
+uplift.6070 涌动沙丘
+uplift.6071 提升成功
+uplift.6075 涌动沙丘
+uplift.6080 发现了较高级种族
+uplift.6081 提升成功
+uplift.6090 在星球的伤痕中
+uplift.6091 提升成功
+uplift.7000 循序而进
+uplift.7010 艰难的开始
+uplift.7199 
+uplift.7200 由心而生
+uplift.7205 拒服兵役
+uplift.7210 陌生的危险
+uplift.7215 宗族破碎
+uplift.7500 节外生枝
+uplift.7510 活体实验
+uplift.7520 坐立不安
+uplift.7525 丢失和遗忘
+
+
+事件/utopia megastructure events
+utopia.1 向[ringworld_builder.GetName]提出要求
+utopia.2 从[From.From.GetName]处发来的请求
+utopia.20 
+utopia.2000 环世界建设
+utopia.2001 
+utopia.2002 环世界项目
+utopia.2003 环世界框架完成
+utopia.2004 环世界完成
+utopia.2005 [From.GetSpeciesName]环世界
+utopia.2006 
+utopia.21 可喜的状况
+utopia.22 矿藏
+utopia.23 环世界宠物
+utopia.25 令人震惊的发现
+utopia.26 令人震惊的发现
+utopia.27 工人失踪
+utopia.28 工人失踪
+utopia.29 
+utopia.3 要求已接受。
+utopia.30 独眼漫步者
+utopia.31 信号传输接入
+utopia.32 信号传输接入
+utopia.33 失明的漫步者
+utopia.34 失明的漫步者,信号传输接入
+utopia.35 失明的漫步者
+utopia.36 失明的漫步者
+utopia.37 失明的漫步者
+utopia.38 失明的漫步者
+utopia.39 信号传输接入
+utopia.4 要求被拒绝
+utopia.40 失明的漫步者
+utopia.4000 戴森球建设
+utopia.4001 
+utopia.4002 外星巨型建筑。
+utopia.4003 戴森球框架
+utopia.4004 戴森球嵌板已安装
+utopia.4005 [From.From.GetName]戴森球完成
+utopia.4010 外星巨型建筑完成
+utopia.4100 哨兵阵列建造。
+utopia.4101 
+utopia.4102 外星巨型建筑。
+utopia.4103 哨兵阵列轮轴已组装
+utopia.4104 哨兵阵列完成
+utopia.4110 外星巨型建筑完成
+utopia.5 任务完成
+utopia.50 
+utopia.51 青春之泉
+utopia.54 疑云弥漫
+utopia.55 [ointment_name.GetName]精华
+utopia.56 青春之泉
+utopia.57 财富之泉
+utopia.58 无物为精华
+utopia.59 神经库
+utopia.6 环世界要求：结论
+utopia.60 神经库
+utopia.62 [abducted_leader.GetName]
+utopia.63 [abducted_leader.GetName]
+utopia.64 神经库
+utopia.80 科学枢纽建设
+utopia.81 
+utopia.82 外星巨型建筑
+utopia.83 科学枢纽中心
+utopia.84 科学枢纽完成
+utopia.85 科学枢纽研发辅翼
+utopia.86 外星巨型建筑完成
+utopia.87 
+
+
+事件/utopia on action events
+
+
+utopia.180 
+utopia.200 虚境中新的存在
+utopia.203 觉醒
+utopia.204 鲁莽的觉醒
+utopia.205 未曾预料的觉醒
+utopia.2500 血肉皮囊
+utopia.2501 义体革命
+utopia.2505 [From.Capital.GetName]拥抱义体
+utopia.2510 
+utopia.2511 
+utopia.2550 合成人进化
+utopia.2551 合成人时代
+utopia.2555 合成人进化
+utopia.2556 信号传输接入
+utopia.2557 
+utopia.2558 信号传输接入
+utopia.2560 
+utopia.2561 
+utopia.2600 心胜于物
+utopia.2601 
+utopia.2602 [From.GetSpeciesNamePlural]展示灵能潜能
+utopia.2650 大觉醒
+utopia.2651 
+utopia.2653 
+utopia.2655 虚境
+utopia.2656 招魂会
+utopia.2700 进化设计
+utopia.2703 掌控进化
+utopia.6000 
+utopia.90 
+utopia.91 
+
+
+事件/utopia shroud events
+utopia.3000 虚境
+utopia.3010 虚境
+utopia.3020 虚境
+utopia.3021 虚境
+utopia.3022 虚境
+utopia.3023 虚境
+utopia.3024 虚境侵军
+utopia.3025 
+utopia.3026 虚境化身被驱散
+utopia.3030 被赐予恩赐
+utopia.3031 被赐予恩赐
+utopia.3032 被赐予恩赐
+utopia.3033 被赐予恩赐
+utopia.3034 被赐予恩赐
+utopia.3035 被赐予恩赐
+utopia.3036 被赐予恩赐
+utopia.3037 被赐予恩赐
+utopia.3038 被赐予恩赐
+utopia.3039 被赐予恩赐
+utopia.3040 被赐予恩赐
+utopia.3041 被赐予恩赐
+utopia.3042 被赐予恩赐
+utopia.3043 被赐予恩赐
+utopia.3044 被赐予恩赐
+utopia.3045 虚境
+utopia.3050 被赐予诅咒
+utopia.3051 被赐予诅咒
+utopia.3052 被赐予诅咒
+utopia.3053 被赐予诅咒
+utopia.3054 被赐予诅咒
+utopia.3055 被赐予诅咒
+utopia.3056 被赐予诅咒
+utopia.3057 被赐予诅咒
+utopia.3058 被赐予诅咒
+utopia.3059 被赐予诅咒
+utopia.3100 虚境
+utopia.3110 虚境
+utopia.3120 虚境
+utopia.3130 虚境
+utopia.3140 虚境
+utopia.3150 虚境
+utopia.3151 虚境
+utopia.3152 虚境
+utopia.3153 信号传输接入
+utopia.3160 虚境
+utopia.3161 灵能跃迁引擎
+utopia.3162 被赐予诅咒
+utopia.3170 虚境
+utopia.3171 灵能护盾
+utopia.3172 虚境
+utopia.3180 虚境
+utopia.3181 预知界面
+utopia.3182 虚境
+utopia.3190 虚境
+utopia.3191 虚境
+utopia.3192 虚境
+utopia.3193 虚境
+utopia.3200 虚境
+utopia.3300 虚境
+utopia.3301 虚境
+utopia.3302 虚境
+utopia.3303 
+utopia.3304 虚境
+utopia.3305 虚境
+utopia.3306 虚境
+utopia.3307 虚境
+utopia.3308 虚境
+utopia.3310 达成协议
+utopia.3320 轮回之终末：清算
+utopia.3321 轮回之终末：清算
+utopia.3322 
+utopia.3323 
+utopia.3324 轮回之终末：虚境之下
+utopia.3330 
+utopia.3331 虚空之低语：应对
+utopia.3332 虚空之低语：自杀
+utopia.3333 虚空之低语：疯狂
+utopia.3334 虚空之低语：精神错乱
+utopia.3335 世界之喰煞：略饿
+utopia.3336 世界之喰煞：饥饿
+utopia.3337 世界之喰煞：极饿
+utopia.3338 渴求之器具：反对派
+utopia.3339 渴求之器具：叛逆
+utopia.3340 渴求之器具：腐化
+utopia.3341 生命之织缕：变异
+
+
+
+
+事件/war in heaven events
+war_in_heaven.1 好的。
+war_in_heaven.10 好的。
+war_in_heaven.11 先祖帝国战败
+war_in_heaven.12 好的。
+war_in_heaven.13 不结盟组织
+war_in_heaven.14 war_in_heaven.14.name
+war_in_heaven.15 成员国加入申请
+war_in_heaven.16 与复兴者的战争
+war_in_heaven.17 好的。
+war_in_heaven.18 复兴者的陨落
+war_in_heaven.19 不结盟组织
+war_in_heaven.2 上古宿敌
+war_in_heaven.20 成员国接受了申请
+war_in_heaven.21 成员国拒绝了申请
+war_in_heaven.22 不结盟组织
+war_in_heaven.3 好的。
+war_in_heaven.4 天堂之战
+war_in_heaven.5 天堂之战的终章
+war_in_heaven.6 天堂之战 - 胜利
+war_in_heaven.7 天堂之战 - 胜利
+war_in_heaven.8 天堂之战 - 战败
+war_in_heaven.9 天堂之战 - 战败
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,1101 @@
+effect组合命令
+effect命令可以跟一些命令或者预置脚本组合成一组控制台命令，如：
+
+与add_modifier（为所选星球添加修正）、remove_modifier（为所选星球移除修正）等控制台命令组合（参见文末附录）
+effect = { reroll_deposits = yes }可以为所选星球重新生成矿藏
+effect = { clear_blockers = yes }可以清理所选星球的障碍
+也可以用更复杂的组合，例如effect = { begin_event_chain = { event_chain = "baol_chain"} }可以开启巴奥事件链（但没后续效果）
+所有的组合可以参见 Stellaris\common\scripted_effects\ 目录下的预置脚本文档。如果开了MOD，那么MOD里的预置脚本同样可以。
+
+更多组合详见控制台/常见组合
+
+指令
+注：如果增加的资源数超过1000000，可能增加的资源会归0。
+
+
+相关附加代码（点击下列链接即可跳转到对应表格位置）
+
+1.指令列表
+2.星球类型
+3.资源列表
+4.飞升天赋
+5.领袖特质
+6.科技列表
+7.事件列表
+在控制台中可以输入的指令：
+
+2.0版本更新部分指令失效(已修正部分指令)
+
+作弊类型	代码	备注
+信息	debugtooltip	开关命令查看id、效果、flag等隐藏信息，可以用于验证MOD效果的工具（无法查看种群id,要查看种群id还请改派）
+帮助	help <作弊指令>	查看该作弊指令的使用方法。不加具体指令显示所有作弊指令列表。
+指令列表	TAB键	按下TAB可查看常用作弊指令列表。
+事件	event <事件id> <触发事件>	触发编号为<id>的事件，注意，ship_event需要选择舰船来触发，planet_event需要选择星球来触发，country_event一般不需要选取即可触发。部分被触发事件可能由于没有对象和不满足条件等原因触发出现问题
+舰船	add_ship <舰船设计名称>	在你选定的物品旁增加一艘舰船。舰船设计可以是预置的舰船设计方案（global_ship_design）
+添加战略资源	planet_resource <战略资源代码> <数值>	为指定的行星添加 战略资源（活金属,育兰晶体，中子矿石之类），不加具体数值或者具体资源代码会无法使用。
+能源	energy <数值>	增加<数值>数量的能量币能量币。只输入energy或cash，不加具体数值，会增加5000能量币。
+cash <数值>
+矿物	minerals <数值>	增加<数值>数量的矿物矿物。只输入minerals不加具体数值，会增加5000矿物。
+食物	food <数值>	增加<数值>数量的食物食物。只输入food不加具体数值，会增加5000食物。
+合金	alloys <数值>	增加<数值>数量的合金合金。只输入alloys不加具体数值，会增加5000合金。
+影响力	influence <数值>	增加<数值>数量的影响力影响力。只输入influence，不加具体数值，会增加5000影响力（不开instant_build时会超过上限，所以实际只加到上限值）。
+凝聚力	unity <数值>	增加<数值>数量的 凝聚力凝聚力。只输入unity，不加具体数值，会增加500凝聚力。
+所有资源	rr	只输入rr,增加所有资源至上限。经实测，未拥有开采科技的稀有战略资源（天然气，沼气等）不会有任何增加。
+工业科研点数	engineering <数值>	增加<数值>数量的工程学研究工程学研究。只输入engineering，不加具体数值，会增加5000工程学点数。
+社会研究点数	society <数值>	增加<数值>数量的社会学研究社会学研究。只输入society，不加具体数值，会增加5000社会学点数。
+物理学点数	physics <数值>	增加<数值>数量的物理学研究物理学研究。只输入physics，不加具体数值，会增加5000物理学点数。
+科技全开(1.0.X-2.0.1)	research_technologies	瞬间研究所有科技。数值1为1时包括事件和飞升科技，0不包括，数值2为循环科技等级。
+可以省去数值2，也可以两个均省去。两数值默认值均为0
+注：
+
+research_technologies 1 X 会让游戏卡顿一段时间，数值小卡顿不明显，数值越大卡顿越久，数值过大(与电脑性能有关)可直接卡死
+循环层数过高，科研需求值可能溢出而变为负数，此时显示需求值为0，可以瞬间(次日)完成
+科技全开(2.0.2-未来版本）	research_all_technologies <数值1><数值2>	瞬间研究所有科技。数值1为事件武器和天灾武器和飞升武器 1为研究 0为不研究，数值2为循环科技等级
+注：
+
+指令格式：research_all_technologires X X为循环科技等级
+research_all_technologies 1 X 会让游戏卡顿一段时间，数值小卡顿不明显，数值越大卡顿越久，数值过大(与电脑性能有关)可直接卡死(v2.0.2略有好转，但数值过大依然会卡死，2.3版本后已修复此bug，但仍然有机会卡死，具体表现在是否有异常研究、或者类似弹窗事件在同时完成。建议用此指令前存档，读档后在暂停状态下输入此条指令，循环层数经测试，500层比较舒服-_d)
+循环层数过高，科研需求值可能溢出而变为负数，此时显示需求值为0，可以瞬间(次日)完成
+2.0.3 2.0.4 2.0.5无法通过本指令解锁特殊科技，如事件武器（包括天灾武器、巨像武器等），但可以使用 research_technology XX (XX为科技名)来解锁指定科技
+2.1以后如果拥有遥远的群星DLC 那么 research_all_technologies 1 X 会导致L星门线索收集完成也无法打开L星门 解决方法百度贴吧有或者在圈了L星门后再进行科技
+瞬间研究某项科技(2.0.2-未来版本）	research_technology <科技代码>	瞬间研究指定科技。
+瞬间完成当前科技	finish_research	将当前所有科研槽的研发项目与特殊项目(如果存在)的进度更改为100%，于第二天结束研究
+瞬间完成特殊项目	finish_special_projects	瞬间完成状态日志中所有特殊项目，事件链项目容易产生bug。
+瞬间建造	instant_build	开关命令瞬间建造（包括升级太空港、添加太空港插槽模块），且建造费用为0，注意陆军、建造太空港需要第二天完成。
+如果开启瞬间建造之前已经有队列，则需要第二天才能完成。瞬间建造不包括机械人口。警告：这也适用于敌人AI。
+瞬间调查	survey	瞬间调查所有星球。危机警告:会导致先驱者任务线卡住
+瞬间殖民	instant_colony	殖民船瞬间殖民(宜居度够即可)
+舰队瞬间移动	tweakergui instant_move	开关命令 创建一个开关舰队瞬间移动的窗口
+舰船无敌	invincible	开关命令我方舰队/空间站的闪避率提高到100%，因此不受伤害。
+国家灭亡	kill_country <国家代码>	使目标ID的国家瞬间灭亡
+领导人死亡	kill_leader 领导人ID	使目标ID的领导人死亡
+POP死亡	kill_pop pop ID	使目标ID的POP死亡
+统治者死亡	kill_ruler ID	使目标ID的统治者死亡
+新一轮选举	election	开始新一轮选举
+GUI隐藏	nogui	隐藏GUI。
+观察全宇宙	observe	观察全宇宙和全宇宙的生物(观海模式)，但是无法造船，有一定bug。
+修改星球类型	planet_class <星球类型代码>	修改选定星球的星球类型
+未选定时修改所有行星和天然卫星(包括轨道栖息地和已建成的环世界，不包括恒星、小行星)。
+planetclass <星球类型代码>
+修改星球大小	planet_size <数值>	修改选定星球的大小，如果是可居住星球(包括轨道居住地)，也会改变地块数量。
+planetsize <数值>
+崩溃	crash	使游戏崩溃
+投降	surrender <x（投降者编号）> <y（战胜者编号）>	使x在对y的战斗中投降。
+科技权重	techweights <phy/soc/eng>	显示当前的物理／社会／工程科技的权重，权重越大，下一个出现的概率越高。
+更换科技列表	techupdate	重新生成可用科技的列表。
+伤害	damage <数值>	对选定的舰队造成<数值>点伤害。（需要注意的是，这个伤害的来源将被认为是来自于空玩家）
+同意条约	yesmen或debug_yesmen	开关命令AI总是同意玩家提出的条约（包括共同防御、组建联邦、停战协议、交易等）
+拒绝条约	nomen或debug_nomen	开关命令AI总是拒绝玩家提出的条约
+更换国家	play <数值>	玩id为<数值>的国家，包括失落帝国、原始文明、太空城邦、野怪、天灾等势力
+tag <数值>
+控制星球	control <数值>	控制（相当于陆军占领后的状态）id为<数值>的星球，没标明数值时控制选定星球或恒星基地。太空港归控制者。若双方未交战则自动归还。
+选定即控制	control paint	开关命令开启后，选定的星球均会被玩家控制。
+获得星球的所有权	own <数值>	占有id为<数值>的星球，若为未殖民星球则会产生一个主体种族人口。没标明数值时占有选定星球或恒星基地。
+选定即拥有	own paint	开关命令开启后，选定的星球均会被玩家占有。
+星球类型统计	planets	显示各种类型星球的数目的统计值及百分比。
+资源点统计	deposits	显示各种资源点（deposit）的数目的统计值级百分比（因为会统计空白，所以百分比意义不大）。
+增加异常点	add_anomaly	在星球上增加一个异常点，异常点列表见project:查询表/异常点。
+自由政府状态	free_government	切换政府为自由政府。
+填满星球人口	populate	将选定星球填满人口(注意：该指令对机械帝国和非机械帝国均有效。但在新的2.2版本及以上对于非机械帝国，该指令对目标行星仅能生效一次，特定情况下使目标行星人口正好超出住房上限，建造增加住房的区划和建筑，使可用住房为正值时可再次使用该指令。对于机械帝国，populate指令仍可生效且增加的pop数偶尔多于非机械帝国殖民相同的行星后使用该指令)。如需为目标行星添加非装配的"自然增长人口(非机器pop)"需使用“grow_pops+[自然增长进度1的数量(以下简称数量)]”指令进行添加，装配的"非自然增长人口(机器pop)"可用“build_pops+[数量]"指令增加。
+在选定的星球上添加资源	effect add_deposit =	在选定的星球上（最好是无人的）添加各种战略资源，最多10个单位。
+战争	war <进攻方国家代码> <防御方国家代码> <进攻方战争目标>	使一个国家向另一个国家宣战。
+战争目标：[wg_colossus]全面战争 [wg_humiliation]羞辱 [wg_independence]独立 [wg_conquest]征服 [需要补充更多战争目标]
+
+解锁传统和飞升槽	activate_all_traditions	解锁所有传统并解锁和传统数量一样的飞升槽，如加载更多飞升槽MOD只需多收入几次
+解锁传统后传统呈灰色未解锁状态，保存重新加载即可
+
+增加灾飞威慑度	menace <数值>	增加天灾飞升的数值，无法一次性增至满级，需要研究对应科技继续增加即可
+注：开关命令在奇数次输入时开启对应的效果，偶数次输入时关闭对应的效果。
+官方wiki 控制台指令
+
+指令列表
+文中带有 <> 符号代表着需要你执行某些动作让指令正确运行。比如 <Select Planet> 意味着先在游戏中选中一个星球后再输入并执行控制台指令。如果你需要知道某些事物的 ID 你可以在控制台中使用以下代码tweakergui debugtooltip(pre 1.1) 或者 debugtooltip(1.1)。特殊的 ID 将会在特殊信息栏内显示。
+指令
+Command	说明
+Description	指令参数
+Parameters	示例
+Example
+help	显示一个指令的帮助文档。	[指令名]
+[command name]	help human_ai
+helphelp	才不会给你帮助呢！哼！	看什么看！？	别..别添啊！
+3dstats	开关命令3D统计信息。显示FPS和渲染时间	无	3dstats
+achievement_status	非开关命令打印成就状态。到底能干什么？	无	achievement_status
+activate_ascension_perk
+<天赋名>	激活飞升天赋，把 ap 放在天赋名前。	无	activate_ascension_perk ap_mind_over_matter
+activate_tradition <名字>	激活传统 （需要使用 debugtooltip 获取名字）。	无	activate_tradition tr_prosperity_sct
+add_anomaly	为星球添加异常点(类)。	[异常点类名]
+[anomaly category name]	<Select Planet> add_anomaly life_asteroid_category
+add_ethic_pop	给人口添加思潮。	[Pop ID] [Ethic Key]	add_ethic_pop purged ethic_fanatic_collectivist
+add_opinion	增加 '甲' 对 '乙' 的好感度(可以使用负数减少好感度)。	[甲][乙][数额]
+[target country id] [target country id] [amount]	add_opinion 01 00 500
+add_ship	创建一艘指定型号的舰船。	[design name]	add_ship Avatar
+create_navy	创建一个舰队，使用你最新的设计	create_navy [战力]1表示100%	create_navy 0.8
+add_spynetwork_value	增加间谍网络价值。在[目标]上增加[数量]渗透进度	[target] [amount] 
+[目标][数量]
+
+add_spynetwork_value 1 1000
+add_trait_leader	给领袖添加特性。	[领袖ID] [特性名或索引]
+[leader id] [trait key or index]	add_trait_leader 1 leader_trait_gale_speed
+add_trait_species	给物种添加特性。	[物种ID] [特性名]
+[species id] [trait key]	add_trait_species 5 intelligent
+ai	开关命令开关AI。	无	ai
+alienfx	尝试使用Alien FX改变电脑的灯光。	无	TODO
+ambient_object	产生指定类型的环境对象。	[type]	ambient_object medium_debris_02_object
+attackallfleets	使所有舰队瞄准所有其他舰队。	无	TODO
+cash	添加 [数量] 能源币。默认为5000。	[数额]
+[amount]	cash 500
+colonize	复制一个给予的人口开始选中星球的殖民过程。	<select planet> [colonizer pop id]	<select planet> colonize 1
+communications	开关命令开关所有交易。	[目标国家ID]
+[target country id]	TODO
+contact	开关命令开关所有提案。	无	contact
+control	用于占领行星。如果与[planet id]的拥有者没有战争，控制权会立即恢复。	[planet id]	control 50
+copy_pop	使用 ID 复制一个人口至选中的星球。	[pop id]	copy_pop 1247
+crash	使游戏崩溃。	无	crash
+create_megastructure	创建一个特定的巨型建筑。	[megastructure id]	create_megastructure think_tank_1
+damage	选择舰船造成 x 伤害。	<选中舰船>
+<Select Ship>	damage 50
+debug_nomen	所有AI控制的国家永远不同意你的交易和提案。	无	debug_nomen
+debug_yesmen	所有AI控制的国家永远同意你的交易和提案。	无	debug_yesmen
+democratic_election	开始民主统治者选举。	无	TODO
+effect shift_ethic =	改变国家思潮	[Ethic Key]	格式塔意识格式塔意识：effect shift_ethic = ethic_gestalt_consciousness
+极端军国主义极端军国主义：effect shift_ethic = ethic_fanatic_militarist
+极端排外主义极端排外主义：effect shift_ethic = ethic_fanatic_xenophobe
+极端平等主义极端平等主义：effect shift_ethic = ethic_fanatic_egalitarian
+极端唯物主义极端唯物主义：effect shift_ethic = ethic_fanatic_materialist
+极端和平主义极端和平主义：effect shift_ethic = ethic_fanatic_pacifist
+极端亲外主义极端亲外主义：effect shift_ethic = ethic_fanatic_xenophile
+极端威权主义极端威权主义：effect shift_ethic = ethic_fanatic_authoritarian
+极端唯心主义极端唯心主义：effect shift_ethic = ethic_fanatic_spiritualist
+(不想要“极端”的话，请去掉“fanatic_”)。
+election	开始一个统治者的选举。	无	election
+engineering	添加工程技术点。 默认为5000。	[数额]
+[amount]	engineering 500
+error	在日志中显示错误。	无	error
+event	执行一个事件。	[事件ID] [目标ID]
+[event id] [target id]	event story.5
+event crisis.
+10/100/1000/2000	执行末日危机事件：
+“10” 开始 Prethoryn Swarm，
+“100” 群虫女王 子事件，
+“1000” 次元入侵者
+“2000” AI 暴乱。	[event id] crisis.[target id]	event crisis.1000
+eventscopes	显示当前事件的范围树。	无	<Event open> eventscopes
+eventstats	显示事件统计信息。	无	eventstats
+fast_forward	快进至设置的天数。
+（快进时按下ESC可终止快进）
+
+该代码是让玩家挂机到指定天数，快进期间其它帝国以及相关事件依旧在进行。
+
+唯一不同的就是玩家帝国一直在原地挂机。
+
+[amount of days]
+（无效）[observer]
+
+fast_forward 100
+federation_add_experience	增加联盟等级经验，默认1000	[数额]
+[amount]	federation_add_experience 1000
+federation_add_cohesion	增加联盟团结度，默认200	[数额]
+[amount]	federation_add_cohesion 200
+federation_add_cohesion_speed	增加联盟每月团结度，默认10	[数额]
+[amount]	federation_add_cohesion_speed 10
+federation_examine_leader	立即选举联盟主席	无	federation_examine_leader
+finish_research	完成所有当前的研究。	无	finish_research
+finish_special_projects	完成所有特殊项目。	无	finish_special_projects
+force_integrate	迫使目标国家合并至玩家国家。	force_integrate [国家id]	force_integrate 5
+free_government	开关命令允许玩家在没有时间限制的情况下改革政府(每次20年的限制)	无	free_government
+free_policies	开关命令允许玩家更改政策而不受限制，包括以前禁用的策略。	无	free_policies
+ftl	开关命令开关无限制FTL。	无	ftl
+fullscreen	开关命令切换至全屏。	无	fullscreen
+game_over	执行指定的游戏结束类型。	[胜利类型索引]
+[victory type index]	game_over 0
+goto	移动视角至[x] [y]	[x] [y]	goto 10 10
+grow_pops	添加一个成长中的人口至选中的星球。在指令后添加数字加快成长。数值对应人口	无	<Select Planet> grow_pops 100
+hdr	开关命令切换 HDR。	无	hdr
+hsv	将RGB转换为HSV。	无	hsv 25 25 25
+human_ai	开关命令将玩家帝国托管给电脑。
+玩家依旧可以操作帝国，但是无法抉择大部分事件以及外交提案。
+
+无	human_ai
+influence	添加 [数量] 的影响力。默认为5000.	[数额]
+[amount]	influence 500
+info	开关命令开关Debug信息。	无	info
+instant_build	开关命令会立即完成地表建筑物，升级，舰船，站点的建造。警告：这同样适用于敌方AI。	无	instant_build
+invincible	玩家的舰队将不会受到伤害。	无	invincible
+kill_country	玩家当前主控的帝国直接灭亡。	无	kill_country
+kill_leader	杀死指定的领袖。	[leader id]	kill_leader ?
+kill_pop	杀死当前的人口	[pop id]	kill_pop 745
+kill_ruler	杀死当前的统治者。	无	Kills current ruler.
+lockcamera	锁定视角到当前的位置。	[debug_lockcamera, lockcamera]	lockcamera
+map_names	重新生成地图名称。	无	map_names
+mature_galaxy	危险代码
+模拟一个100年后的银河系。
+
+该外码会强制将年份定在开局+100年的时间点上，即便当时已经过了100年。会引发游戏逻辑错误导致崩溃。
+
+无	mature_galaxy
+message	在顶栏显示所有类型的信息。	无	message
+minerals	添加矿物。默认为5000。	[数额]
+[amount]	minerals 500
+nogui	开关命令切换GUI。	无	nogui
+nomouse	开关命令切换鼠标滚轮	无	nomouse
+observe	开启观海模式	无	observe
+overnight	把游戏设置成通宵模式。	[ticks per turn]	overnight 2
+own	获取指定星球的所有权和控制权。	[planet id] [paint]	own 5
+path	在星系之间寻找路径。	[from index] [to index]	path 0 1
+physics	添加物理技术点。默认为5000。	[数额]
+[amount]	physics 500
+planet_class	改变选中的星球类型至指定的类型。	[planet class name]	<Select Planet> planet_class pc_tropical
+planet_happiness	增加选中星球的幸福度，具体来说，向选中星球添加了一个增加幸福度的buff，但是，不会超过因为其他因素影响的最大幸福度。	[数额]
+[amount]	<Select Planet> planet_happiness 100
+planet_resource	添加资源到资源块，每块地的资源数量是随机的，总和就是输入的数额。	[资源类型] [数额]
+[resource] [amount]	<Select Planet> planet_resource minerals 50
+新版本2.2.X废弃
+planet_size	调整星球和地表块的大小，最大的地表块尺寸为25块，但是星球的大小可以在25之后继续增加。警告：极端大小能、也将会破坏游戏。	[planet size]	<Select Planet> planet_size 25
+planets	列出每一种类型的行星和每个行星的数量。	无	planets
+play	允许你使用两位数的ID切换游玩的帝国。00是玩家的帝国，AI帝国是01及以上。	[tag] [country index]	play 01
+pop_happiness	与 tweakergui 一起使用. 使人口幸福度达到特定的等级。	无	tweakergui pop_happiness
+pp	给予玩家矿物	[数额]
+[amount]	pp 1000
+random_ruler	用一个新的随机统治者替换当前统治者。	无	random_rulerrandom_ruler
+recalc_fleet_presence	重新计算舰队驻留缓存，如果载入旧存档则很有用。	无	recalc_fleet_presence
+reload	重新加载 assets	[file name]	reload main.gui
+reload_galaxy	重新加载系统初始化脚本以及重新生成星系。	无	TODO
+reload_graphical_map	重新加载图形地图。	无	reload_graphical_map
+reloadfx	重新加载着色器。	[arguments: map/mapname/postfx or *.fx filename]	reloadfx arrow
+remove_ethic_pop	移除一个选中的人口的一个思潮。	[pop id] [ethic key]	remove_ethic_pop ? ethic_xenophobe
+remove_notification	移除所有属于玩家的所有通知。	[数额]
+[amount]	remove_notification 1
+remove_trait_leader	移除领袖特质。	[leader id] [trait key or index]	remove_trait_leader 17 trait_leader_meticulous
+remove_trait_species	移除物种特质。	[species id] [trait key]	remove_trait_species 5 intelligent
+rendertype	显示当前的渲染类型。	无	rendertype
+research_technologies	立即研究所有非循环科技的科技。	布尔值
+Boolean	(如果参数为1)立即研究所有科技，包括生物和末日危机科技。
+resource	添加 [数量] 于 [资源]。 默认为5000。	[数额]
+[amount]	resource minerals 500
+resources	显示星球资源。	无	resources
+reverse_diplo	从目标派遣一个外交指挥官到玩家。	[diplo] [id]	reverse_diplo action_invite_to_alliance 01
+skills	为每个玩家控制的领袖添加一定数额的技能等级。	[数额]
+[amount]	skills 5 所有领袖等级+5
+society	添加社会技术点。默认为5000。	[数额]
+[amount]	society 500
+surrender	投降并同意所有要求。只使用 [country id] 来列出该国家正在进行的所有战争的编号。	[country id] [war id]	List all wars for country with country_id = 5 along with their war_ids: surrender 5. Force country with country_id = 5 to surrender in war with war_id = 19975: surrender 5 19975.
+survey	探索所有星球。	无	survey
+observe	在地图上展示一切，但你不能游玩。使用play x指令，恢复游玩。	无	observe
+play x	在观察命令[observe]之后继续游玩。	无	play x
+techupdate	重新生成玩家的科技树。	无	techupdate
+terraforming_resources	设定星球上特殊资源的数量。	[数额]
+[amount]	<Select Planet> terraforming_resources 10
+unlock_edicts	提供颁布任何法令的能力，以及不能用于玩家使用的法令。	无	unlock_edicts
+unity	添加凝聚力。	[数额]
+[amount]	unity 500
+volume	修改音乐音量	[volume delta]	volume 20
+（代码已确认无效）war_on_player	迫使目标国家向玩家宣战。	[country id]	war_on_player 05
+warscore	为帝国所有激活的战争添加给予的战争分数。	[数额]
+[amount]	warscore 75
+effect add_deposit =	为选定星球添加对应资源	[Planetary Deposits]	<Select Planet> effect add_deposit = d_exotic_gases_1
+注：开关命令在奇数次输入时开启对应的效果，偶数次输入时关闭对应的效果。
+附录
+由于篇幅限制，部分列表移至相关子页面，点击链接即可查看详细列表
+
+
+飞升列表
+访问专题
+这些可以用于 activate_ascension_perk 命令。与其他命令的用法还未确认。
+飞升天赋列表
+
+名称	代码	代号
+天机工程天机工程天机工程	activate_ascension_perk ap_enigmatic_engineering	0
+强取豪夺强取豪夺强取豪夺	activate_ascension_perk ap_nihilistic_acquisition	1
+巨像计划巨像计划巨像计划	activate_ascension_perk ap_colossus	2
+设计进化设计进化设计进化	activate_ascension_perk ap_engineered_evolution	3
+掌控进化掌控进化掌控进化	activate_ascension_perk ap_evolutionary_mastery	4
+血肉皮囊血肉皮囊血肉皮囊	activate_ascension_perk ap_the_flesh_is_weak	5
+合成进化合成进化合成进化	activate_ascension_perk ap_synthetic_evolution	6
+心胜于物心胜于物心胜于物	activate_ascension_perk ap_mind_over_matter	7
+超凡入圣超凡入圣超凡入圣	activate_ascension_perk ap_transcendence	8
+世界塑形师世界塑形师世界塑形师	activate_ascension_perk ap_world_shaper	9
+星河力量投射星河力量投射星河力量投射	activate_ascension_perk ap_galactic_force_projection	10
+星河卫士星河卫士星河卫士	activate_ascension_perk ap_defender_of_the_galaxy	11
+星际主权星际主权星际主权	activate_ascension_perk ap_interstellar_dominion	12
+掌握太虚掌握太虚掌握太虚	activate_ascension_perk ap_grasp_the_void	13
+戒心永存戒心永存戒心永存	activate_ascension_perk ap_eternal_vigilance	14
+逐鹿星河逐鹿星河逐鹿星河	activate_ascension_perk ap_galactic_contender	15
+科技至上科技至上科技至上	activate_ascension_perk ap_technological_ascendancy	16
+万众一心万众一心万众一心	activate_ascension_perk ap_one_vision	17
+祝圣世界祝圣世界祝圣世界	activate_ascension_perk ap_consecrated_worlds	18
+掌控自然掌控自然掌控自然	activate_ascension_perk ap_mastery_of_nature	19
+帝都特权帝都特权帝都特权	activate_ascension_perk ap_imperial_prerogative	20
+高效行政高效行政高效行政	activate_ascension_perk ap_executive_vigor	21
+卓越学术卓越学术卓越学术	activate_ascension_perk ap_transcendent_learning	22
+共同命运共同命运共同命运	activate_ascension_perk ap_shared_destiny	23
+太空子民太空子民太空子民	activate_ascension_perk ap_voidborn	24
+建筑大师建筑大师建筑大师	activate_ascension_perk ap_master_builders	25
+星河奇迹星河奇迹星河奇迹	activate_ascension_perk ap_galactic_wonders_utopia	26
+星河奇迹星河奇迹星河奇迹	activate_ascension_perk ap_galactic_wonders_megacorp	27
+星河奇迹星河奇迹星河奇迹	activate_ascension_perk ap_galactic_wonders_utopia_and_megacorp	28
+合成时代合成时代合成时代	activate_ascension_perk ap_synthetic_age	29
+机械世界机械世界机械世界	activate_ascension_perk ap_machine_worlds	30
+蜂巢星球蜂巢星球蜂巢星球	activate_ascension_perk ap_hive_worlds	31
+理想城计划理想城计划理想城计划	activate_ascension_perk ap_arcology_project	32
+跨种族兼容性跨种族兼容性跨种族兼容性	activate_ascension_perk ap_xeno_compatibility	33
+寰宇贸易寰宇贸易寰宇贸易	activate_ascension_perk ap_universal_transactions	34
+注意！三个星河奇迹只有最后一个和下面列表中的是可以用的！
+
+飞升名字	代码
+水之心	activate_ascension_perk ap_hydrocentric（非水生种族可用）
+化身天灾	activate_ascension_perk ap_become_the_crisis
+星河奇迹	activate_ascension_perk ap_galactic_wonders_utopia_and_megacorp
+星球类型列表
+访问专题
+这些可以用于 planet_class 命令。与其他命令的用法还未确认。
+星球类型列表
+
+名称	代码	代号
+沙漠星球沙漠星球	planet_class pc_desert	0
+干旱星球干旱星球	planet_class pc_arid	1
+草原星球草原星球	planet_class pc_savannah	2
+热带星球热带星球	planet_class pc_tropical	3
+陆地星球陆地星球	planet_class pc_continental	4
+海洋星球海洋星球	planet_class pc_ocean	5
+苔原星球苔原星球	planet_class pc_tundra	6
+极地星球极地星球	planet_class pc_arctic	7
+高山星球高山星球	planet_class pc_alpine	8
+气态巨行星气态巨行星	planet_class pc_gas_giant	9
+小行星小行星	planet_class pc_asteroid	10
+冰晶小行星冰晶小行星	planet_class pc_ice_asteroid	11
+晶态小行星晶态小行星	planet_class pc_rare_crystal_asteroid	12
+熔融星球熔融星球	planet_class pc_molten	13
+荒芜星球荒芜星球	planet_class pc_barren	14
+荒芜星球荒芜星球	planet_class pc_barren_cold	15
+剧毒星球剧毒星球	planet_class pc_toxic	16
+冰封星球冰封星球	planet_class pc_frozen	17
+死寂星球死寂星球	planet_class pc_nuked	18
+蜂巢星球蜂巢星球	planet_class pc_hive	19
+机械星球机械星球	planet_class pc_machine	20
+屏障星球屏障星球	planet_class pc_shielded	21
+人工智能星球人工智能星球	planet_class pc_ai	22
+孵化星球孵化星球	planet_class pc_infested	23
+盖亚星球盖亚星球	planet_class pc_gaia	24
+环形世界环形世界	planet_class pc_cybrex	25
+B型恒星B型恒星	planet_class pc_b_star	26
+A型恒星A型恒星	planet_class pc_a_star	27
+F型恒星F型恒星	planet_class pc_f_star	28
+G型恒星G型恒星	planet_class pc_g_star	29
+K型恒星K型恒星	planet_class pc_k_star	30
+M型恒星M型恒星	planet_class pc_m_star	31
+M型红巨星M型红巨星	planet_class pc_m_giant_star	32
+T型褐矮星T型褐矮星	planet_class pc_t_star	33
+黑洞黑洞	planet_class pc_black_hole	34
+中子星中子星	planet_class pc_neutron_star	35
+脉冲星脉冲星	planet_class pc_pulsar	36
+环形世界环形世界	planet_class pc_ringworld_habitable	37
+破损的环形世界破损的环形世界	planet_class pc_ringworld_habitable_damaged	38
+环形世界环形世界	planet_class pc_ringworld_tech	39
+破损的环形世界破损的环形世界	planet_class pc_ringworld_tech_damaged	40
+环形世界环形世界	planet_class pc_ringworld_seam	41
+破损的环形世界破损的环形世界	planet_class pc_ringworld_seam_damaged	42
+轨道居住站轨道居住站	planet_class pc_habitat	43
+虚境星球虚境星球	planet_class pc_shrouded	44
+残破星球残破星球	planet_class pc_broken	45
+粉碎星球粉碎星球	planet_class pc_shattered	46
+纳米星球纳米星球	planet_class pc_gray_goo	47
+破碎星球破碎星球	planet_class pc_egg_cracked	48
+晶态小行星晶态小行星	planet_class pc_crystal_asteroid	49
+被屏蔽的环形世界区段被屏蔽的环形世界区段	planet_class pc_ringworld_shielded	50
+被屏蔽的居住站被屏蔽的居住站	planet_class pc_habitat_shielded	51
+都市星球都市星球	planet_class pc_city	52
+遗落星球遗落星球	planet_class pc_relic	53
+资源列表
+访问专题
+这些可以用于 resource 命令。与其他命令的用法还未确认。
+资源列表
+
+名称	代码	代号
+时间时间	resource time	0
+能量币能量币	resource energy	1
+矿物矿物	resource minerals	2
+食物食物	resource food	3
+物理学研究物理学研究	resource physics_research	4
+社会学研究社会学研究	resource society_research	5
+工程学研究工程学研究	resource engineering_research	6
+影响力影响力	resource influence	7
+凝聚力凝聚力	resource unity	8
+合金合金	resource alloys	9
+消费品消费品	resource consumer_goods	10
+易爆微粒易爆微粒	resource volatile_motes	11
+异星天然气异星天然气	resource exotic_gases	12
+稀有水晶稀有水晶	resource rare_crystals	13
+活体金属活体金属	resource sr_living_metal	14
+泽珞泽珞	resource sr_zro	15
+暗物质暗物质	resource sr_dark_matter	16
+纳米机器人纳米机器人	resource nanites	17
+稀有文物稀有文物	resource minor_artifacts	18
+资源添加给非生命星球代码如下：
+一次性可以加1-10的（加在代码末尾，如effect add_deposit = d_energy_8，就可以给选定星球加8点能量币）此处往后数值用n代替
+能量币能量币 effect add_deposit=d_energy_n
+矿物矿物 effect add_deposit=d_minerals_n
+物理学研究物理学研究 effect add_deposit=d_physics_n
+社会学研究社会学研究 effect add_deposit=d_society_n
+工程学研究工程学研究 effect add_deposit=d_engineering_n
+一次性可以加1-5的
+合金合金 effect add_deposit=d_alloys_n
+易爆微粒易爆微粒 effect add_deposit=d_volatile_motes_n
+异星天然气异星天然气 effect add_deposit=d_exotic_gases_n
+稀有水晶稀有水晶 effect add_deposit=d_rare_crystals_n
+“”贸易价值 effect add_deposit=d_trade_value_n （时间流淌一个月后出现）
+泽珞泽珞 effect add_deposit=d_zro_deposit_n
+特殊的：
+暗物质暗物质 effect add_deposit=d_dark_matter_deposit_n （1-3）
+纳米机器人纳米机器人 effect add_deposit=d_nanites_deposit （没有参数n，输一遍+1，只能一遍遍输）
+活体金属活体金属 effect add_deposit=d_living_metal_deposit （也没有参数n，输一遍+1，只能一遍遍输）
+食物食物 effect add_deposit=d_food_3 （目前来看，食物仅能一次加3）
+其余无法添加或尚未找到添加方法
+注意，并不是什么行星都能添加某种资源的，你毕竟不可能给一个气体巨行星添加易爆微粒！
+领导人特性代码
+访问专题
+这些可以用于 add_trait_leader 命令与remove_trait_leader命令 。与其他命令的用法还未确认。
+通用特性
+通用特性列表
+
+名称	代码	代号
+开明开明	add_trait_leader @ leader_trait_adaptable	36
+顽固顽固	add_trait_leader @ leader_trait_stubborn	37
+活力四射活力四射	add_trait_leader @ leader_trait_eager	40
+没有前途没有前途	add_trait_leader @ leader_trait_arrested_development	41
+灵活编程灵活编程	add_trait_leader @ leader_trait_flexible_programming	122
+死板编程死板编程	add_trait_leader @ leader_trait_rigid_programming	123
+新上任新上任	add_trait_leader @ leader_trait_newboot	124
+元首特性
+元首特性列表
+
+名称	代码	代号
+护卫舰专精护卫舰专精	add_trait_leader @ trait_ruler_corvette_focus	60
+驱逐舰专精驱逐舰专精	add_trait_leader @ trait_ruler_destroyer_focus	61
+巡洋舰专精巡洋舰专精	add_trait_leader @ trait_ruler_cruiser_focus	62
+战列舰专精战列舰专精	add_trait_leader @ trait_ruler_battleship_focus	63
+征募者征募者	add_trait_leader @ trait_ruler_recruiter	64
+出身士卒出身士卒	add_trait_leader @ trait_ruler_from_the_ranks	65
+筑防者筑防者	add_trait_leader @ trait_ruler_fortifier	66
+深通后勤深通后勤	add_trait_leader @ trait_ruler_logistic_understanding	67
+军事先驱军事先驱	add_trait_leader @ trait_ruler_military_pioneer	68
+好战好战	add_trait_leader @ trait_ruler_warlike	69
+重视建筑重视建筑	add_trait_leader @ trait_ruler_architectural_sense	70
+开拓精神开拓精神	add_trait_leader @ trait_ruler_frontier_spirit	71
+星球整形师星球整形师	add_trait_leader @ trait_ruler_world_shaper	72
+星辰大海星辰大海	add_trait_leader @ trait_ruler_home_in_the_sky	73
+实业家实业家	add_trait_leader @ trait_ruler_industrialist	74
+伯乐之眼伯乐之眼	add_trait_leader @ trait_ruler_eye_for_talent	75
+关系深厚关系深厚	add_trait_leader @ trait_ruler_deep_connections	76
+魅力非凡魅力非凡	add_trait_leader @ trait_ruler_charismatic	77
+人民公仆人民公仆	add_trait_leader @ trait_ruler_champion_of_the_people	78
+扩张主义者扩张主义者	add_trait_leader @ trait_ruler_expansionist	79
+重视农耕重视农耕	add_trait_leader @ trait_ruler_fertility_preacher	80
+投资者投资者	add_trait_leader @ trait_ruler_investor	81
+太空矿工太空矿工	add_trait_leader @ trait_ruler_space_miner	82
+探险家探险家	add_trait_leader @ trait_ruler_explorer	83
+舰队组织者舰队组织者	add_trait_leader @ leader_trait_fleet_organizer	84
+改革家改革家	add_trait_leader @ leader_trait_reformer	85
+博学多识博学多识	add_trait_leader @ leader_trait_ruler_erudite	86
+义体人义体人	add_trait_leader @ leader_trait_ruler_cyborg	87
+合成人合成人	add_trait_leader @ leader_trait_ruler_synthetic	88
+灵媒灵媒	add_trait_leader @ leader_trait_ruler_psionic	89
+天选之人天选之人	add_trait_leader @ leader_trait_ruler_chosen	90
+蜂巢思维蜂巢思维	add_trait_leader @ leader_trait_ruler_hive_mind	91
+机械智能机械智能	add_trait_leader @ leader_trait_ruler_machine_intelligence	121
+不稳定代码库不稳定代码库	add_trait_leader @ leader_trait_unstable_code_base	133
+脑蛞蝓宿主脑蛞蝓宿主	add_trait_leader @ leader_trait_ruler_brainslug	244
+总督特性
+总督特性列表
+
+名称	代码	代号
+铁拳铁拳	add_trait_leader @ leader_trait_iron_fist	43
+退伍老兵退伍老兵	add_trait_leader @ leader_trait_army_veteran	44
+退伍海军军官退伍海军军官	add_trait_leader @ leader_trait_retired_fleet_officer	45
+建筑学爱好者建筑学爱好者	add_trait_leader @ leader_trait_architectural_interest	46
+土地培育师土地培育师	add_trait_leader @ leader_trait_agrarian_upbringing	47
+知识分子知识分子	add_trait_leader @ leader_trait_intellectual	48
+环境工程师环境工程师	add_trait_leader @ leader_trait_environmental_engineer	49
+博学多识博学多识	add_trait_leader @ leader_trait_governor_erudite	50
+义体人义体人	add_trait_leader @ leader_trait_governor_cyborg	51
+合成人合成人	add_trait_leader @ leader_trait_governor_synthetic	52
+灵媒灵媒	add_trait_leader @ leader_trait_governor_psionic	53
+天选之人天选之人	add_trait_leader @ leader_trait_governor_chosen	54
+正义凌然正义凌然	add_trait_leader @ leader_trait_righteous	55
+贪婪腐败贪婪腐败	add_trait_leader @ leader_trait_corrupt	56
+杀器焊匠杀器焊匠	add_trait_leader @ leader_trait_warbot_tinkerer	125
+AI辅助设计AI辅助设计	add_trait_leader @ leader_trait_ai_aided_design	126
+推土机推土机	add_trait_leader @ leader_trait_bulldozer	127
+善于分析善于分析	add_trait_leader @ leader_trait_analytical	128
+脑蛞蝓宿主脑蛞蝓宿主	add_trait_leader @ leader_trait_governor_brainslug	242
+纳米机器个体纳米机器个体	add_trait_leader @ leader_trait_governor_gray	243
+城邦商人城邦商人	add_trait_leader @ leader_trait_enclave_trader	248
+废物处理专家废物处理专家	add_trait_leader @ leader_trait_waste_management_specialist	251
+拜金教商人拜金教商人	add_trait_leader @ leader_trait_nuumismatic_priest	252
+神谕神谕	add_trait_leader @ leader_trait_governor_oracle	258
+科学家特性
+科学家特性列表
+
+名称	代码	代号
+leader_trait_loop_touchedleader_trait_loop_touched	add_trait_leader @ leader_trait_loop_touched	58
+细致细致	add_trait_leader @ leader_trait_meticulous	92
+灵光一闪灵光一闪	add_trait_leader @ leader_trait_spark_of_genius	93
+无忧无虑无忧无虑	add_trait_leader @ leader_trait_carefree	94
+漫游者漫游者	add_trait_leader @ leader_trait_roamer	95
+考古学家考古学家	add_trait_leader @ leader_trait_archaeologist_ancrel	96
+考古学家考古学家	add_trait_leader @ leader_trait_archaeologist	97
+偏执偏执	add_trait_leader @ leader_trait_paranoid	98
+狂热狂热	add_trait_leader @ leader_trait_maniacal	99
+定制AI助理定制AI助理	add_trait_leader @ leader_trait_custom_AI_assistant	100
+知性AI副官知性AI副官	add_trait_leader @ leader_trait_sapient_AI_assistant	101
+专长：材料科学专长：材料科学	add_trait_leader @ leader_trait_expertise_materials	102
+专长：推进力学专长：推进力学	add_trait_leader @ leader_trait_expertise_propulsion	103
+专长：宇航技术专长：宇航技术	add_trait_leader @ leader_trait_expertise_voidcraft	104
+专长：工业专长：工业	add_trait_leader @ leader_trait_expertise_industry	105
+专长：力场操控专长：力场操控	add_trait_leader @ leader_trait_expertise_field_manipulation	106
+专长：粒子物理专长：粒子物理	add_trait_leader @ leader_trait_expertise_particles	107
+专长：计算技术专长：计算技术	add_trait_leader @ leader_trait_expertise_computing	108
+专长：灵能理论专长：灵能理论	add_trait_leader @ leader_trait_expertise_psionics	109
+专长：新世界理论专长：新世界理论	add_trait_leader @ leader_trait_expertise_new_worlds	110
+专长：治国术专长：治国术	add_trait_leader @ leader_trait_expertise_statecraft	111
+专长：生物学专长：生物学	add_trait_leader @ leader_trait_expertise_biology	112
+专长：军事理论专长：军事理论	add_trait_leader @ leader_trait_expertise_military_theory	113
+策展人策展人	add_trait_leader @ leader_trait_curator	114
+博学多识博学多识	add_trait_leader @ leader_trait_scientist_erudite	115
+义体人义体人	add_trait_leader @ leader_trait_scientist_cyborg	116
+合成人合成人	add_trait_leader @ leader_trait_scientist_synthetic	117
+灵媒灵媒	add_trait_leader @ leader_trait_scientist_psionic	118
+天选之人天选之人	add_trait_leader @ leader_trait_scientist_chosen	119
+毛巾携带者毛巾携带者	add_trait_leader @ leader_trait_towel	120
+目录编纂者目录编纂者	add_trait_leader @ leader_trait_cataloger	134
+脑蛞蝓宿主脑蛞蝓宿主	add_trait_leader @ leader_trait_scientist_brainslug	238
+受挫受挫	add_trait_leader @ leader_trait_traumatized	253
+伤残伤残	add_trait_leader @ leader_trait_maimed	254
+受启发的考古学家受启发的考古学家	add_trait_leader @ leader_trait_inspired_archaeologist	255
+受启发的研究员受启发的研究员	add_trait_leader @ leader_trait_inspired_researcher	256
+受启发的调查员受启发的调查员	add_trait_leader @ leader_trait_inspired_surveyor	257
+受启发的考古学家：考古发掘速度+1000% 领袖获得经验+25%
+受启发的研究员：研究速度+10% 领袖获得经验+25%
+受启发的调查员：异常现象研究速度+10% 领袖获得经验+25%
+
+陆军领袖特性
+陆军领袖特性列表
+
+名称	代码	代号
+克制克制	add_trait_leader @ leader_trait_restrained	24
+传奇英雄传奇英雄	add_trait_leader @ leader_trait_charismatic	25
+屠夫屠夫	add_trait_leader @ leader_trait_butcher	26
+身先士卒身先士卒	add_trait_leader @ leader_trait_glory_seeker	27
+纸上谈兵纸上谈兵	add_trait_leader @ leader_trait_armchair_commander	28
+陆战队后勤专家陆战队后勤专家	add_trait_leader @ leader_trait_army_logistician	29
+博学多识博学多识	add_trait_leader @ leader_trait_general_erudite	30
+义体人义体人	add_trait_leader @ leader_trait_general_cyborg	31
+合成人合成人	add_trait_leader @ leader_trait_general_synthetic	32
+灵媒灵媒	add_trait_leader @ leader_trait_general_psionic	33
+天选之人天选之人	add_trait_leader @ leader_trait_general_chosen	34
+佣兵战士佣兵战士	add_trait_leader @ leader_trait_general_mercenary_warrior	35
+零件再利用零件再利用	add_trait_leader @ leader_trait_parts_cannibalizer	129
+灌输恐惧灌输恐惧	add_trait_leader @ leader_trait_demoralizer	130
+不稳定道德核心不稳定道德核心	add_trait_leader @ leader_trait_erratic_morality_core	131
+脑蛞蝓宿主脑蛞蝓宿主	add_trait_leader @ leader_trait_general_brainslug	239
+舰队司令特性
+舰队司令特性列表
+
+名称	代码	代号
+战略家战略家	add_trait_leader @ leader_trait_trickster	0
+舰队后勤专家舰队后勤专家	add_trait_leader @ leader_trait_fleet_logistician	1
+工程师工程师	add_trait_leader @ leader_trait_engineer	2
+火力全开火力全开	add_trait_leader @ leader_trait_aggressive	3
+谨慎谨慎	add_trait_leader @ leader_trait_cautious	4
+侦查专家侦查专家	add_trait_leader @ leader_trait_scout	5
+不屈不屈	add_trait_leader @ leader_trait_unyielding	6
+神经质神经质	add_trait_leader @ leader_trait_nervous	7
+其疾如风其疾如风	add_trait_leader @ leader_trait_gale_speed	8
+懒散懒散	add_trait_leader @ leader_trait_lethargic	9
+哨兵训练哨兵训练	add_trait_leader @ leader_trait_sentinel	10
+蜂巢亲和蜂巢亲和	add_trait_leader @ leader_trait_hive_affinity	11
+虚空猎手虚空猎手	add_trait_leader @ leader_trait_void_swimmer	12
+虚无缥缈虚无缥缈	add_trait_leader @ leader_trait_ethereal	13
+次元巡航次元巡航	add_trait_leader @ leader_trait_dimensional_stutter	14
+屠龙者屠龙者	add_trait_leader @ leader_trait_dragonslayer	15
+博学多识博学多识	add_trait_leader @ leader_trait_admiral_erudite	16
+义体人义体人	add_trait_leader @ leader_trait_admiral_cyborg	17
+合成人合成人	add_trait_leader @ leader_trait_admiral_synthetic	18
+灵媒灵媒	add_trait_leader @ leader_trait_admiral_psionic	19
+天选之人天选之人	add_trait_leader @ leader_trait_admiral_chosen	20
+赛博勒克斯数据库赛博勒克斯数据库	add_trait_leader @ leader_trait_cybrex	21
+佣兵战士佣兵战士	add_trait_leader @ leader_trait_mercenary_warrior	22
+大可汗大可汗	add_trait_leader @ leader_trait_great_khan	23
+命中注定相会命中注定相会	add_trait_leader @ leader_trait_foredoomed_to_a_rendezvous	59
+维护循环维护循环	add_trait_leader @ leader_trait_maintenance_loop	132
+还原点还原点	add_trait_leader @ leader_trait_restore_point	135
+脑蛞蝓宿主脑蛞蝓宿主	add_trait_leader @ leader_trait_admiral_brainslug	240
+地狱雄心地狱雄心	add_trait_leader @ leader_trait_admiral_hells_heart	241
+行商拦截者行商拦截者	add_trait_leader @ leader_trait_caravan_counter	247
+遗珍代码
+add_relic <遗珍代码>
+遗珍	代码
+泽洛魂石	add_relic r_zro_crystal
+有机全典	add_relic r_omnicodex
+最后的巴奥	add_relic r_the_last_baol
+女猎手之刃	add_relic r_ancient_sword
+扎克兰的头颅	add_relic r_severed_head
+银河之星	add_relic r_galatron
+微缩星河	add_relic r_galaxy
+索林原虫虫后	add_relic r_prethoryn_queen
+碎片整理程序	add_relic r_the_defragmentor
+异次元术士	add_relic r_unbidden_warlock
+独立的肃正核心	add_relic r_contingency_core
+时螶之鳞	add_relic r_worm_scales
+可汗王座	add_relic r_khans_throne
+赛博勒克斯兵工厂	add_relic r_war_forge
+沃陶姆现实透孔仪	add_relic r_reality_perforator
+尤特冷冻核心	add_relic r_cryo_core
+贾沃疹样本	add_relic r_pox_sample
+勘探器	add_relic r_surveyor
+以太巨龙战利品	add_relic r_dragon_trophy
+誊录仪	add_relic r_rubricator
+add_relic all 添加全部遗珍
+
+巨构代码
+· effect remove_megastructure = this 移除选中巨构
+一般来说最后的数字，0是基址，列表中是成品 
+巨构	代码	
+已完成的环形世界区段	create_megastructure ring_world_3_intermediate	使用第一次会生成A区段，第二次B区段，以此往复 但会全都缩在恒星的模型里
+戴森球	create_megastructure dyson_sphere_5	会自动适应恒星大小
+哨兵阵列	create_megastructure spy_orb_4	
+科学枢纽	create_megastructure think_tank_3	
+星门	create_megastructure gateway_final	
+物质解压器	create_megastructure matter_decompressor_4	模型会歪
+战略指挥中心	create_megastructure strategic_coordination_center_3	
+巨型艺术设施	create_megastructure mega_art_installation_3	
+星际集会	create_megastructure interstellar_assembly_4	
+居住地	create_megastructure habitat_0	
+巨型船坞	create_megastructure mega_shipyard_3	
+以太相引擎	create_megastructure crisis_sphere_3	0为损坏版 3为最后一个阶段之前 4为直接建成引擎 事件可正常触发
+事件代码
+访问专题
+这些可以用于 event 命令。与其他命令的用法还未确认。
+星球事件需要选定星球再使用控制台，舰船事件需要选定舰船再使用控制台
+事件列表：事件控制台列表
+
+矿藏代码
+访问专题
+这些可以用于 effect add_deposit 命令，格式为 effect add_deposit=d_英文代号_n （n为数量，有的有限制，有的没有这个参数，只能一个，可以叠加，数量过大需要自行摸索） 。与其他命令的用法还未确认。
+需要选定星球再使用控制台
+修正列表：矿脉专题或矿藏控制台列表
+
+矿物等资源很容易在列表中找到，这边给出较为难找的科研增益； 常用的科研加成地形（加成较为强力的）
+
+稀有带科研加成地块	地块名称	效果
+effect add_deposit = d_valley_of_zanaam	扎纳姆山谷	全科研30%加4研究岗位
+effect add_deposit = d_central_spire	中央尖塔	全科研15%，加8研究岗位
+effect add_deposit = d_relic_dense_ruins	密集废墟	全科研15%，最大地区数-6
+effect add_deposit = d_former_relic_world	前遗落星球	全科研10%
+effect add_deposit = d_ancient_bombardment_craters	远古弹坑	20%物理和2研究岗位
+effect add_deposit = d_ancient_particle_accelerator	远古粒子加速器	20%物理和2研究岗位
+effect add_deposit = d_wetware_computer	生体电脑	20%工程2研究岗位
+effect add_deposit = d_ancient_battlefield	远古战场	20%工程2研究岗位
+effect add_deposit = d_underground_vault	地下避难所	20%社会2研究岗位
+effect add_deposit = d_flooded_mounds	被淹没的洞穴	20%社会2研究岗位
+effect add_modifier={modifier=magnetic_research_boost}	磁力奇迹(这个是BUFF)	全科研+20%
+修正代码
+访问专题
+这些可以用于 effect add_modifier 命令，格式为effect add_modifier = { modifier = <名称> days = <时间，其中-1为永久> }。与其他命令的用法还未确认。
+需要选定星球再使用控制台
+修正列表：修正控制台列表
+
+
+科技代码
+访问专题
+这些可以用于 research_technology 命令。与其他命令的用法还未确认。
+科技列表
+
+巨型装配系统 research_technology tech_mega_assembly
+名称	代码	代号
+巨像巨像	research_technology tech_colossus	0
+地爆天星地爆天星	research_technology tech_pk_cracker	1
+安乐天使安乐天使	research_technology tech_pk_shielder	2
+中子灭杀中子灭杀	research_technology tech_pk_neutron	3
+神圣激素神圣激素	research_technology tech_pk_godray	4
+大气纳米机器人散布大气纳米机器人散布	research_technology tech_pk_nanobots	5
+超体进化超体进化	research_technology tech_gargantuan_evolution	6
+L星门启动L星门启动	research_technology tech_lgate_activation	7
+L星门认知L星门认知	research_technology tech_repeatable_lcluster_clue	8
+试验性超空间导航试验性超空间导航	research_technology tech_experimental_subspace_navigation	9
+神经组织工程神经组织工程	research_technology tech_neuroregeneration	10
+纳米修复系统纳米修复系统	research_technology tech_nanite_repair_system	11
+轨道能源转化技术轨道能源转化技术	research_technology tech_solar_panel_network	12
+太空探索太空探索	research_technology tech_space_exploration	13
+护卫舰护卫舰	research_technology tech_corvettes	14
+驱逐舰驱逐舰	research_technology tech_destroyers	15
+巡洋舰巡洋舰	research_technology tech_cruisers	16
+战列舰战列舰	research_technology tech_battleships	17
+泰坦泰坦	research_technology tech_titans	18
+标准化护卫舰模板标准化护卫舰模板	research_technology tech_corvette_build_speed	19
+改进护卫舰船体改进护卫舰船体	research_technology tech_corvette_hull_1	20
+先进护卫舰船体先进护卫舰船体	research_technology tech_corvette_hull_2	21
+标准化驱逐舰模板标准化驱逐舰模板	research_technology tech_destroyer_build_speed	22
+改进驱逐舰船体改进驱逐舰船体	research_technology tech_destroyer_hull_1	23
+先进驱逐舰船体先进驱逐舰船体	research_technology tech_destroyer_hull_2	24
+标准化巡洋舰模板标准化巡洋舰模板	research_technology tech_cruiser_build_speed	25
+改进巡洋舰船体改进巡洋舰船体	research_technology tech_cruiser_hull_1	26
+先进巡洋舰船体先进巡洋舰船体	research_technology tech_cruiser_hull_2	27
+标准化战列舰模板标准化战列舰模板	research_technology tech_battleship_build_speed	28
+改进战列舰船体改进战列舰船体	research_technology tech_battleship_hull_1	29
+先进战列舰船体先进战列舰船体	research_technology tech_battleship_hull_2	30
+改进泰坦船体改进泰坦船体	research_technology tech_titan_hull_1	31
+先进泰坦船体先进泰坦船体	research_technology tech_titan_hull_2	32
+恒星基地建设恒星基地建设	research_technology tech_starbase_1	33
+星港星港	research_technology tech_starbase_2	34
+星垒星垒	research_technology tech_starbase_3	35
+星堡星堡	research_technology tech_starbase_4	36
+擎天堡擎天堡	research_technology tech_starbase_5	37
+轨道居住站轨道居住站	research_technology tech_habitat_1	38
+模块化工程模块化工程	research_technology tech_modular_engineering	39
+工兵部队工兵部队	research_technology tech_space_defense_station_improvement	40
+航母作战航母作战	research_technology tech_strike_craft_1	41
+改良型舰载机改良型舰载机	research_technology tech_strike_craft_2	42
+先进型舰载机先进型舰载机	research_technology tech_strike_craft_3	43
+星际远征军星际远征军	research_technology tech_assault_armies	44
+纳米复合材料纳米复合材料	research_technology tech_ship_armor_1	45
+瓷金复合材料瓷金复合材料	research_technology tech_ship_armor_2	46
+塑钢材料塑钢材料	research_technology tech_ship_armor_3	47
+耐钢材料耐钢材料	research_technology tech_ship_armor_4	48
+零素材料零素材料	research_technology tech_ship_armor_5	49
+水晶复合镀层水晶复合镀层	research_technology tech_crystal_armor_1	50
+水晶锻造镀层水晶锻造镀层	research_technology tech_crystal_armor_2	51
+化学推进器化学推进器	research_technology tech_thrusters_1	52
+离子推进器离子推进器	research_technology tech_thrusters_2	53
+等离子推进器等离子推进器	research_technology tech_thrusters_3	54
+脉冲推进器脉冲推进器	research_technology tech_thrusters_4	55
+深空防御深空防御	research_technology tech_space_defense_station_1	56
+改善结构完整性改善结构完整性	research_technology tech_defense_platform_hull_1	57
+工业基地工业基地	research_technology tech_basic_industry	58
+机械化开采机械化开采	research_technology tech_mechanized_mining	59
+动力外骨骼动力外骨骼	research_technology tech_powered_exoskeletons	60
+零重力精炼厂零重力精炼厂	research_technology tech_space_mining_1	61
+远距离矿物扫描仪远距离矿物扫描仪	research_technology tech_space_mining_2	62
+矿石切割束矿石切割束	research_technology tech_space_mining_3	63
+自动采矿无人机自动采矿无人机	research_technology tech_space_mining_4	64
+纳米矿物探测器纳米矿物探测器	research_technology tech_space_mining_5	65
+地热水力压裂地热水力压裂	research_technology tech_mining_1	66
+地心开采地心开采	research_technology tech_mining_2	67
+矿物分离矿物分离	research_technology tech_mining_3	68
+矿物提纯矿物提纯	research_technology tech_mineral_purification_1	69
+先进矿物提纯先进矿物提纯	research_technology tech_mineral_purification_2	70
+固态全息铸模固态全息铸模	research_technology tech_alloys_1	71
+纳米分离器纳米分离器	research_technology tech_alloys_2	72
+纳米电路装配纳米电路装配	research_technology tech_luxuries_1	73
+复制机终端复制机终端	research_technology tech_luxuries_2	74
+纳米力学纳米力学	research_technology tech_engineering_1	75
+超固体材料超固体材料	research_technology tech_engineering_2	76
+超流体材料超流体材料	research_technology tech_engineering_3	77
+机器人劳工机器人劳工	research_technology tech_robotic_workers	78
+智能人智能人	research_technology tech_droid_workers	79
+合成人合成人	research_technology tech_synthetic_workers	80
+合成人人格矩阵合成人人格矩阵	research_technology tech_synthetic_leaders	81
+外太空建设外太空建设	research_technology tech_space_construction	82
+加力燃烧室加力燃烧室	research_technology tech_afterburners_1	83
+先进加力燃烧室先进加力燃烧室	research_technology tech_afterburners_2	84
+装配模式装配模式	research_technology tech_assembly_pattern	85
+建造模板建造模板	research_technology tech_construction_templates	86
+气候控制系统气候控制系统	research_technology tech_housing_1	87
+反重力工程反重力工程	research_technology tech_housing_2	88
+提取模式提取模式	research_technology tech_repeatable_improved_tile_mineral_output	89
+同步开火模式同步开火模式	research_technology tech_repeatable_improved_military_station_damage	90
+强化核心层强化核心层	research_technology tech_repeatable_improved_military_station_health	91
+物质压缩物质压缩	research_technology tech_repeatable_improved_armor_output	92
+热力学当量控制热力学当量控制	research_technology tech_repeatable_weapon_type_explosive_damage	93
+小型预点火装置小型预点火装置	research_technology tech_repeatable_weapon_type_explosive_fire_rate	94
+高密度弹药高密度弹药	research_technology tech_repeatable_weapon_type_kinetic_damage	95
+装载效率装载效率	research_technology tech_repeatable_weapon_type_kinetic_fire_rate	96
+突触拦截器突触拦截器	research_technology tech_repeatable_weapon_type_strike_craft_fire_damage	97
+热力循环器热力循环器	research_technology tech_repeatable_weapon_type_strike_craft_fire_rate	98
+组装算法组装算法	research_technology tech_repeatable_reduced_building_time	99
+质量投射器质量投射器	research_technology tech_mass_drivers_1	100
+线圈炮线圈炮	research_technology tech_mass_drivers_2	101
+轨道炮轨道炮	research_technology tech_mass_drivers_3	102
+先进轨道炮先进轨道炮	research_technology tech_mass_drivers_4	103
+高斯炮高斯炮	research_technology tech_mass_drivers_5	104
+动能火炮动能火炮	research_technology tech_kinetic_artillery_1	105
+先进动能火炮先进动能火炮	research_technology tech_kinetic_artillery_2	106
+兆级加农炮兆级加农炮	research_technology tech_mass_accelerator_1	107
+千兆级加农炮千兆级加农炮	research_technology tech_mass_accelerator_2	108
+机关炮机关炮	research_technology tech_autocannons_1	109
+撕裂者机关炮撕裂者机关炮	research_technology tech_autocannons_2	110
+烈焰风暴机关炮烈焰风暴机关炮	research_technology tech_autocannons_3	111
+高射炮高射炮	research_technology tech_flak_batteries_1	112
+高射加农炮高射加农炮	research_technology tech_flak_batteries_2	113
+重型高射炮重型高射炮	research_technology tech_flak_batteries_3	114
+核导弹核导弹	research_technology tech_missiles_1	115
+聚变核导弹聚变核导弹	research_technology tech_missiles_2	116
+反物质导弹反物质导弹	research_technology tech_missiles_3	117
+量子导弹量子导弹	research_technology tech_missiles_4	118
+掠夺者导弹掠夺者导弹	research_technology tech_missiles_5	119
+蜂群导弹蜂群导弹	research_technology tech_swarmer_missiles_1	120
+旋风导弹旋风导弹	research_technology tech_swarmer_missiles_2	121
+太空鱼雷太空鱼雷	research_technology tech_torpedoes_1	122
+装甲鱼雷装甲鱼雷	research_technology tech_torpedoes_2	123
+毁灭者鱼雷毁灭者鱼雷	research_technology tech_torpedoes_3	124
+暗物质偏导护盾暗物质偏导护盾	research_technology tech_dark_matter_deflector	125
+暗物质能源暗物质能源	research_technology tech_dark_matter_power_core	126
+暗物质推进暗物质推进	research_technology tech_dark_matter_propulsion	127
+熵递归熵递归	research_technology tech_akx_worm_1	128
+学说：奇异循环学说：奇异循环	research_technology tech_akx_worm_2	129
+欧米伽理论欧米伽理论	research_technology tech_akx_worm_3	130
+人造龙鳞装甲人造龙鳞装甲	research_technology tech_dragon_armor	131
+神秘编码器神秘编码器	research_technology tech_enigmatic_encoder	132
+神秘解码器神秘解码器	research_technology tech_enigmatic_decoder	133
+轨道垃圾散布轨道垃圾散布	research_technology tech_orbital_trash_dispersal	134
+外星拓展中介外星拓展中介	research_technology tech_xeno_tourism_agency	135
+高管休闲项目高管休闲项目	research_technology tech_executive_retreat	136
+巨构建筑工程巨构建筑工程	research_technology tech_mega_engineering	137
+科学枢纽科学枢纽	research_technology tech_science_nexus	138
+哨兵阵列哨兵阵列	research_technology tech_sentry_array	139
+战略指挥中心战略指挥中心	research_technology tech_strategic_coordination	140
+星际集会星际集会	research_technology tech_interstellar_assembly	141
+巨型艺术设施巨型艺术设施	research_technology tech_mega_art	142
+星门激活星门激活	research_technology tech_gateway_activation	143
+星门建造星门建造	research_technology tech_gateway_construction	144
+戴森球戴森球	research_technology tech_dyson_sphere	145
+物质解压器物质解压器	research_technology tech_matter_decompressor	146
+环形世界环形世界	research_technology tech_ring_world	147
+科学方法科学方法	research_technology tech_basic_science_lab_1	148
+外星材料实验室外星材料实验室	research_technology tech_basic_science_lab_2	149
+多维研究多维研究	research_technology tech_basic_science_lab_3	150
+策展人探索实验室策展人探索实验室	research_technology tech_curator_lab	151
+策展人考古实验室策展人考古实验室	research_technology tech_archeology_lab_ancrel	152
+策展人考古实验室策展人考古实验室	research_technology tech_archeology_lab	153
+零重力实验室零重力实验室	research_technology tech_space_science_1	154
+微型遏制力场微型遏制力场	research_technology tech_space_science_2	155
+量子探测器量子探测器	research_technology tech_space_science_3	156
+自主运行空间站协议自主运行空间站协议	research_technology tech_space_science_4	157
+多维分析多维分析	research_technology tech_space_science_5	158
+量子理论量子理论	research_technology tech_physics_1	159
+应用量子力学应用量子力学	research_technology tech_physics_2	160
+时空理论时空理论	research_technology tech_physics_3	161
+跨行星研究倡议跨行星研究倡议	research_technology tech_global_research_initiative	162
+管理型人工智能管理型人工智能	research_technology tech_administrative_ai	163
+人工智能殖民船人工智能殖民船	research_technology tech_cryostasis_1	164
+自我意识殖民船自我意识殖民船	research_technology tech_cryostasis_2	165
+自我演化逻辑自我演化逻辑	research_technology tech_self_aware_logic	166
+自动探索协议自动探索协议	research_technology tech_automated_exploration	167
+正电子人工智能正电子人工智能	research_technology tech_sapient_ai	168
+正电子脑植入体正电子脑植入体	research_technology tech_positronic_implants	169
+特种作战计算机特种作战计算机	research_technology tech_combat_computers_1	170
+拓展战斗算法拓展战斗算法	research_technology tech_combat_computers_2	171
+知性战斗模拟知性战斗模拟	research_technology tech_combat_computers_3	172
+舰船自主智能舰船自主智能	research_technology tech_combat_computers_autonomous	173
+辅助火控辅助火控	research_technology tech_auxiliary_fire_control	174
+同步防御同步防御	research_technology tech_synchronized_defences	175
+裂变能源裂变能源	research_technology tech_fission_power	176
+聚变能源聚变能源	research_technology tech_fusion_power	177
+冷核聚变能源冷核聚变能源	research_technology tech_cold_fusion_power	178
+反物质能源反物质能源	research_technology tech_antimatter_power	179
+零点能源零点能源	research_technology tech_zero_point_power	180
+反应堆增压器反应堆增压器	research_technology tech_reactor_boosters_1	181
+改良反应堆增压器改良反应堆增压器	research_technology tech_reactor_boosters_2	182
+先进反应堆增压器先进反应堆增压器	research_technology tech_reactor_boosters_3	183
+偏射盾偏射盾	research_technology tech_shields_1	184
+改良偏射盾改良偏射盾	research_technology tech_shields_2	185
+护盾护盾	research_technology tech_shields_3	186
+先进护盾先进护盾	research_technology tech_shields_4	187
+超级护盾超级护盾	research_technology tech_shields_5	188
+护盾电容护盾电容	research_technology tech_shield_rechargers_1	189
+行星护盾行星护盾	research_technology tech_planetary_shield_generator	190
+重力传感器重力传感器	research_technology tech_sensors_2	191
+亚空间传感器亚空间传感器	research_technology tech_sensors_3	192
+速子传感器速子传感器	research_technology tech_sensors_4	193
+高能电容器高能电容器	research_technology tech_power_plant_1	194
+力场调制力场调制	research_technology tech_power_plant_2	195
+量子能态量子能态	research_technology tech_power_plant_3	196
+量子场操控量子场操控	research_technology tech_power_plant_4	197
+全球能源管理全球能源管理	research_technology tech_power_hub_1	198
+行星电力网行星电力网	research_technology tech_power_hub_2	199
+超空间移动超空间移动	research_technology tech_hyper_drive_1	200
+超空间航道突破点超空间航道突破点	research_technology tech_hyper_drive_2	201
+超空间滑流超空间滑流	research_technology tech_hyper_drive_3	202
+虫洞稳定虫洞稳定	research_technology tech_wormhole_stabilization	203
+跃迁引擎跃迁引擎	research_technology tech_jump_drive_1	204
+超光速抑制超光速抑制	research_technology tech_ftl_inhibitor	205
+生物反应堆生物反应堆	research_technology tech_bio_reactor	206
+超导应用超导应用	research_technology tech_repeatable_improved_tile_energy_output	207
+护盾数律分析护盾数律分析	research_technology tech_repeatable_improved_shield_output	208
+聚焦阵列聚焦阵列	research_technology tech_repeatable_weapon_type_energy_damage	209
+快速冷却剂快速冷却剂	research_technology tech_repeatable_weapon_type_energy_fire_rate	210
+引力分析引力分析	research_technology tech_repeatable_reduced_building_cost	211
+红激光发射器红激光发射器	research_technology tech_lasers_1	212
+蓝激光发射器蓝激光发射器	research_technology tech_lasers_2	213
+紫外激光发射器紫外激光发射器	research_technology tech_lasers_3	214
+X射线发射器X射线发射器	research_technology tech_lasers_4	215
+伽马激光伽马激光	research_technology tech_lasers_5	216
+粒子光矛粒子光矛	research_technology tech_energy_lance_1	217
+快子光矛快子光矛	research_technology tech_energy_lance_2	218
+等离子发射器等离子发射器	research_technology tech_plasma_1	219
+等离子加速器等离子加速器	research_technology tech_plasma_2	220
+等离子加农炮等离子加农炮	research_technology tech_plasma_3	221
+电弧发射器电弧发射器	research_technology tech_arc_emitter_1	222
+行星地貌重塑行星地貌重塑	research_technology tech_tb_mountain_range	222
+聚能电弧发射器聚能电弧发射器	research_technology tech_arc_emitter_2	223
+裂解炮裂解炮	research_technology tech_disruptors_1	224
+离子裂解炮离子裂解炮	research_technology tech_disruptors_2	225
+相位裂解炮相位裂解炮	research_technology tech_disruptors_3	226
+质子发射器质子发射器	research_technology tech_energy_torpedoes_1	227
+中子发射器中子发射器	research_technology tech_energy_torpedoes_2	228
+主动反制主动反制	research_technology tech_pd_tracking_1	229
+互联支援系统互联支援系统	research_technology tech_pd_tracking_2	230
+预测算法预测算法	research_technology tech_pd_tracking_3	231
+高维武器高维武器	research_technology tech_extradimensional_weapon_1	232
+采矿无人机激光采矿无人机激光	research_technology tech_mining_drone_weapon_1	233
+雷云导线雷云导线	research_technology tech_space_cloud_weapon_1	234
+太虚光束太虚光束	research_technology null_void_beam	235
+行星防御行星防御	research_technology tech_planetary_defenses	236
+星际贸易星际贸易	research_technology tech_interplanetary_commerce	237
+外星贸易公司外星贸易公司	research_technology tech_space_trading	238
+星际经济学星际经济学	research_technology tech_interstellar_economics	239
+泛星系市场泛星系市场	research_technology tech_galactic_markets	240
+拜金教数据建模拜金教数据建模	research_technology tech_prescient_data_modeling	241
+农业工业化农业工业化	research_technology tech_industrial_farming	242
+生态模拟生态模拟	research_technology tech_eco_simulation	243
+转基因作物转基因作物	research_technology tech_gene_crops	244
+纳米活性作物纳米活性作物	research_technology tech_nano_vitality_crops	245
+营养复制营养复制	research_technology tech_nutrient_replication	246
+水培农业水培农业	research_technology tech_hydroponics	247
+食品加工食品加工	research_technology tech_food_processing_1	248
+高级食品加工高级食品加工	research_technology tech_food_processing_2	249
+生物多样性研究生物多样性研究	research_technology tech_society_1	250
+异种生物学异种生物学	research_technology tech_society_2	251
+生命的秘密生命的秘密	research_technology tech_society_3	252
+异种生物学异种生物学	research_technology tech_alien_life_studies	253
+奥术解密奥术解密	research_technology tech_arcane_deciphering	254
+新世界协议新世界协议	research_technology tech_colonization_1	255
+大气过滤大气过滤	research_technology tech_colonization_2	256
+恶劣环境适应恶劣环境适应	research_technology tech_colonization_3	257
+外星土壤肥化外星土壤肥化	research_technology tech_colonization_4	258
+生态整合研究生态整合研究	research_technology tech_colonization_5	259
+死寂星球适应死寂星球适应	research_technology tech_tomb_world_adaption	260
+基因健康保障基因健康保障	research_technology tech_frontier_health	261
+细胞修复细胞修复	research_technology tech_frontier_hospital	262
+地表重塑地表重塑	research_technology tech_mountain_range	263
+地壳深部工程地壳深部工程	research_technology tech_volcano	264
+清除危险野生动物清除危险野生动物	research_technology tech_dangerous_wildlife	265
+选择性脱叶剂选择性脱叶剂	research_technology tech_dense_jungle	266
+土壤修复土壤修复	research_technology tech_quicksand_basin	267
+异种水力掌控异种水力掌控	research_technology tech_noxious_swamp	268
+气候控制网络气候控制网络	research_technology tech_massive_glacier	269
+海洋生态管理海洋生态管理	research_technology tech_toxic_kelp	270
+地下殖民地下殖民	research_technology tech_deep_sinkhole	271
+地表塑造地表塑造	research_technology tech_terrestrial_sculpting	272
+生态适应生态适应	research_technology tech_ecological_adaptation	273
+气候复苏气候复苏	research_technology tech_climate_restoration	274
+基因图谱基因图谱	research_technology tech_genome_mapping	275
+活性增强剂活性增强剂	research_technology tech_vitality_boosters	276
+表观遗传学机制表观遗传学机制	research_technology tech_epigenetic_triggers	277
+克隆克隆	research_technology tech_cloning	278
+基因库基因库	research_technology tech_gene_banks	279
+基因种子纯化基因种子纯化	research_technology tech_gene_seed_purification	280
+形态发生学精通形态发生学精通	research_technology tech_morphogenetic_field_mastery	281
+基因剪裁基因剪裁	research_technology tech_gene_tailoring	282
+腺体适应腺体适应	research_technology tech_glandular_acclimation	283
+基因重测序基因重测序	research_technology tech_genetic_resequencing	284
+基因定向表达基因定向表达	research_technology tech_gene_expressions	285
+择优血脉择优血脉	research_technology tech_selected_lineages	286
+能力增强能力增强	research_technology tech_capacity_boosters	287
+再生舰体组织再生舰体组织	research_technology tech_regenerative_hull_tissue	288
+学说：太空战斗学说：太空战斗	research_technology tech_doctrine_fleet_size_1	289
+学说：灵巧编队学说：灵巧编队	research_technology tech_doctrine_fleet_size_2	290
+学说：星际战争学说：星际战争	research_technology tech_doctrine_fleet_size_3	291
+学说：机动舰队模板学说：机动舰队模板	research_technology tech_doctrine_fleet_size_4	292
+学说：舰队阵型学说：舰队阵型	research_technology tech_doctrine_fleet_size_5	293
+星际舰队传统星际舰队传统	research_technology tech_interstellar_fleet_traditions	294
+改装标准改装标准	research_technology tech_refit_standards	295
+指挥中心指挥中心	research_technology tech_command_matrix	296
+学说：舰队支援学说：舰队支援	research_technology tech_doctrine_navy_size_1	297
+学说：支援船队学说：支援船队	research_technology tech_doctrine_navy_size_2	298
+学说：星际后勤学说：星际后勤	research_technology tech_doctrine_navy_size_3	299
+学说：舰队联络学说：舰队联络	research_technology tech_doctrine_navy_size_4	300
+集中指挥集中指挥	research_technology tech_centralized_command	301
+战斗训练战斗训练	research_technology tech_combat_training	302
+地面防御计划地面防御计划	research_technology tech_ground_defense_planning	303
+全球防御网络全球防御网络	research_technology tech_global_defense_grid	304
+灵能理论灵能理论	research_technology tech_psionic_theory	305
+心灵感应心灵感应	research_technology tech_telepathy	306
+预知接口预知接口	research_technology tech_precognition_interface	307
+灵能跃迁引擎灵能跃迁引擎	research_technology tech_psi_jump_drive_1	308
+星际扩张星际扩张	research_technology tech_galactic_ambitions	309
+昭昭天命昭昭天命	research_technology tech_manifest_destiny	310
+星际战役星际战役	research_technology tech_interstellar_campaigns	311
+星河战役星河战役	research_technology tech_galactic_campaigns	312
+行星政府行星政府	research_technology tech_planetary_government	313
+行星统一行星统一	research_technology tech_planetary_unification	314
+殖民集中殖民集中	research_technology tech_colonial_centralization	315
+星系管理星系管理	research_technology tech_galactic_administration	316
+皮下刺激皮下刺激	research_technology tech_subdermal_stimulation	317
+全球生产策略全球生产策略	research_technology tech_global_production_strategy	318
+灵活机构灵活机构	research_technology tech_adaptive_bureaucracy	319
+殖民官僚制殖民官僚制	research_technology tech_colonial_bureaucracy	320
+星河官僚制星河官僚制	research_technology tech_galactic_bureaucracy	321
+生生不息生生不息	research_technology tech_living_state	322
+集体自我集体自我	research_technology tech_collective_self	323
+自主代理自主代理	research_technology tech_autonomous_agents	324
+具现物力论具现物力论	research_technology tech_embodied_dynamism	325
+神经植入体神经植入体	research_technology tech_neural_implants	326
+人工道德规范人工道德规范	research_technology tech_artificial_moral_codes	327
+综合思维模式综合思维模式	research_technology tech_synthetic_thought_patterns	328
+齐心协力齐心协力	research_technology tech_unity_of_purpose	329
+集体生产方法集体生产方法	research_technology tech_collective_production_methods	330
+资源处理算法资源处理算法	research_technology tech_resource_processing_algorithms	331
+全息影像娱乐全息影像娱乐	research_technology tech_holo_entertainment	332
+极乐广场极乐广场	research_technology tech_hyper_entertainment_forum	333
+田园建筑学田园建筑学	research_technology tech_paradise_dome	334
+社会文化历史社会文化历史	research_technology tech_cultural_heritage	335
+传承遗迹传承遗迹	research_technology tech_heritage_site	336
+本地超通讯本地超通讯	research_technology tech_hypercomms_forum	337
+自动综合处理算法自动综合处理算法	research_technology tech_autocurating_vault	338
+全息仪式全息仪式	research_technology tech_holographic_rituals	339
+授圣力场授圣力场	research_technology tech_consecration_fields	340
+超意识信仰超意识信仰	research_technology tech_transcendent_faith	341
+突触建筑突触建筑	research_technology tech_hive_node	342
+簇状突触簇状突触	research_technology tech_hive_cluster	343
+思想集簇思想集簇	research_technology tech_hive_confluence	344
+飞升理论飞升理论	research_technology tech_ascension_theory	345
+灵能屏障灵能屏障	research_technology tech_psionic_barrier	346
+灵能护盾灵能护盾	research_technology tech_psionic_shield	347
+流放地流放地	research_technology tech_penal_colonies	348
+度假星球度假星球	research_technology tech_resort_colonies	349
+奴隶世界奴隶世界	research_technology tech_slave_colonies	350
+农业乌托邦农业乌托邦	research_technology tech_housing_agrarian_idyll	351
+转基因作物转基因作物	research_technology tech_repeatable_improved_tile_food_output	352
+行政效率行政效率	research_technology tech_repeatable_improved_core_system_cap	353
+公告广播公告广播	research_technology tech_repeatable_improved_edict_length	354
+主动适应主动适应	research_technology tech_repeatable_improved_army_damage	355
+神经抑制器神经抑制器	research_technology tech_repeatable_improved_army_health	356
+细胞活力细胞活力	research_technology tech_repeatable_improved_leader_life_span	357
+舰队管理规程舰队管理规程	research_technology tech_repeatable_naval_cap	358
+司令幕僚司令幕僚	research_technology tech_repeatable_command_limit	359
+星际扩张星际扩张	research_technology tech_repeatable_improved_starbase_capacity	360
+变形虫育种计划变形虫育种计划	research_technology tech_amoeba_strike_craft_1	361
+虫群产卵池虫群产卵池	research_technology tech_swarm_strike_craft_1	362
+天灾导弹天灾导弹	research_technology tech_scourge_missile_1	363
+频率调谐频率调谐	research_technology tech_space_whale_weapon_1	364
+活体金属活体金属	research_technology tech_mine_living_metal	365
+贝赛里安精炼贝赛里安精炼	research_technology tech_mine_betharian	366
+微粒稳定化微粒稳定化	research_technology tech_mine_volatile_motes	367
+易爆材料生产厂易爆材料生产厂	research_technology tech_volatile_motes	368
+异星天然气开采异星天然气开采	research_technology tech_mine_exotic_gases	369
+异星天然气精炼异星天然气精炼	research_technology tech_exotic_gases	370
+稀有水晶开采稀有水晶开采	research_technology tech_mine_rare_crystals	371
+稀有水晶生产稀有水晶生产	research_technology tech_rare_crystals	372
+蒸馏泽珞蒸馏泽珞	research_technology tech_mine_zro	373
+暗物质收集暗物质收集	research_technology tech_mine_dark_matter	374
+纳米变形纳米变形	research_technology tech_nanite_transmutation	375
+机械模板系统机械模板系统	research_technology tech_robomodding_m	376
+机械模板系统机械模板系统	research_technology tech_robomodding	377
+交叉模组标准化交叉模组标准化	research_technology tech_robomodding_points_1	378
+可替换电路可替换电路	research_technology tech_robomodding_points_2	379
+二进制内驱程序二进制内驱程序	research_technology tech_binary_motivators	380
+纳米装配机纳米装配机	research_technology tech_nanite_assemblers	381
+自适应作战算法自适应作战算法	research_technology tech_adaptive_combat_algorithms	382
+生物力学生物力学	research_technology tech_biomechanics	383
+微型复制机微型复制机	research_technology tech_micro_replicators	384
+自动组装部件自动组装部件	research_technology tech_self_assembling_components	385
