@@ -36,8 +36,9 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
-          # Upload /public repository
-          path: '/public'
+          # Upload all repository
+          BRANCH: blogs
+          FOLDER: public
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v1
