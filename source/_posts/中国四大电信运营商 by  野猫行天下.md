@@ -83,5 +83,3 @@ origin: https://mp.weixin.qq.com/s?__biz=MzU1NTg4MTA1Nw==&mid=2247486112&idx=2&s
 中国联通：谨防移动支付中的电信诈骗。
 
 野猫说：来来来，为他们真挚的友谊干杯！！！
-
-![图片](https://mmbiz.qpic.cn/mmbiz_gif/9Uq6185REibZEfHf1koVEJ91ibTPiacufKOv8fQAkzSkWQicY2MQWeibMYzUR6I2drf2167AlZUNIbdDcun9SZvN64w/640?wx_fmt=gif&wxfrom=5&wx_lazy=1)

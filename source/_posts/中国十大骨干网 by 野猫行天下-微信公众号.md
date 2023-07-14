@@ -193,17 +193,3 @@ CMNET同时也是中国移动GPRS网络的两大接入点（Access Point Name，
 虽然有很多人在怀疑马斯克的吹牛计划，但据SpaceX官网消息，美国东部时间2020年2月17日上午10时5分，马斯克旗下的火箭公司SpaceX已将60颗“星链”卫星送入太空。截至目前，“星链”计划已分五批发射300颗卫星。
 
 **看来世界上真的只有2种人：做事的人和说话的人，做事的人一言不合就做事，说话的人一言不合就争论，**虽然现在的胜利者往往是后者，但未来的胜利者却多是前者**。**
-
-**
-**
-
-**
-**
-
-![图片](https://mmbiz.qpic.cn/mmbiz_jpg/9Uq6185REibbd3O5w8TvFE5flyXTuKu9fQGxo9vm2fuicNQIg20NWIQlMCcJicUBQj3j86AGRgN0icjp0GdvjF5LdQ/640?wx_fmt=jpeg&wxfrom=5&wx_lazy=1&wx_co=1)
-
-收录于合集 #电脑高级使用技巧，事半功倍
-
- 32个
-
-上一篇中国四大电信运营商下一篇一文说尽江湖中的高速下载大杀器

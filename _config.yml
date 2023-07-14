@@ -1,23 +1,65 @@
 # Hexo Configuration
 ## Docs: https://hexo.io/docs/configuration.html
 ## Source: https://github.com/hexojs/hexo/
-
 # Site
-title: hojun
+title: stevessr
 subtitle:
 description: 好少年光芒万丈
 keywords:
-author: hojun
+author: stevessr
 language: zh-cn
-timezone:
+timezone: Asia/Hong_Kong
+# site name
+# 站点名 【改】
+prefixName: ( •̀ ω •́ )y
+siteName: 🚒🚚🚛🚜🚘🚔🚖🚍
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: /
+#url: .
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
+# 站点介绍（或者说是个人签名）【改】
+#description: Live your life with passion! With some drive!
+# 站点cdn，没有就为空 【改】  若是cdn为空，一些图片地址就要填完整地址了，比如之前avatar就要填https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/custom/avatar.jpg
+#cdn: https://cdn.jsdelivr.net/gh/honjun/cdn@1.6
+# 开启pjax 【选】
+#pjax: 1
+# 站点首页的公告信息 【改】
+notice: Notice w(ﾟДﾟ)w wow~ ⊙o⊙
+# 懒加载的加载中图片 【选】
+#lazyloadImg: https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg
 
+# 站点菜单配置 【选】
+menus:
+  首页: { path: /, fa: fa-fort-awesome faa-shake }
+  归档: { path: /archives, fa: fa-archive faa-shake, submenus: { 
+    技术: {path: /categories/技术/, fa: fa-code }, 
+    生活: {path: /categories/生活/, fa: fa-file-text-o }, 
+    资源: {path: /categories/资源/, fa: fa-cloud-download }, 
+    随想: {path: /categories/随想/, fa: fa-commenting-o },
+    转载: {path: /categories/转载/, fa: fa-book }
+  } }
+  清单: { path: javascript:;, fa: fa-list-ul faa-vertical, submenus: { 
+    书单: {path: /tags/悦读/, fa: fa-th-list faa-bounce }, 
+    番组: {path: /bangumi/, fa: fa-film faa-vertical }, 
+    歌单: {path: /music/, fa: fa-headphones },
+    图集: {path: /tags/图集/, fa: fa-photo },
+    转载: {path: /tags/转载/, fa: fa-soild fas-share }
+  } }
+  留言板: { path: /comment/, fa: fa-pencil-square-o faa-tada }
+  友人帐: { path: /links/, fa: fa-link faa-shake }
+  赞赏: { path: /donate/, fa: fa-heart faa-pulse }
+  关于: { path: /, fa: fa-leaf faa-wrench , submenus: { 
+    我？: {path: /about/, fa: fa-meetup}, 
+    主题: {path: /theme-sakura/, fa: iconfont icon-sakura },
+    Lab: {path: /lab/, fa: fa-cogs },
+  } }
+  客户端: { path: /client/, fa: fa-android faa-vertical }
+  RSS: { path: /atom.xml, fa: fa-rss faa-pulse }
+  
+ 
 # Directory
 source_dir: source
 public_dir: public
@@ -27,7 +69,6 @@ category_dir: categories
 code_dir: downloads/code
 i18n_dir: :lang
 skip_render:
-
 # Writing
 new_post_name: :title.md # File name of new posts
 default_layout: post
@@ -42,14 +83,13 @@ highlight:
   enable: false
   line_number: false
   auto_detect: false
-  tab_replace:
-  
+  tab_replace: false
 # Home page setting
 # path: Root path for your blogs index page. (default = '')
 # per_page: Posts displayed per page. (0 = disable pagination)
 # order_by: Posts order. (Order by date descending by default)
 index_generator:
-  path: ''
+  path: '/atom.xml'
   per_page: 10
   order_by: -date
   
@@ -84,7 +124,6 @@ deploy:
     # github: https://github.com/honjun/honjun.github.io.git
     coding: https://git.coding.net/hojun/hojun.git
   branch: master
-
 # backup
 backup:
   type: git
@@ -92,7 +131,6 @@ backup:
   repository:
     # github: https://github.com/honjun/honjun.github.io.git,backup
     coding: https://git.coding.net/hojun/hojun.git,backup
-
 #RSS
 feed:
   type: atom
@@ -103,3 +141,10 @@ feed:
   content_limit: 140
   content_limit_delim: ' '
   order_by: -date
+  
+# favicon and site master avatar
+# 站点的favicon和头像 输入图片路径（下面的配置是都是cdn的相对路径，没有cdn请填写完整路径，建议使用jsdeliver搭建一个cdn啦，先去下载我的cdn替换下图片就行了，简单方便~）【改】
+favicon: /images/favicon.ico
+avatar: /img/custom/avatar.jpg
+  
+
