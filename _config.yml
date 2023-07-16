@@ -3,9 +3,9 @@
 ## Source: https://github.com/hexojs/hexo/
 # Site
 title: stevessr
-subtitle:
+subtitle: sub标题
 description: 好少年光芒万丈
-keywords:
+keywords: hexo
 author: stevessr
 language: zh-cn
 timezone: Asia/Hong_Kong
@@ -146,5 +146,25 @@ feed:
 # 站点的favicon和头像 输入图片路径（下面的配置是都是cdn的相对路径，没有cdn请填写完整路径，建议使用jsdeliver搭建一个cdn啦，先去下载我的cdn替换下图片就行了，简单方便~）【改】
 favicon: /images/favicon.ico
 avatar: /img/custom/avatar.jpg
-  
 
+# startdash url, title, desc img
+startdash: 
+  - {url: /theme-sakura/, title: Sakura, desc: 本站 hexo 主题, img: /img/startdash/sakura.md.png}
+  - {url: https://space.bilibili.com/499161515, title: Bilibili, desc: 博主的b站视频, img: /img/startdash/bilibili.jpg}
+  - {url: /, title: hojun的万事屋, desc: 技术服务, img: /img/startdash/wangshiwu.jpg}
+  
+#social  url, img PC端配置
+social:
+  github: {url: http://github.com/stevessr, img: /img/social/github.png}
+  sina: {url: https://weibo.com/u/7852531849, img: /img/social/sina.png}
+  #wangyiyun: {url: http://weibo.com/mashirozx?is_all=1, img: /img/social/wangyiyun.png}
+  zhihu: {url: https://www.zhihu.com/people/35-78-68-35, img: /img/social/zhihu.png}
+  email: {url: steve-ssr@outlook.com, img: /img/social/email.svg}
+  #wechat: {url: /#, qrcode: /img/custom/wechat.jpg, img: /img/social/wechat.png}
+  #wechat2: {url: /#, qrcode: /img/custom/wechat.jpg, img: /img/social/wechat.png}
+
+# 社交按钮(msocial)  url, img 移动端配置 【改】
+msocial:
+  github: {url: http://github.com/stevessr, fa: fa-github, color: 333}
+  #weibo: {url: http://weibo.com/mashirozx?is_all=1, fa: fa-weibo, color: dd4b39}
+  #qq: {url: https://wpa.qq.com/msgrd?v=3&uin=954655431&site=qq&menu=yes, fa: fa-qq, color: 25c6fe}
