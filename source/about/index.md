@@ -37,3 +37,5 @@ bot_ui_ini()
 {% endraw %}
 
 ![https://1.116.141.20/](https://1.116.141.20/)
+
+![https://mino.firsts1.repl.co:5900/bucket1/svg/aaca.eu.org.svg](https://mino.firsts1.repl.co:5900/bucket1/svg/aaca.eu.org.svg)
