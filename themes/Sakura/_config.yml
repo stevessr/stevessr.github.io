@@ -2,7 +2,7 @@
 prefixName: さくら荘その
 siteName: stevessr
 # favicon and site master avatar
-favicon: https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/images/favicon.ico
+favicon: https://cdn.jsdelivr.net/gh/honjun/cdn@1.8/assets/img/favicon.ico
 avatar: https://cdn.aaca.eu.org/api/v1/buckets/bucket1/objects/download?preview=true&prefix=aW1nLzg5NjQ1MzcyLnBuZw==&version_id=4ba1136c-9af9-40d3-b88b-09550aa37810
 url: https://sakura.stevessr-github-io.pages.dev
 description: Live your life with passion! With some drive!

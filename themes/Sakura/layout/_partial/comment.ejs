@@ -15,30 +15,29 @@
 <% } %>
 
 <% if (theme.waline.enable && post.comments) { %>
-    <script src="//cdn.jsdelivr.net/npm/@waline/client"></script>
+  <script src='//unpkg.com/@waline/client@v2/dist/waline.js'></script>
+    <link rel="stylesheet" href="//unpkg.com/@waline/client@v2/dist/waline.css"/>
     <div id="waline"></div>
-    <style>
-    #waline textarea {
-        box-sizing: border-box;
-        background: url("<%- url_for(theme.waline.background) %>") 100% 100% no-repeat;
-    }
-    </style>
-    <script>
-        Waline({
+      <script type="module" >
+        import { init } from 'https://unpkg.com/@waline/client@v2/dist/waline.mjs';
+        init({
               el: '#waline',
               serverURL: '<%- theme.waline.serverURL %>',
               pageSize: '<%- theme.waline.pageSize %>',
               lang: '<% if (config.language == "zh-cn") {  %>zh-CN<% } else { %>en<% } %>',
-              requiredFields: ['nick','mail'], //设置必填项
-              placeholder: '<%= theme.waline.placeholder %>',
-              visitor: '<%- theme.waline.visitor %>',
+              requiredMeta: ['nick','mail'], //设置必填项
+              locale.placeholder: '<%= theme.waline.placeholder %>',
+              pageview: '<%- theme.waline.visitor %>',
               emoji: [
-                  'https://cdn.jsdelivr.net/gh/walinejs/emojis@1.0.0/tieba',
-                  'https://cdn.jsdelivr.net/gh/walinejs/emojis@1.0.0/bilibili',
-                  'https://cdn.jsdelivr.net/gh/walinejs/emojis@1.0.0/weibo',
+                  'https://cdn.jsdelivr.net/gh/walinejs/emojis@1.1.0/tieba',
+                  'https://cdn.jsdelivr.net/gh/walinejs/emojis@1.1.0/bilibili',
+                  'https://cdn.jsdelivr.net/gh/walinejs/emojis@1.1.0/weibo',
+                  'https://cdn.jsdelivr.net/gh/walinejs/emojis@1.1.0/alus',
+                  'https://cdn.jsdelivr.net/gh/walinejs/emojis@1.1.0/bmoji',
+                  'https://cdn.jsdelivr.net/gh/walinejs/emojis@1.1.0/qq',
+                  'https://cdn.jsdelivr.net/gh/walinejs/emojis@1.1.0/tw-emoji'
               ],
-              avatar: '<%- theme.waline.avatar %>',
-              dark: 'auto',
+              dark: 'auto'
             });
     </script>
 <% } %>
