@@ -26,7 +26,9 @@
               pageSize: '<%- theme.waline.pageSize %>',
               lang: '<% if (config.language == "zh-cn") {  %>zh-CN<% } else { %>en<% } %>',
               requiredMeta: ['nick','mail'], 
-              locale:{placeholder: "<%= theme.waline.placeholder %>"}
+              locale:{placeholder: "<%= theme.waline.placeholder %>"},
+              pageview: true,
+              comment: true,
               emoji: [
                   'https://cdn.jsdelivr.net/gh/walinejs/emojis@1.1.0/tieba',
                   'https://cdn.jsdelivr.net/gh/walinejs/emojis@1.1.0/bilibili',
