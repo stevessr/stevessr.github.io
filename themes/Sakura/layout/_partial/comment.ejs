@@ -25,9 +25,9 @@
               serverURL: '<%- theme.waline.serverURL %>',
               pageSize: '<%- theme.waline.pageSize %>',
               lang: '<% if (config.language == "zh-cn") {  %>zh-CN<% } else { %>en<% } %>',
-              requiredMeta: ['nick','mail'], //设置必填项
-              locale.placeholder: '<%= theme.waline.placeholder %>',
-              pageview: '<%- theme.waline.visitor %>',
+              requiredMeta: ['nick','mail'], 
+              locale:{placeholder: "<%= theme.waline.placeholder %>"}
+              pageview: "<%- theme.waline.visitor %>",
               emoji: [
                   'https://cdn.jsdelivr.net/gh/walinejs/emojis@1.1.0/tieba',
                   'https://cdn.jsdelivr.net/gh/walinejs/emojis@1.1.0/bilibili',
