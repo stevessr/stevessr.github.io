@@ -18,12 +18,13 @@ jobs:
     - name: Set up Node.js
       uses: actions/setup-node@v3
       with:
-        node-version: '18'
+        node-version: '22'
 
     - name: Install Hexo and dependencies
       run: |
         npm install -g hexo-cli
-        npm ci
+        npm install -g pnpm 
+        pnpm install --production
 
     - name: Build the Hexo site
       run: hexo generate
