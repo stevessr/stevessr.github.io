@@ -38,4 +38,4 @@ jobs:
         git init
         git add .
         git commit -m "Deploy Hexo site"
-        git push --force --quiet "https://${{ secrets.GITHUB_TOKEN }}@github.com/stevessr/blog-sakura.git" master:sakura
+        git push --force --quiet "https://${{ secrets.PERSONAL_ACCESS_TOKEN }}@github.com/stevessr/blog-sakura.git" master:sakura
