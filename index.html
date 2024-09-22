@@ -66,8 +66,8 @@
   
     <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2024/09/03/hello-world/" class="article-date">
-  <time datetime="2024-09-03T09:06:21.017Z" itemprop="datePublished">2024-09-03</time>
+    <a href="/2024/09/22/hello-world/" class="article-date">
+  <time datetime="2024-09-22T01:33:23.067Z" itemprop="datePublished">2024-09-22</time>
 </a>
     
   </div>
@@ -78,7 +78,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2024/09/03/hello-world/">Hello World</a>
+      <a class="article-title" href="/2024/09/22/hello-world/">Hello World</a>
     </h1>
   
 
@@ -103,9 +103,322 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2024/09/03/hello-world/" data-id="cm0m7gc410000dtol7be92od4" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2024/09/22/hello-world/" data-id="cm1cwn2xx0001eaqa0slh7dse" class="article-share-link">Share</a>
       
       
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-doh可用" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2024/09/22/doh%E5%8F%AF%E7%94%A8/" class="article-date">
+  <time datetime="2024-09-22T00:46:06.000Z" itemprop="datePublished">2024-09-22</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/doh/">doh</a>►<a class="article-category-link" href="/categories/doh/available/">available</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2024/09/22/doh%E5%8F%AF%E7%94%A8/">Doh可用</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="一、什么是doh"><a href="#一、什么是doh" class="headerlink" title="一、什么是doh"></a>一、什么是doh</h1><p>参考 <a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/DNS_over_HTTPS">DNS over HTTPS - 维基</a></p>
+<p><strong>DNS over HTTPS</strong>（缩写：<strong>DoH</strong>）是<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/%E5%9F%9F%E5%90%8D%E7%B3%BB%E7%BB%9F">域名系统</a>的安全协议，以<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/%E8%B6%85%E6%96%87%E6%9C%AC%E4%BC%A0%E8%BE%93%E5%AE%89%E5%85%A8%E5%8D%8F%E8%AE%AE">HTTPS</a>协议完成DNS解析来保护<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/%E7%BD%91%E7%BB%9C%E4%B8%BB%E6%9C%BA">网络主机</a>的隐私，能避免传统DNS协议中用户的DNS解析请求被窃听或者修改（例如<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/%E4%B8%AD%E9%97%B4%E4%BA%BA%E6%94%BB%E5%87%BB">中间人攻击</a>）的情况。[<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/DNS_over_HTTPS#cite_note-register-1">1]</a></p>
+<p>DoH由<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/IETF">IETF</a>支持（见 <a target="_blank" rel="noopener" href="https://datatracker.ietf.org/doc/html/rfc8484">RFC 8484</a> （<a target="_blank" rel="noopener" href="https://web.archive.org/web/20230912223539/https://datatracker.ietf.org/doc/html/rfc8484">页面存档备份</a>，存于<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/%E4%BA%92%E8%81%94%E7%BD%91%E6%A1%A3%E6%A1%88%E9%A6%86">互联网档案馆</a>））。</p>
+<p><a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/Google">Google</a>及<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/Mozilla%E5%9F%BA%E9%87%91%E4%BC%9A">Mozilla基金会</a>正在测试此协议，提高网络安全性。[<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/DNS_over_HTTPS#cite_note-Google1-2">2]</a>[<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/DNS_over_HTTPS#cite_note-3">3]</a>2018年9月5日，Mozilla基金会发布的<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/Firefox">Firefox</a> 62正式版加入了这项功能，但需要用户手动开启。</p>
+<details>
+
+<p>DNS over HTTPS利用HTTP协议的GET命令发出经由<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/JSON">JSON</a>等编码的DNS解析请求。[<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/DNS_over_HTTPS#cite_note-Google1-2">2]</a>较于传统的DNS协议，此处的HTTP协议通信处于具有加密作用的<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/SSL">SSL&#x2F;TLS</a>协议（两者统称作HTTPS）的保护之下。但是，由于HTTPS本身需要经由多次数据来回传递才能完成协议初始化，其域名解析耗时较原DNS协议会显著增加。</p>
+<p>基于HTTPS的DNS是尚在提议阶段的标准，由IETF以RFC 8484（2018年10月）发布。它使用<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/HTTP/2">HTTP&#x2F;2</a>和<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/%E8%B6%85%E6%96%87%E6%9C%AC%E4%BC%A0%E8%BE%93%E5%AE%89%E5%85%A8%E5%8D%8F%E8%AE%AE">HTTPS</a>，并支持有线格式DNS响应数据，如现有UDP响应中所返回的，在具有<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/MIME">MIME</a>类型<code>application/dns-message</code>的HTTPS有效负载中。[<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/DNS_over_HTTPS#cite_note-5">5]</a>[<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/DNS_over_HTTPS#cite_note-6">6]</a>如果使用HTTP&#x2F;2，服务器也可以使用HTTP&#x2F;2服务器推送来发送它预期客户端可能提前发现有用的值。[<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/DNS_over_HTTPS#cite_note-#1-7">7]</a></p>
+<p>传统的DNS协议形成于互联网早期，直接基于<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/%E7%94%A8%E6%88%B7%E6%95%B0%E6%8D%AE%E6%8A%A5%E5%8D%8F%E8%AE%AE">UDP</a>或<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/%E4%BC%A0%E8%BE%93%E6%8E%A7%E5%88%B6%E5%8D%8F%E8%AE%AE">TCP</a>协议，且彼时未虑及现代安全性的需要，未利用<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/%E5%AF%86%E7%A2%BC%E5%AD%B8">密码学</a>等手段进行加密或验证。因而，其无法抵御现代互联网常见的<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/DNS%E6%8A%95%E6%AF%92%E6%B1%A1%E6%9F%93">DNS投毒污染</a>等攻击手段或监听。虽然后来的<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/DNSSEC">DNSSEC</a>方案通过<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/%E9%9B%BB%E5%AD%90%E7%B0%BD%E5%90%8D">电子签名</a>进行验证，强化了DNS的安全性，并能够抵御DNS投毒污染等篡改通信的手段，但其对于中间网络设备进行的监听仍然没有抵御能力（随后，监听者可以通过获取的通信数据知晓用户访问了哪一<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/%E5%9F%9F%E5%90%8D">域名</a>，而域名往往与具体的<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/%E7%B6%B2%E7%AB%99">网站</a>相关系）。此外，DNSSEC的起效要求现有的大量DNS解析服务的提供商（常为<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/%E4%BA%92%E8%81%AF%E7%B6%B2%E6%9C%8D%E5%8B%99%E4%BE%9B%E6%87%89%E5%95%86">互联网服务提供商</a>或第三方大型互联网机构）对已有的DNS服务器进行大范围修改等问题，其推进进程并不理想。而对于DNS over HTTPS，在正确部署服务端并妥善配置客户端的前提下，互联网服务提供商或其它中间网络设备无法解密（亦即无法获知请求的实际内容）或者篡改已经<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/%E5%8A%A0%E5%AF%86">加密</a>的HTTPS通信，故其能够有效保护互联网用户的安全及隐私；另一方面，其基于已经成熟并已广泛部署的HTTPS协议，客户端进行利用较为方便。</p>
+<h2 id="实施方案"><a href="#实施方案" class="headerlink" title="实施方案"></a>实施方案</h2><p>DNS over HTTPS用于DNS解析器的递归DNS解析。解析器（DoH客户端）必须能够访问托管查询端点的DoH服务器。[<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/DNS_over_HTTPS#cite_note-#1-7">7]</a>基于HTTPS的DNS缺乏操作系统的本机支持。因此，希望使用它的用户必须安装附加软件。三种使用场景很常见：</p>
+<ul>
+<li>在应用程序中使用DoH实现：某些浏览器具有内置的DoH实现，因此可以绕过操作系统的DNS功能来执行查询。缺点是应用程序可能无法通过错误配置或缺乏对DoH的支持来通知用户是否跳过DoH查询。</li>
+<li>在本地网络中的名称服务器上安装DoH代理：在此方案中，客户端系统继续使用传统（端口53或853）DNS来查询本地网络中的名称服务器，然后通过到达来通过DoH收集必要的回复 互联网中的DoH服务器。 此方法对最终用户是透明的。</li>
+<li>在本地系统上安装DoH代理：在此方案中，操作系统配置为查询本地运行的DoH代理。与前面提到的方法相反，需要在希望使用DoH的每个系统上安装代理，这可能需要在更大的环境中付出很多努力。</li>
+<li>为操作系统安装DoH解析插件。</li>
+</ul>
+<p>在所有这些方案中，DoH客户端不直接查询任何权威名称服务器。相反，客户端依赖于使用传统（端口53或853）查询的DoH服务器来最终到达权威服务器。因此，DoH不具备<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/%E7%AB%AF%E5%88%B0%E7%AB%AF%E5%8A%A0%E5%AF%86">端到端加密</a>协议的资格，只有逐跳加密且仅在始终使用<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/DNS_over_TLS">DNS over TLS</a>时才有资格。</p>
+<h2 id="支持"><a href="#支持" class="headerlink" title="支持"></a>支持</h2><h3 id="公共DNS"><a href="#公共DNS" class="headerlink" title="公共DNS"></a>公共DNS</h3><p>DNS over HTTPS 功能已由部分公共 DNS 支持[<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/DNS_over_HTTPS#cite_note-8">8]</a>[<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/DNS_over_HTTPS#cite_note-9">9]</a>[<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/DNS_over_HTTPS#cite_note-10">10]</a>，包括：</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/AdGuard">AdGuard</a></li>
+<li><a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/%E9%98%BF%E9%87%8C%E4%BA%91">阿里云</a>公共 DNS</li>
+<li><a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/Cloudflare">Cloudflare</a></li>
+<li>DNSPod Public DNS</li>
+<li><a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/Google_Public_DNS">Google Public DNS</a></li>
+<li><a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/OpenDNS">OpenDNS</a></li>
+<li>QUAD9 DNS</li>
+<li><a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/%E5%8F%B0%E7%81%A3%E7%B6%B2%E8%B7%AF%E8%B3%87%E8%A8%8A%E4%B8%AD%E5%BF%83">台湾网络信息中心</a>（Quad 101）</li>
+</ul>
+<p>详见<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/%E5%85%AC%E5%85%B1%E5%9F%9F%E5%90%8D%E8%A7%A3%E6%9E%90%E6%9C%8D%E5%8A%A1">公共域名解析服务</a></p>
+<h3 id="软件"><a href="#软件" class="headerlink" title="软件"></a>软件</h3><p>Edge、Firefox、Chrome浏览器均支持DoH。</p>
+<h3 id="MacOS"><a href="#MacOS" class="headerlink" title="MacOS"></a><a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/MacOS">MacOS</a></h3><p>2020年6月，苹果在WWDC大会宣布 iOS 14 与 macOS 11 新增对加密DNS的支持，包括 DNS over HTTPS（DoH）与 DNS over TLS（DoT）。[<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/DNS_over_HTTPS#cite_note-11">11]</a></p>
+<h3 id="Microsoft-Windows"><a href="#Microsoft-Windows" class="headerlink" title="Microsoft Windows"></a><a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/Microsoft_Windows">Microsoft Windows</a></h3><p>2019年11月17日，一篇在微软官方博客释出的博文宣布，Windows 将支持 DNS over HTTPS（DoH)，以加密 DNS 流量保护用户隐私。[<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/DNS_over_HTTPS#cite_note-12">12]</a></p>
+<p>Windows 11支持DoH。</p>
+</details>
+
+<h1 id="目前doh的可用情况"><a href="#目前doh的可用情况" class="headerlink" title="目前doh的可用情况"></a>目前doh的可用情况</h1><p>p.s.测试于2024&#x2F;9&#x2F;22上午</p>
+<table>
+<thead>
+<tr>
+<th>服务商</th>
+<th>地址</th>
+<th>可用性</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>OpenDNS</td>
+<td><del><a target="_blank" rel="noopener" href="https://doh.opendns.com/dns-query">doh.opendns.com</a></del></td>
+<td>reset</td>
+</tr>
+<tr>
+<td></td>
+<td><a target="_blank" rel="noopener" href="https://208.67.222.222/dns-query">208.67.222.222</a></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td><a target="_blank" rel="noopener" href="https://208.67.220.220/dns-query">208.67.220.220</a></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td><a target="_blank" rel="noopener" href="https://[2620:119:fc::2]/dns-query">[2620:119:fc::2]</a></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td><del><a target="_blank" rel="noopener" href="https://familyshield.opendns.com/dns-query">familyshield.opendns.com</a></del></td>
+<td>reset</td>
+</tr>
+<tr>
+<td></td>
+<td><a target="_blank" rel="noopener" href="https://146.112.41.2/dns-query">146.112.41.2</a></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td><a target="_blank" rel="noopener" href="https://208.67.222.123/dns-query">208.67.222.123</a></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td><a target="_blank" rel="noopener" href="https://208.67.220.123/dns-query">208.67.220.123</a></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td><del><a target="_blank" rel="noopener" href="https://sandbox.opendns.com/dns-query">sandbox.opendns.com</a></del></td>
+<td>reset</td>
+</tr>
+<tr>
+<td></td>
+<td><a target="_blank" rel="noopener" href="https://208.67.222.2/dns-query">208.67.222.2</a></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td><a target="_blank" rel="noopener" href="https://208.67.220.2/dns-query">208.67.220.2t</a></td>
+<td></td>
+</tr>
+<tr>
+<td>Cloudflare</td>
+<td><del><a target="_blank" rel="noopener" href="https://dns.cloudflare.com/dns-query">dns.cloudflare.com</a></del></td>
+<td>reset</td>
+</tr>
+<tr>
+<td></td>
+<td><del><a target="_blank" rel="noopener" href="https://security.cloudflare-dns.com/dns-query">cloudflare-dns.com</a></del></td>
+<td>reset</td>
+</tr>
+<tr>
+<td></td>
+<td><del><a target="_blank" rel="noopener" href="https://one.one.one.one/dns-query">one.one.one.one</a></del></td>
+<td>reset</td>
+</tr>
+<tr>
+<td></td>
+<td><del><a target="_blank" rel="noopener" href="https://1dot1dot1dot1.cloudflare-dns.com/dns-query">1dot1dot1dot1.cloudflare-dns.com</a></del></td>
+<td>reset</td>
+</tr>
+<tr>
+<td></td>
+<td><del><a target="_blank" rel="noopener" href="https://security.cloudflare-dns.com/dns-query">security.cloudflare-dns.com</a></del></td>
+<td>reset</td>
+</tr>
+<tr>
+<td></td>
+<td><del><a target="_blank" rel="noopener" href="https://family.cloudflare-dns.com/dns-query">family.cloudflare-dns.com</a></del></td>
+<td>reset</td>
+</tr>
+<tr>
+<td></td>
+<td><a target="_blank" rel="noopener" href="https://dns64.cloudflare-dns.com/dns-query">dns64.cloudflare-dns.com</a></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td><a target="_blank" rel="noopener" href="https://[2606:4700::6810:84e5]/dns-query">[2606:4700::6810:84e5]</a></td>
+<td>证书不对</td>
+</tr>
+<tr>
+<td></td>
+<td><a target="_blank" rel="noopener" href="https://104.16.133.229/dns-query">104.16.133.229</a></td>
+<td>证书不对</td>
+</tr>
+<tr>
+<td></td>
+<td><del><a target="_blank" rel="noopener" href="https://1.1.1.1/dns-query">1.1.1.1</a></del></td>
+<td>超时</td>
+</tr>
+<tr>
+<td></td>
+<td><del><a target="_blank" rel="noopener" href="https://1.0.0.1/dns-query">1.0.0.1</a></del></td>
+<td>超时</td>
+</tr>
+<tr>
+<td>Wikimedia</td>
+<td><a target="_blank" rel="noopener" href="https://wikimedia-dns.org/dns-query">wikimedia-dns.org</a></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td><a target="_blank" rel="noopener" href="https://185.71.138.138/dns-query">185.71.138.138</a></td>
+<td>证书不对</td>
+</tr>
+<tr>
+<td></td>
+<td><a target="_blank" rel="noopener" href="https://185.71.138.138/dns-query">185.71.138.138</a></td>
+<td>证书不对</td>
+</tr>
+<tr>
+<td>google</td>
+<td><del><a target="_blank" rel="noopener" href="https://dns.google/dns-query">dns.google</a></del></td>
+<td>超时</td>
+</tr>
+<tr>
+<td></td>
+<td><a target="_blank" rel="noopener" href="https://dns64.dns.google/dns-query">dns64.dns.google</a></td>
+<td></td>
+</tr>
+<tr>
+<td>Adguard</td>
+<td><del><a target="_blank" rel="noopener" href="https://dns.adguard-dns.com/dns-query">dns.adguard-dns.com</a></del></td>
+<td>reset</td>
+</tr>
+<tr>
+<td></td>
+<td><del><a target="_blank" rel="noopener" href="https://unfiltered.adguard-dns.com/dns-query">unfiltered.adguard-dns.com</a></del></td>
+<td>reset</td>
+</tr>
+<tr>
+<td></td>
+<td><del><a target="_blank" rel="noopener" href="https://family.adguard-dns.com/dns-query">family.adguard-dns.com</a></del></td>
+<td>reset</td>
+</tr>
+<tr>
+<td>quad9</td>
+<td><del><a target="_blank" rel="noopener" href="https://dns.quad9.net/dns-query">dns.quad9.net</a></del></td>
+<td>reset</td>
+</tr>
+<tr>
+<td></td>
+<td><a target="_blank" rel="noopener" href="https://9.9.9.9/dns-query">9.9.9.9</a></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td><a target="_blank" rel="noopener" href="https://149.112.112.112/dns-query">149.112.112.112</a></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td><a target="_blank" rel="noopener" href="https://[2620:fe::fe]/dns-query">[2620:fe::fe]</a></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td><a target="_blank" rel="noopener" href="https://[2620:fe::9]/dns-query">[2620:fe::9]</a></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td><del><a target="_blank" rel="noopener" href="https://dns10.quad9.net/dns-query">dns10.quad9.net</a></del></td>
+<td>reset</td>
+</tr>
+<tr>
+<td></td>
+<td><a target="_blank" rel="noopener" href="https://9.9.9.11/dns-query">9.9.9.11</a></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td><a target="_blank" rel="noopener" href="https://149.112.112.11/dns-query">149.112.112.11</a></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td><a target="_blank" rel="noopener" href="https://[2620:fe::11]/dns-query">[2620:fe::11]</a></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td><a target="_blank" rel="noopener" href="https://[2620:fe::fe:11]/dns-query">[2620:fe::fe:11]</a></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td><del><a target="_blank" rel="noopener" href="https://dns11.quad9.net/dns-query">dns11.quad9.net</a></del></td>
+<td>reset</td>
+</tr>
+<tr>
+<td></td>
+<td><a target="_blank" rel="noopener" href="https://9.9.9.10/dns-query">9.9.9.10</a></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td><a target="_blank" rel="noopener" href="https://149.112.112.10/dns-query">149.112.112.10</a></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td><a target="_blank" rel="noopener" href="https://[2620:fe::10]/dns-query">[2620:fe::10]</a></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td><a target="_blank" rel="noopener" href="https://[2620:fe::fe:10]/dns-query">[2620:fe::fe:10]</a></td>
+<td></td>
+</tr>
+</tbody></table>
+<p>copyright stevessr 未经许可不许转载</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2024/09/22/doh%E5%8F%AF%E7%94%A8/" data-id="cm1cwn2xs0000eaqacxum3u67" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/doh/" rel="tag">doh</a></li></ul>
+
     </footer>
   </div>
   
@@ -11695,7 +12008,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2024/09/03/htmlchart/" data-id="cm0m7gc4b0005dtolhhl09y8h" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2024/09/03/htmlchart/" data-id="cm1cwn2y30006eaqahm32amg6" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/chart/" rel="tag">chart</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/codeing/" rel="tag">codeing</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/html/" rel="tag">html</a></li></ul>
@@ -11740,7 +12053,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2024/08/30/phone/" data-id="cm0m7gc480002dtol5a4n5quu" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2024/08/30/phone/" data-id="cm1cwn2y20005eaqa4h748zg4" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%A4%87%E4%BB%BD/" rel="tag">备份</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E7%94%B5%E4%BF%A1/" rel="tag">电信</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E7%A7%BB%E5%8A%A8/" rel="tag">移动</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%81%94%E9%80%9A/" rel="tag">联通</a></li></ul>
@@ -11835,7 +12148,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2024/08/07/nodejs/" data-id="cm0m7gc460001dtol9mtag6kq" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2024/08/07/nodejs/" data-id="cm1cwn2y10004eaqaepp9d7ra" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux/" rel="tag">linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/nodejs/" rel="tag">nodejs</a></li></ul>
@@ -11909,7 +12222,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2023/07/14/%E4%B8%AD%E5%9B%BD%E5%9B%9B%E5%A4%A7%E7%94%B5%E4%BF%A1%E8%BF%90%E8%90%A5%E5%95%86%20by%20%20%E9%87%8E%E7%8C%AB%E8%A1%8C%E5%A4%A9%E4%B8%8B/" data-id="cm0m7gc4f000adtol3ltvfi7l" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2023/07/14/%E4%B8%AD%E5%9B%BD%E5%9B%9B%E5%A4%A7%E7%94%B5%E4%BF%A1%E8%BF%90%E8%90%A5%E5%95%86%20by%20%20%E9%87%8E%E7%8C%AB%E8%A1%8C%E5%A4%A9%E4%B8%8B/" data-id="cm1cwn2y7000eeaqaakprac9y" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%A4%87%E4%BB%BD/" rel="tag">备份</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/" rel="tag">微信公众号</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E7%94%B5%E4%BF%A1/" rel="tag">电信</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E7%A7%BB%E5%8A%A8/" rel="tag">移动</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%80%83%E5%8F%A4/" rel="tag">考古</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%81%94%E9%80%9A/" rel="tag">联通</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%BD%AC%E8%BD%BD/" rel="tag">转载</a></li></ul>
@@ -12044,7 +12357,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2023/07/14/%E4%B8%AD%E5%9B%BD%E5%8D%81%E5%A4%A7%E9%AA%A8%E5%B9%B2%E7%BD%91%20by%20%E9%87%8E%E7%8C%AB%E8%A1%8C%E5%A4%A9%E4%B8%8B-%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/" data-id="cm0m7gc4c0006dtol11nq00va" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2023/07/14/%E4%B8%AD%E5%9B%BD%E5%8D%81%E5%A4%A7%E9%AA%A8%E5%B9%B2%E7%BD%91%20by%20%E9%87%8E%E7%8C%AB%E8%A1%8C%E5%A4%A9%E4%B8%8B-%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/" data-id="cm1cwn2y5000aeaqa45ox07jy" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%A4%87%E4%BB%BD/" rel="tag">备份</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/" rel="tag">微信公众号</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E7%94%B5%E4%BF%A1/" rel="tag">电信</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E7%A7%BB%E5%8A%A8/" rel="tag">移动</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%80%83%E5%8F%A4/" rel="tag">考古</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%81%94%E9%80%9A/" rel="tag">联通</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%BD%AC%E8%BD%BD/" rel="tag">转载</a></li></ul>
@@ -12152,7 +12465,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2023/07/14/%E4%B8%AD%E5%9B%BD%E5%8D%81%E5%A4%A7%E9%AA%A8%E5%B9%B2%E7%BD%91%20by%20%E9%87%8E%E7%8C%AB%E8%A1%8C%E5%A4%A9%E4%B8%8B-%E7%9F%A5%E4%B9%8E/" data-id="cm0m7gc4d0007dtolbxhdfw4g" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2023/07/14/%E4%B8%AD%E5%9B%BD%E5%8D%81%E5%A4%A7%E9%AA%A8%E5%B9%B2%E7%BD%91%20by%20%E9%87%8E%E7%8C%AB%E8%A1%8C%E5%A4%A9%E4%B8%8B-%E7%9F%A5%E4%B9%8E/" data-id="cm1cwn2y6000beaqa8nsxfltr" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%A4%87%E4%BB%BD/" rel="tag">备份</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E7%94%B5%E4%BF%A1/" rel="tag">电信</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E7%9F%A5%E4%B9%8E/" rel="tag">知乎</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E7%A7%BB%E5%8A%A8/" rel="tag">移动</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%80%83%E5%8F%A4/" rel="tag">考古</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%81%94%E9%80%9A/" rel="tag">联通</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%BD%AC%E8%BD%BD/" rel="tag">转载</a></li></ul>
@@ -12269,7 +12582,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2023/07/14/%E8%B5%B7%E5%BA%95%E4%B8%89%E5%A4%A7%E8%BF%90%E8%90%A5%E5%95%86%E7%9A%84%E5%89%8D%E4%B8%96%E4%BB%8A%E7%94%9F,%E4%B8%8E%E5%90%8E%E4%B8%96...%20by%20%E8%BF%90%E8%90%A5%E5%95%86%E6%B1%82%E8%81%8C/" data-id="cm0m7gc4f000bdtold66qf8ns" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2023/07/14/%E8%B5%B7%E5%BA%95%E4%B8%89%E5%A4%A7%E8%BF%90%E8%90%A5%E5%95%86%E7%9A%84%E5%89%8D%E4%B8%96%E4%BB%8A%E7%94%9F,%E4%B8%8E%E5%90%8E%E4%B8%96...%20by%20%E8%BF%90%E8%90%A5%E5%95%86%E6%B1%82%E8%81%8C/" data-id="cm1cwn2y8000feaqadics5fmc" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%A4%87%E4%BB%BD/" rel="tag">备份</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E7%94%B5%E4%BF%A1/" rel="tag">电信</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E7%9F%A5%E4%B9%8E/" rel="tag">知乎</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E7%A7%BB%E5%8A%A8/" rel="tag">移动</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%80%83%E5%8F%A4/" rel="tag">考古</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%81%94%E9%80%9A/" rel="tag">联通</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%BD%AC%E8%BD%BD/" rel="tag">转载</a></li></ul>
@@ -12291,7 +12604,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Categories</h3>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/chart/">chart</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/chart/html/">html</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/chart/html/codeing/">codeing</a></li></ul></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/nodejs/">nodejs</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/nodejs/linux/">linux</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%8A%80%E6%9C%AF/">技术</a></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/chart/">chart</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/chart/html/">html</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/chart/html/codeing/">codeing</a></li></ul></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/doh/">doh</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/doh/available/">available</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/nodejs/">nodejs</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/nodejs/linux/">linux</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%8A%80%E6%9C%AF/">技术</a></li></ul>
     </div>
   </div>
 
@@ -12301,7 +12614,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/chart/" rel="tag">chart</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/codeing/" rel="tag">codeing</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/html/" rel="tag">html</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/linux/" rel="tag">linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nodejs/" rel="tag">nodejs</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%A4%87%E4%BB%BD/" rel="tag">备份</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/" rel="tag">微信公众号</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%94%B5%E4%BF%A1/" rel="tag">电信</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%9F%A5%E4%B9%8E/" rel="tag">知乎</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%A7%BB%E5%8A%A8/" rel="tag">移动</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%80%83%E5%8F%A4/" rel="tag">考古</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%81%94%E9%80%9A/" rel="tag">联通</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%BD%AC%E8%BD%BD/" rel="tag">转载</a></li></ul>
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/chart/" rel="tag">chart</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/codeing/" rel="tag">codeing</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/doh/" rel="tag">doh</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/html/" rel="tag">html</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/linux/" rel="tag">linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nodejs/" rel="tag">nodejs</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%A4%87%E4%BB%BD/" rel="tag">备份</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/" rel="tag">微信公众号</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%94%B5%E4%BF%A1/" rel="tag">电信</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%9F%A5%E4%B9%8E/" rel="tag">知乎</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%A7%BB%E5%8A%A8/" rel="tag">移动</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%80%83%E5%8F%A4/" rel="tag">考古</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%81%94%E9%80%9A/" rel="tag">联通</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%BD%AC%E8%BD%BD/" rel="tag">转载</a></li></ul>
     </div>
   </div>
 
@@ -12311,7 +12624,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/chart/" style="font-size: 10px;">chart</a> <a href="/tags/codeing/" style="font-size: 10px;">codeing</a> <a href="/tags/html/" style="font-size: 10px;">html</a> <a href="/tags/linux/" style="font-size: 10px;">linux</a> <a href="/tags/nodejs/" style="font-size: 10px;">nodejs</a> <a href="/tags/%E5%A4%87%E4%BB%BD/" style="font-size: 20px;">备份</a> <a href="/tags/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/" style="font-size: 13.33px;">微信公众号</a> <a href="/tags/%E7%94%B5%E4%BF%A1/" style="font-size: 20px;">电信</a> <a href="/tags/%E7%9F%A5%E4%B9%8E/" style="font-size: 13.33px;">知乎</a> <a href="/tags/%E7%A7%BB%E5%8A%A8/" style="font-size: 20px;">移动</a> <a href="/tags/%E8%80%83%E5%8F%A4/" style="font-size: 16.67px;">考古</a> <a href="/tags/%E8%81%94%E9%80%9A/" style="font-size: 20px;">联通</a> <a href="/tags/%E8%BD%AC%E8%BD%BD/" style="font-size: 16.67px;">转载</a>
+      <a href="/tags/chart/" style="font-size: 10px;">chart</a> <a href="/tags/codeing/" style="font-size: 10px;">codeing</a> <a href="/tags/doh/" style="font-size: 10px;">doh</a> <a href="/tags/html/" style="font-size: 10px;">html</a> <a href="/tags/linux/" style="font-size: 10px;">linux</a> <a href="/tags/nodejs/" style="font-size: 10px;">nodejs</a> <a href="/tags/%E5%A4%87%E4%BB%BD/" style="font-size: 20px;">备份</a> <a href="/tags/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/" style="font-size: 13.33px;">微信公众号</a> <a href="/tags/%E7%94%B5%E4%BF%A1/" style="font-size: 20px;">电信</a> <a href="/tags/%E7%9F%A5%E4%B9%8E/" style="font-size: 13.33px;">知乎</a> <a href="/tags/%E7%A7%BB%E5%8A%A8/" style="font-size: 20px;">移动</a> <a href="/tags/%E8%80%83%E5%8F%A4/" style="font-size: 16.67px;">考古</a> <a href="/tags/%E8%81%94%E9%80%9A/" style="font-size: 20px;">联通</a> <a href="/tags/%E8%BD%AC%E8%BD%BD/" style="font-size: 16.67px;">转载</a>
     </div>
   </div>
 
@@ -12333,7 +12646,11 @@
       <ul>
         
           <li>
-            <a href="/2024/09/03/hello-world/">Hello World</a>
+            <a href="/2024/09/22/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/2024/09/22/doh%E5%8F%AF%E7%94%A8/">Doh可用</a>
           </li>
         
           <li>
@@ -12346,10 +12663,6 @@
         
           <li>
             <a href="/2024/08/07/nodejs/">Nodejs</a>
-          </li>
-        
-          <li>
-            <a href="/2023/07/14/%E4%B8%AD%E5%9B%BD%E5%9B%9B%E5%A4%A7%E7%94%B5%E4%BF%A1%E8%BF%90%E8%90%A5%E5%95%86%20by%20%20%E9%87%8E%E7%8C%AB%E8%A1%8C%E5%A4%A9%E4%B8%8B/">中国四大电信运营商</a>
           </li>
         
       </ul>
