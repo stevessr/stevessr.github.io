@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>树莓派初始化与配置指南 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="yet , again使用官方raspberry pi OS  （64bit）在树莓派3B+上使用Kingston 64G TF卡，并更新到debian sid版本 step 1 : 安装系统当然是使用Raspberry Pi Imager了 step 2 : 初始化系统1234export http_proxy&#x3D;&quot;http:&#x2F;&#x2F;192.168.127.66:7891&quot;#这个只">
+<meta property="og:type" content="article">
+<meta property="og:title" content="树莓派初始化与配置指南">
+<meta property="og:url" content="http://example.com/2025/01/05/%E6%A0%91%E8%8E%93%E6%B4%BE%E5%86%8D%E6%AC%A1%E5%88%9D%E5%A7%8B%E5%8C%96/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="yet , again使用官方raspberry pi OS  （64bit）在树莓派3B+上使用Kingston 64G TF卡，并更新到debian sid版本 step 1 : 安装系统当然是使用Raspberry Pi Imager了 step 2 : 初始化系统1234export http_proxy&#x3D;&quot;http:&#x2F;&#x2F;192.168.127.66:7891&quot;#这个只">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2025-01-05T14:45:00.000Z">
+<meta property="article:modified_time" content="2025-01-05T03:14:42.199Z">
+<meta property="article:author" content="John Doe">
+<meta property="article:tag" content="树莓派">
+<meta property="article:tag" content="Raspberry Pi">
+<meta property="article:tag" content="Linux 配置">
+<meta property="article:tag" content="系统更新">
+<meta property="article:tag" content="工具安装">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-树莓派再次初始化" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2025/01/05/%E6%A0%91%E8%8E%93%E6%B4%BE%E5%86%8D%E6%AC%A1%E5%88%9D%E5%A7%8B%E5%8C%96/" class="article-date">
+  <time datetime="2025-01-05T14:45:00.000Z" itemprop="datePublished">2025-01-05</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E6%A0%91%E8%8E%93%E6%B4%BE%E9%85%8D%E7%BD%AE/">树莓派配置</a>►<a class="article-category-link" href="/categories/%E6%A0%91%E8%8E%93%E6%B4%BE%E9%85%8D%E7%BD%AE/%E5%BC%80%E6%BA%90%E5%B7%A5%E5%85%B7/">开源工具</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      树莓派初始化与配置指南
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="yet-again"><a href="#yet-again" class="headerlink" title="yet , again"></a>yet , again</h1><p>使用官方raspberry pi OS  （64bit）在树莓派3B+上使用Kingston 64G TF卡，并更新到debian sid版本</p>
+<h2 id="step-1-安装系统"><a href="#step-1-安装系统" class="headerlink" title="step 1 : 安装系统"></a>step 1 : 安装系统</h2><p>当然是使用Raspberry Pi Imager了</p>
+<h2 id="step-2-初始化系统"><a href="#step-2-初始化系统" class="headerlink" title="step 2 : 初始化系统"></a>step 2 : 初始化系统</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">export</span> http_proxy=<span class="string">&quot;http://192.168.127.66:7891&quot;</span></span><br><span class="line"><span class="comment">#这个只管http连接</span></span><br><span class="line"><span class="built_in">export</span> https_proxy=<span class="string">&quot;http://192.168.127.66:7891&quot;</span></span><br><span class="line"><span class="comment">#这个才关https连接</span></span><br></pre></td></tr></table></figure>
+<h2 id="step-3-安装常用软件"><a href="#step-3-安装常用软件" class="headerlink" title="step 3 : 安装常用软件"></a>step 3 : 安装常用软件</h2><h3 id="nodejs"><a href="#nodejs" class="headerlink" title="nodejs"></a>nodejs</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 安装 fnm (快速 Node 管理器)</span></span><br><span class="line">curl -fsSL https://fnm.vercel.app/install | bash</span><br><span class="line"></span><br><span class="line"><span class="comment"># 激活 fnm</span></span><br><span class="line"><span class="built_in">source</span> ~/.bashrc</span><br><span class="line"></span><br><span class="line"><span class="comment"># 下载并安装 Node.js</span></span><br><span class="line">fnm use --install-if-missing 22</span><br><span class="line"></span><br><span class="line"><span class="comment"># 验证环境中是否存在正确的 Node.js 版本</span></span><br><span class="line">node -v <span class="comment"># 应该打印 `v22.12.0`</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 验证环境中是否存在正确的 npm 版本</span></span><br><span class="line">npm -v <span class="comment"># 应该打印 `10.9.0`</span></span><br></pre></td></tr></table></figure>
+<h3 id="pnpm"><a href="#pnpm" class="headerlink" title="pnpm"></a>pnpm</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">curl -fsSL https://get.pnpm.io/install.sh | sh -</span><br><span class="line"><span class="comment"># or</span></span><br><span class="line">wget -qO- https://get.pnpm.io/install.sh | sh -</span><br></pre></td></tr></table></figure>
+
+<h3 id="rust"><a href="#rust" class="headerlink" title="rust"></a>rust</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl --proto <span class="string">&#x27;=https&#x27;</span> --tlsv1.2 -sSf https://sh.rustup.rs | sh</span><br></pre></td></tr></table></figure>
+
+<h3 id="golang"><a href="#golang" class="headerlink" title="golang"></a>golang</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> apt install golang</span><br></pre></td></tr></table></figure>
+
+<h2 id="etc-apt-sources-list"><a href="#etc-apt-sources-list" class="headerlink" title="&#x2F;etc&#x2F;apt&#x2F;sources.list"></a>&#x2F;etc&#x2F;apt&#x2F;sources.list</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"># 默认注释了源码镜像以提高 apt update 速度，如有需要可自行取消注释</span><br><span class="line">deb  [arch=arm64] https://mirrors.tuna.tsinghua.edu.cn/debian/ bookworm main contrib non-free non-free-firmware</span><br><span class="line">deb-src [arch=arm64] https://mirrors.tuna.tsinghua.edu.cn/debian/ bookworm main contrib non-free non-free-firmware</span><br><span class="line"></span><br><span class="line">deb [arch=arm64] https://mirrors.tuna.tsinghua.edu.cn/debian/ bookworm-updates main contrib non-free non-free-firmware</span><br><span class="line">deb-src [arch=arm64] https://mirrors.tuna.tsinghua.edu.cn/debian/ bookworm-updates main contrib non-free non-free-firmware</span><br><span class="line"></span><br><span class="line">deb [arch=arm64] https://mirrors.tuna.tsinghua.edu.cn/debian/ bookworm-backports main contrib non-free non-free-firmware</span><br><span class="line">deb-src [arch=arm64] https://mirrors.tuna.tsinghua.edu.cn/debian/ bookworm-backports main contrib non-free non-free-firmware</span><br><span class="line"></span><br><span class="line"># 以下安全更新软件源包含了官方源与镜像站配置，如有需要可自行修改注释切换</span><br><span class="line">deb [arch=arm64] https://security.debian.org/debian-security bookworm-security main contrib non-free non-free-firmware</span><br><span class="line">deb-src [arch=arm64] https://security.debian.org/debian-security bookworm-security main contrib non-free non-free-firmware</span><br></pre></td></tr></table></figure>
+
+<h3 id="如果你要升级到sid"><a href="#如果你要升级到sid" class="headerlink" title="如果你要升级到sid"></a>如果你要升级到sid</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># 默认注释了源码镜像以提高 apt update 速度，如有需要可自行取消注释</span><br><span class="line">deb  [arch=arm64] https://mirrors.tuna.tsinghua.edu.cn/debian/ sid main contrib non-free non-free-firmware</span><br><span class="line">deb-src [arch=arm64] https://mirrors.tuna.tsinghua.edu.cn/debian/ sid main contrib non-free non-free-firmware</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> apt update -y</span><br><span class="line"><span class="built_in">sudo</span> apt upgrade -y</span><br><span class="line"><span class="built_in">sudo</span> apt autoremove -y</span><br></pre></td></tr></table></figure>
+<h3 id="neovim"><a href="#neovim" class="headerlink" title="neovim"></a>neovim</h3><h4 id="very-important-为了这个而升级到sid版本"><a href="#very-important-为了这个而升级到sid版本" class="headerlink" title="very important : 为了这个而升级到sid版本"></a>very important : 为了这个而升级到sid版本</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> apt update</span><br><span class="line"><span class="built_in">sudo</span> apt install neovim -y</span><br></pre></td></tr></table></figure>
+<h2 id="lazy-nvim"><a href="#lazy-nvim" class="headerlink" title="lazy.nvim"></a>lazy.nvim</h2><figure class="highlight lua"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">--  require(&quot;config.lazy&quot;)</span></span><br><span class="line"><span class="built_in">require</span>(<span class="string">&quot;config.lazy&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight lua"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">--  ~/.config/nvim/lua/config/lazy.lua</span></span><br><span class="line"><span class="comment">-- Bootstrap lazy.nvim  </span></span><br><span class="line"><span class="keyword">local</span> lazypath = vim.fn.stdpath(<span class="string">&quot;data&quot;</span>) .. <span class="string">&quot;/lazy/lazy.nvim&quot;</span>  </span><br><span class="line"><span class="keyword">if</span> <span class="keyword">not</span> (vim.uv <span class="keyword">or</span> vim.loop).fs_stat(lazypath) <span class="keyword">then</span>  </span><br><span class="line"><span class="keyword">local</span> lazyrepo = <span class="string">&quot;https://github.com/folke/lazy.nvim.git&quot;</span>  </span><br><span class="line"><span class="keyword">local</span> out = vim.fn.system(&#123; <span class="string">&quot;git&quot;</span>, <span class="string">&quot;clone&quot;</span>, <span class="string">&quot;--filter=blob:none&quot;</span>, <span class="string">&quot;--branch=stable&quot;</span>, lazyrepo, lazypath &#125;)  </span><br><span class="line"><span class="keyword">if</span> vim.v.shell_error ~= <span class="number">0</span> <span class="keyword">then</span>  </span><br><span class="line">vim.api.nvim_echo(&#123;  </span><br><span class="line">&#123; <span class="string">&quot;Failed to clone lazy.nvim:\n&quot;</span>, <span class="string">&quot;ErrorMsg&quot;</span> &#125;,  </span><br><span class="line">&#123; out, <span class="string">&quot;WarningMsg&quot;</span> &#125;,  </span><br><span class="line">&#123; <span class="string">&quot;\nPress any key to exit...&quot;</span> &#125;,  </span><br><span class="line">&#125;, <span class="literal">true</span>, &#123;&#125;)  </span><br><span class="line">vim.fn.getchar()  </span><br><span class="line"><span class="built_in">os</span>.<span class="built_in">exit</span>(<span class="number">1</span>)  </span><br><span class="line"><span class="keyword">end</span>  </span><br><span class="line"><span class="keyword">end</span>  </span><br><span class="line">vim.opt.rtp:prepend(lazypath)  </span><br><span class="line">  </span><br><span class="line"><span class="comment">-- Make sure to setup `mapleader` and `maplocalleader` before  </span></span><br><span class="line"><span class="comment">-- loading lazy.nvim so that mappings are correct.  </span></span><br><span class="line"><span class="comment">-- This is also a good place to setup other settings (vim.opt)  </span></span><br><span class="line">vim.g.mapleader = <span class="string">&quot; &quot;</span>  </span><br><span class="line">vim.g.maplocalleader = <span class="string">&quot;\\&quot;</span>  </span><br><span class="line">  </span><br><span class="line"><span class="comment">-- Setup lazy.nvim  </span></span><br><span class="line"><span class="built_in">require</span>(<span class="string">&quot;lazy&quot;</span>).setup(&#123;  </span><br><span class="line">spec = &#123;  </span><br><span class="line"><span class="comment">-- import your plugins  </span></span><br><span class="line">&#123; import = <span class="string">&quot;plugins&quot;</span> &#125;,  </span><br><span class="line">&#125;,  </span><br><span class="line"><span class="comment">-- Configure any other settings here. See the documentation for more details.  </span></span><br><span class="line"><span class="comment">-- colorscheme that will be used when installing plugins.  </span></span><br><span class="line">install = &#123; colorscheme = &#123; <span class="string">&quot;habamax&quot;</span> &#125; &#125;,  </span><br><span class="line"><span class="comment">-- automatically check for plugin updates  </span></span><br><span class="line">checker = &#123; enabled = <span class="literal">true</span> &#125;,  </span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<h2 id="pipx"><a href="#pipx" class="headerlink" title="pipx"></a>pipx</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> apt update </span><br><span class="line"><span class="built_in">sudo</span> apt install pipx </span><br><span class="line">pipx ensurepath</span><br></pre></td></tr></table></figure>
+
+<h2 id="zsh"><a href="#zsh" class="headerlink" title="zsh"></a>zsh</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> apt install zsh</span><br></pre></td></tr></table></figure>
+<h2 id="oh-my-zsh"><a href="#oh-my-zsh" class="headerlink" title="oh my zsh"></a>oh my zsh</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">sh -c <span class="string">&quot;<span class="subst">$(curl -fsSL https://install.ohmyz.sh/)</span>&quot;</span></span><br><span class="line"><span class="comment"># or </span></span><br><span class="line">sh -c <span class="string">&quot;<span class="subst">$(wget -O- https://install.ohmyz.sh/)</span>&quot;</span></span><br><span class="line"><span class="comment"># or</span></span><br><span class="line">sh -c <span class="string">&quot;<span class="subst">$(fetch -o - https://install.ohmyz.sh/)</span>&quot;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="vscode-server"><a href="#vscode-server" class="headerlink" title="vscode(server)"></a>vscode(server)</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#先创建一个专用用户</span></span><br><span class="line"><span class="built_in">sudo</span> useradd -m pi_dev</span><br><span class="line"><span class="built_in">sudo</span> usermod -aG <span class="built_in">sudo</span> pi_dev</span><br><span class="line"><span class="built_in">sudo</span> usermod -s /bin/zsh pi_dev</span><br><span class="line"><span class="comment">#设置密码</span></span><br><span class="line"><span class="built_in">sudo</span> passwd pi_dev</span><br><span class="line">su pi_dev</span><br><span class="line"><span class="built_in">mkdir</span> ~/.ssh</span><br><span class="line"><span class="comment">#使用sftp上传你的ssh公钥</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>启动vscode</li>
+<li>在vscode中安装Remote Development插件（Microsoft开发的）</li>
+<li>按F1或Ctrl+Shift+P打开控制面板</li>
+<li>选择 <strong>Remote-SSH: Connect to Host…</strong> 命令</li>
+<li>这里输入树莓派的登陆用户名和主机IP，即准备工作中新建的<strong>pi_dev</strong>用户，务必替换你的实际IP地址</li>
+<li>连接到远程主机时，首先会要求我们选择系统类型（Windows&#x2F;Linux&#x2F;macOS），根据实际情况选择即可</li>
+<li>会自动配置vscode服务器端</li>
+</ul>
+<h2 id="安装远程桌面"><a href="#安装远程桌面" class="headerlink" title="安装远程桌面"></a>安装远程桌面</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> apt install xrdp</span><br><span class="line"><span class="built_in">sudo</span> /etc/init.d/xrdp restart</span><br></pre></td></tr></table></figure>
+
+<h3 id="如果你想禁用"><a href="#如果你想禁用" class="headerlink" title="如果你想禁用"></a>如果你想禁用</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> systemctl stop xrdp</span><br><span class="line"><span class="built_in">sudo</span> killall xrdp-sessman xrdp-chansrv xrdp</span><br><span class="line">systemctl status xrdp</span><br><span class="line"><span class="built_in">sudo</span> systemctl <span class="built_in">disable</span> xrdp</span><br></pre></td></tr></table></figure>
+<h2 id="安装Raspberry-Pi-Connect"><a href="#安装Raspberry-Pi-Connect" class="headerlink" title="安装Raspberry Pi Connect"></a>安装Raspberry Pi Connect</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> apt update</span><br><span class="line"><span class="built_in">sudo</span> apt full-upgrade</span><br><span class="line"><span class="built_in">sudo</span> apt autoremove</span><br><span class="line"><span class="built_in">sudo</span> apt install rpi-connect</span><br><span class="line">rpi-connect on</span><br><span class="line">rpi-connect vnc on</span><br></pre></td></tr></table></figure>
+<h3 id="如果桌面变回LXDE原生"><a href="#如果桌面变回LXDE原生" class="headerlink" title="如果桌面变回LXDE原生"></a>如果桌面变回LXDE原生</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> apt install fastfetch -y</span><br><span class="line"><span class="built_in">sudo</span> apt install xorg -y</span><br><span class="line"><span class="built_in">sudo</span> apt install lxde openbox -y</span><br><span class="line"><span class="built_in">sudo</span> apt install rpd-plym-splash rpd-wallpaper rp-bookshelf -y</span><br></pre></td></tr></table></figure>
+<h2 id="卸载snap"><a href="#卸载snap" class="headerlink" title="卸载snap"></a>卸载snap</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> p <span class="keyword">in</span> $(snap list | awk <span class="string">&#x27;&#123;print $1&#125;&#x27;</span>); <span class="keyword">do</span>  </span><br><span class="line">  <span class="built_in">sudo</span> snap remove <span class="variable">$p</span>  </span><br><span class="line"><span class="keyword">done</span></span><br><span class="line"><span class="keyword">for</span> p <span class="keyword">in</span> $(snap list | awk <span class="string">&#x27;&#123;print $1&#125;&#x27;</span>); <span class="keyword">do</span>  </span><br><span class="line">  <span class="built_in">sudo</span> snap remove <span class="variable">$p</span>  </span><br><span class="line"><span class="keyword">done</span></span><br><span class="line"><span class="comment"># 直到提示</span></span><br><span class="line"><span class="comment">#No snaps are installed yet. Try &#x27;snap install hello-world&#x27;.</span></span><br><span class="line"><span class="built_in">sudo</span> systemctl stop snapd  </span><br><span class="line"><span class="built_in">sudo</span> systemctl <span class="built_in">disable</span> --now snapd.socket  </span><br><span class="line">  </span><br><span class="line"><span class="keyword">for</span> m <span class="keyword">in</span> /snap/core/*; <span class="keyword">do</span>  </span><br><span class="line">   <span class="built_in">sudo</span> umount <span class="variable">$m</span>  </span><br><span class="line"><span class="keyword">done</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">sudo</span> apt autoremove --purge snapd</span><br><span class="line"></span><br><span class="line"><span class="built_in">rm</span> -rf ~/snap  </span><br><span class="line"><span class="built_in">sudo</span> <span class="built_in">rm</span> -rf /snap  </span><br><span class="line"><span class="built_in">sudo</span> <span class="built_in">rm</span> -rf /var/snap  </span><br><span class="line"><span class="built_in">sudo</span> <span class="built_in">rm</span> -rf /var/lib/snapd  </span><br><span class="line"><span class="built_in">sudo</span> <span class="built_in">rm</span> -rf /var/cache/snapd</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2025/01/05/%E6%A0%91%E8%8E%93%E6%B4%BE%E5%86%8D%E6%AC%A1%E5%88%9D%E5%A7%8B%E5%8C%96/" data-id="cm5j1hvbj000neworfaql20wi" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Linux-%E9%85%8D%E7%BD%AE/" rel="tag">Linux 配置</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Raspberry-Pi/" rel="tag">Raspberry Pi</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%B7%A5%E5%85%B7%E5%AE%89%E8%A3%85/" rel="tag">工具安装</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%A0%91%E8%8E%93%E6%B4%BE/" rel="tag">树莓派</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E7%B3%BB%E7%BB%9F%E6%9B%B4%E6%96%B0/" rel="tag">系统更新</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2025/01/05/Linux(debian%E7%B3%BB)%E4%B8%8B%E9%85%8D%E7%BD%AEaria2/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Linux (Debian 系) 下配置 aria2
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2025/01/05/%E7%BB%88%E7%AB%AF%E5%B0%8F%E7%BB%93/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">终端小结</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Software-Installation/">Software Installation</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Software-Installation/UI-Development/">UI Development</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Software-Installation/UI-Development/Python-Tools/">Python Tools</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Software-Installation/UI-Development/Python-Tools/Open-Source/">Open Source</a></li></ul></li></ul></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/chart/">chart</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/chart/html/">html</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/chart/html/codeing/">codeing</a></li></ul></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/debian/">debian</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/debian/linux/">linux</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/debian/linux/to-go/">to go</a></li></ul></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/doh/">doh</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/doh/available/">available</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/nodejs/">nodejs</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/nodejs/linux/">linux</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/">开发工具</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/%E7%BB%88%E7%AB%AF/">终端</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/%E7%BB%88%E7%AB%AF/%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE/">开源项目</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/%E7%BB%88%E7%AB%AF/%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE/%E6%8A%80%E6%9C%AF%E6%96%87%E6%A1%A3/">技术文档</a></li></ul></li></ul></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%8A%80%E6%9C%AF/">技术</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85/">操作系统安装</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85/%E5%B7%A5%E5%85%B7%E6%8C%87%E5%8D%97/">工具指南</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%A0%91%E8%8E%93%E6%B4%BE%E9%85%8D%E7%BD%AE/">树莓派配置</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%A0%91%E8%8E%93%E6%B4%BE%E9%85%8D%E7%BD%AE/%E5%BC%80%E6%BA%90%E5%B7%A5%E5%85%B7/">开源工具</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%B3%BB%E7%BB%9F%E9%85%8D%E7%BD%AE/">系统配置</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%B3%BB%E7%BB%9F%E9%85%8D%E7%BD%AE/%E4%B8%8B%E8%BD%BD%E5%B7%A5%E5%85%B7/">下载工具</a></li></ul></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/ComfyUI/" rel="tag">ComfyUI</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Command-Line/" rel="tag">Command Line</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/FydeOS/" rel="tag">FydeOS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/" rel="tag">Git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Installation-Guide/" rel="tag">Installation Guide</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux/" rel="tag">Linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux-%E9%85%8D%E7%BD%AE/" rel="tag">Linux 配置</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python/" rel="tag">Python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Pytorch/" rel="tag">Pytorch</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/RPC/" rel="tag">RPC</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Raspberry-Pi/" rel="tag">Raspberry Pi</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Rufus/" rel="tag">Rufus</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Rust/" rel="tag">Rust</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Visual-Studio-Build-Tools/" rel="tag">Visual Studio Build Tools</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/aria2/" rel="tag">aria2</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/chart/" rel="tag">chart</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/codeing/" rel="tag">codeing</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/debian/" rel="tag">debian</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/doh/" rel="tag">doh</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/html/" rel="tag">html</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/linux/" rel="tag">linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nodejs/" rel="tag">nodejs</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/to-go/" rel="tag">to go</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%90%AF%E5%8A%A8%E7%9B%98%E5%88%B6%E4%BD%9C/" rel="tag">启动盘制作</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%A4%87%E4%BB%BD/" rel="tag">备份</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%B7%A5%E5%85%B7%E5%AE%89%E8%A3%85/" rel="tag">工具安装</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%BC%80%E5%8F%91%E8%80%85%E5%B7%A5%E5%85%B7/" rel="tag">开发者工具</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%BC%80%E6%BA%90%E5%B7%A5%E5%85%B7/" rel="tag">开源工具</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/" rel="tag">微信公众号</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" rel="tag">操作系统</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%A0%91%E8%8E%93%E6%B4%BE/" rel="tag">树莓派</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%94%B5%E4%BF%A1/" rel="tag">电信</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%9F%A5%E4%B9%8E/" rel="tag">知乎</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%A7%BB%E5%8A%A8/" rel="tag">移动</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%B3%BB%E7%BB%9F%E6%9B%B4%E6%96%B0/" rel="tag">系统更新</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%BB%88%E7%AB%AF%E4%BB%BF%E7%9C%9F%E5%99%A8/" rel="tag">终端仿真器</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%80%83%E5%8F%A4/" rel="tag">考古</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%81%94%E9%80%9A/" rel="tag">联通</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%87%AA%E5%90%AF%E5%8A%A8/" rel="tag">自启动</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%B7%A8%E5%B9%B3%E5%8F%B0%E5%BC%80%E5%8F%91/" rel="tag">跨平台开发</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%BD%AC%E8%BD%BD/" rel="tag">转载</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%85%8D%E7%BD%AE/" rel="tag">配置</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/ComfyUI/" style="font-size: 10px;">ComfyUI</a> <a href="/tags/Command-Line/" style="font-size: 10px;">Command Line</a> <a href="/tags/FydeOS/" style="font-size: 10px;">FydeOS</a> <a href="/tags/Git/" style="font-size: 10px;">Git</a> <a href="/tags/Installation-Guide/" style="font-size: 10px;">Installation Guide</a> <a href="/tags/Linux/" style="font-size: 10px;">Linux</a> <a href="/tags/Linux-%E9%85%8D%E7%BD%AE/" style="font-size: 10px;">Linux 配置</a> <a href="/tags/Python/" style="font-size: 10px;">Python</a> <a href="/tags/Pytorch/" style="font-size: 10px;">Pytorch</a> <a href="/tags/RPC/" style="font-size: 10px;">RPC</a> <a href="/tags/Raspberry-Pi/" style="font-size: 10px;">Raspberry Pi</a> <a href="/tags/Rufus/" style="font-size: 10px;">Rufus</a> <a href="/tags/Rust/" style="font-size: 10px;">Rust</a> <a href="/tags/Visual-Studio-Build-Tools/" style="font-size: 10px;">Visual Studio Build Tools</a> <a href="/tags/aria2/" style="font-size: 10px;">aria2</a> <a href="/tags/chart/" style="font-size: 10px;">chart</a> <a href="/tags/codeing/" style="font-size: 10px;">codeing</a> <a href="/tags/debian/" style="font-size: 10px;">debian</a> <a href="/tags/doh/" style="font-size: 10px;">doh</a> <a href="/tags/html/" style="font-size: 10px;">html</a> <a href="/tags/linux/" style="font-size: 13.33px;">linux</a> <a href="/tags/nodejs/" style="font-size: 10px;">nodejs</a> <a href="/tags/to-go/" style="font-size: 10px;">to go</a> <a href="/tags/%E5%90%AF%E5%8A%A8%E7%9B%98%E5%88%B6%E4%BD%9C/" style="font-size: 10px;">启动盘制作</a> <a href="/tags/%E5%A4%87%E4%BB%BD/" style="font-size: 20px;">备份</a> <a href="/tags/%E5%B7%A5%E5%85%B7%E5%AE%89%E8%A3%85/" style="font-size: 10px;">工具安装</a> <a href="/tags/%E5%BC%80%E5%8F%91%E8%80%85%E5%B7%A5%E5%85%B7/" style="font-size: 10px;">开发者工具</a> <a href="/tags/%E5%BC%80%E6%BA%90%E5%B7%A5%E5%85%B7/" style="font-size: 10px;">开源工具</a> <a href="/tags/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/" style="font-size: 13.33px;">微信公众号</a> <a href="/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" style="font-size: 10px;">操作系统</a> <a href="/tags/%E6%A0%91%E8%8E%93%E6%B4%BE/" style="font-size: 10px;">树莓派</a> <a href="/tags/%E7%94%B5%E4%BF%A1/" style="font-size: 20px;">电信</a> <a href="/tags/%E7%9F%A5%E4%B9%8E/" style="font-size: 13.33px;">知乎</a> <a href="/tags/%E7%A7%BB%E5%8A%A8/" style="font-size: 20px;">移动</a> <a href="/tags/%E7%B3%BB%E7%BB%9F%E6%9B%B4%E6%96%B0/" style="font-size: 10px;">系统更新</a> <a href="/tags/%E7%BB%88%E7%AB%AF%E4%BB%BF%E7%9C%9F%E5%99%A8/" style="font-size: 10px;">终端仿真器</a> <a href="/tags/%E8%80%83%E5%8F%A4/" style="font-size: 16.67px;">考古</a> <a href="/tags/%E8%81%94%E9%80%9A/" style="font-size: 20px;">联通</a> <a href="/tags/%E8%87%AA%E5%90%AF%E5%8A%A8/" style="font-size: 10px;">自启动</a> <a href="/tags/%E8%B7%A8%E5%B9%B3%E5%8F%B0%E5%BC%80%E5%8F%91/" style="font-size: 10px;">跨平台开发</a> <a href="/tags/%E8%BD%AC%E8%BD%BD/" style="font-size: 16.67px;">转载</a> <a href="/tags/%E9%85%8D%E7%BD%AE/" style="font-size: 10px;">配置</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2025/01/">January 2025</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/10/">October 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/09/">September 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/08/">August 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/07/">July 2023</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2025/01/05/FydeOS%E5%86%99%E5%85%A5%E7%A3%81%E7%9B%98/">使用 Rufus 将 FydeOS 写入磁盘</a>
+          </li>
+        
+          <li>
+            <a href="/2025/01/05/Linux(debian%E7%B3%BB)%E4%B8%8B%E9%85%8D%E7%BD%AEaria2/">Linux (Debian 系) 下配置 aria2</a>
+          </li>
+        
+          <li>
+            <a href="/2025/01/05/%E6%A0%91%E8%8E%93%E6%B4%BE%E5%86%8D%E6%AC%A1%E5%88%9D%E5%A7%8B%E5%8C%96/">树莓派初始化与配置指南</a>
+          </li>
+        
+          <li>
+            <a href="/2025/01/05/%E7%BB%88%E7%AB%AF%E5%B0%8F%E7%BB%93/">终端小结</a>
+          </li>
+        
+          <li>
+            <a href="/2025/01/05/hello-world/">Hello World</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+  <div class="widget-wrap">
+    <div class="sidebarMin">
+  <img 
+  src="https://mino.firsts1.repl.co:5900/bucket1/svg/stevessr.eu.org.svg" 
+  width:"15%" 
+  height:"15%"
+  >
+</div>
+</div>
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2025 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+<a href="https://icp.gov.moe/?keyword=20240144" target="_blank">萌ICP备20240144号</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>
