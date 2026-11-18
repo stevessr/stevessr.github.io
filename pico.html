@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>PICO 4 Ultra 临时 root 记录与模块下载</title>
+<style>
+body { font-family: system-ui, sans-serif; max-width: 860px; margin: 2rem auto; padding: 0 1rem; line-height: 1.7; }
+h1, h2 { border-bottom: 1px solid #ddd; padding-bottom: .3rem; }
+code, pre { background: #f5f5f5; border-radius: 4px; }
+pre { padding: .8rem; overflow-x: auto; }
+table { border-collapse: collapse; }
+td, th { border: 1px solid #ccc; padding: .35rem .7rem; }
+.warn { background: #fff3cd; border: 1px solid #eee0a8; padding: .6rem 1rem; border-radius: 4px; }
+</style>
+</head>
+<body>
+<h1>PICO 4 Ultra 临时 root：白块修复与模块合集</h1>
+<p>设备：PICO 4 Ultra（sparrow / A9210，Android 14，内核 <code>5.10.198-perf-g49587cd7a509-ab176</code>）。不解锁、不刷机，DFRoot 临时提权 + SukiSU-Nova 内核模块 late-load。</p>
+
+<h2>白块问题与修复</h2>
+<p>症状：软重启（Nova 管理器内）后画面出现白色色块与撕裂；冷开机正常。</p>
+<p>根因：上游 <code>ksud soft-reboot</code> 走全局 <code>stop</code> → 重放 post-fs-data → <code>start</code>，会一起重启 SurfaceFlinger，但厂商硬件合成服务 <code>vendor.qti.hardware.display.composer-service</code> 不会跟着重启，两者状态不一致导致撕裂。</p>
+<p>修复：给 ksud 加了 PICO 专用作用域路径——满足 sparrow/A9210/Pico + late-load 时，只重启 zygote，保留 SF 与 composer，等待 system_server 就绪后再重放模块生命周期。任何一步不符合预期就整体放弃（fail-closed），绝不回退到全局路径。</p>
+<pre>实测（同一次开机内软重启）:
+  SurfaceFlinger        18067 → 18067  保留
+  vendor composer        1346 →  1346  保留
+  zygote                18069 → 13213  重建
+  system_server         18216 → 13345  重建
+  Zygisk 重启后 fully_active，HMA / PIF 正常注入
+  GMS 特权挂载保留</pre>
+
+<h2>踩过的坑（记录备查）</h2>
+<ul>
+<li><b>Nova 管理器显示未安装但 su 可用</b>：内核证书哈希带 <code>0x</code> 前缀传入，而 Nova 的 <code>apk_sign.c</code> 用 <code>strcmp</code>，必须不带前缀。</li>
+<li><b>自编译 ksud 后 Zygisk 模块全部静默失效</b>：缺少 <code>zygisk-sepolicy.rule</code>，<code>cp64.sock</code> 落在未映射的 <code>zygisk_file</code> 类型上被 SELinux 拒绝。需内嵌官方 NyaZygisk 资产与策略。</li>
+<li><b>YouTube VR 去广告 v0.1</b>：把补丁 APK 全局挂到 <code>base.apk</code> 上，PackageManager 一旦重扫就把未重签的包从记录里删除，应用直接消失。已撤回；进程私有挂载方案仍在排查（挂载在目标进程不可见，fail-closed 保平安）。<b>该模块未发布、保持禁用。</b></li>
+<li><b>Play 登录丢失</b>：GMS 被自动更到 26.x 后，其登录流程依赖 SystemUI 凭据确认界面，PICO 没有 SystemUI。已回退到系统内置 24.06.16。GMS 模块的自动回退分支在 26.x 上会 NPE，需手动 <code>pm uninstall-system-updates com.google.android.gms</code>。</li>
+</ul>
+
+<h2>发布下载</h2>
+<p>全部组件已打包发布：<a href="https://github.com/stevessr/.github/releases/tag/pico-modules-20261118">stevessr/.github · pico-modules-20261118</a></p>
+<table>
+<tr><th>文件</th><th>说明</th></tr>
+<tr><td>pico-nova-scoped-restart-v0.2.0.zip</td><td>Nova 软重启作用域修复模块（内置 ksud 1439545 + Zygisk 资产；支持改名后的 CI 管理器库）</td></tr>
+<tr><td>kernelsu.ko-android12-5.10-30000-1439545-pico</td><td>上游 main 1439545 编译的 LKM，vermagic 匹配设备内核，符号全部可解析</td></tr>
+<tr><td>ksud-nova-1439545-pico-aarch64</td><td>ksud aarch64（uapi 6），内嵌 LKM 与 Zygisk 资产，作用域软重启已启用</td></tr>
+<tr><td>DFRoot_4.7-nova-ci-pico.apk</td><td>DFRoot 手动模式：Nova 证书哈希不带 0x 传入；按大小识别 CI 改名库</td></tr>
+<tr><td>gms_privapp_v1.8.zip</td><td>GMS 特权持久化（24.06.16 完整树 + privapp 权限）</td></tr>
+<tr><td>SHA256SUMS.txt</td><td>校验和</td></tr>
+</table>
+<p class="warn">⚠️ 不要把 GMS 更新到 26.x（登录依赖 SystemUI 凭据 UI，本机没有）。HMA / PIF / LSPosed 为第三方构建，不在此发布内。</p>
+
+<h2>上游 fork</h2>
+<p>作用域软重启补丁已推送到 fork 分支：<a href="https://github.com/stevessr/SukiSU-Nova/tree/pico-sparrow-late-load">stevessr/SukiSU-Nova · pico-sparrow-late-load</a>（commit <code>c50beb57</code>，说明见仓库内 <code>PICO-SCOPED-RESTART.md</code>）。</p>
+
+<p><a href="/">返回首页</a></p>
+</body>
+</html>
